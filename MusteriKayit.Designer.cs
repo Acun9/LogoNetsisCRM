@@ -326,6 +326,7 @@
             label1.Size = new Size(85, 15);
             label1.TabIndex = 34;
             label1.Text = "Müşteri Kodu:";
+            label1.Click += label1_Click;
             // 
             // rbKadin
             // 

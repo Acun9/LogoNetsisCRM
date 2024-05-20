@@ -33,8 +33,13 @@ namespace C_Forms
             else
             {
                 Application.OpenForms?["AnaSayfa"]?.Show();
-            }    
-            
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

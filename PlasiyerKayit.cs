@@ -14,10 +14,15 @@ namespace C_Forms
 {
     public partial class PlasiyerKayit : Form
     {
+
         public PlasiyerKayit()
         {
             InitializeComponent();
 
+        }
+
+        private void PlasiyerKayit_Load(object sender, EventArgs e)
+        {
             LoadPlasiyerler();
 
             LoadIller();
@@ -29,7 +34,7 @@ namespace C_Forms
         {
             string plasiyerKodu = txtPlasiyerKodu.Text;
             string plasiyerAdıSoyadı = txtAdSoyad.Text;
-            string plasiyerCinsiyeti = "";
+            string plasiyerCinsiyeti = GetSelectedCinsiyet();
             string plasiyerMeslegi = txtMeslek.Text;
             string plasiyerGorevi = txtGorev.Text;
             string plasiyerDepartmani = txtDepartman.Text;
@@ -39,132 +44,85 @@ namespace C_Forms
             string plasiyerAdres = txtAdres.Text;
             string plasiyerResim = txtResimYolu.Text;
             string plasiyerCv = txtCvYolu.Text;
-            string plasiyerIl = "";
-            string plasiyerIlce = "";
-            string plasiyerUlke = "";
+            string plasiyerIl = cmbIller.SelectedItem?.ToString() ?? string.Empty;
+            string plasiyerIlce = cmbIlceler.SelectedItem?.ToString() ?? string.Empty;
+            string plasiyerUlke = cmbUlkeler.SelectedItem?.ToString() ?? string.Empty;
 
-
-            if (rbErkek.Checked)
+            string GetSelectedCinsiyet()
             {
-                plasiyerCinsiyeti = rbErkek.Text;
-            }
-            else if (rbKadin.Checked)
-            {
-                plasiyerCinsiyeti = rbKadin.Text;
-            }
-
-            if (cmbIller.SelectedItem != null)
-            {
-                plasiyerIl = cmbIller.SelectedItem.ToString();
-            }
-
-            if (cmbIlceler.SelectedItem != null)
-            {
-                plasiyerIlce = cmbIlceler.SelectedItem.ToString();
-            }
-
-            if (cmbUlkeler.SelectedItem != null)
-            {
-                plasiyerUlke = cmbUlkeler.SelectedItem.ToString();
-            }
-
-
-            using (SqlConnection connection = new SQLBaglantisi().baglanti()) // Veritabanı bağlantısı
-            {
-                string queryCheckExisting = "SELECT COUNT(*) FROM dbo.PLASIYER WHERE PLASIYER_KODU = @plasiyerKodu";
-                using (SqlCommand commandCheckExisting = new SqlCommand(queryCheckExisting, connection))
+                if (rbErkek.Checked)
                 {
-                    commandCheckExisting.Parameters.AddWithValue("@plasiyerKodu", plasiyerKodu);
-                    int existingCount = (int)commandCheckExisting.ExecuteScalar();
+                    return "ERKEK";
+                }
+                else if (rbKadin.Checked)
+                {
+                    return "KADIN";
+                }
+                else
+                {
+                    return string.Empty; // Hiçbir şey seçilmediyse
+                }
+            }
 
-                    if (existingCount > 0)
+            using (SqlConnection connection = new SQLBaglantisi().baglanti())
+            {
+                string mergeQuery = @"
+            MERGE INTO dbo.PLASIYER AS Target
+            USING (VALUES (@plasiyerKodu, @plasiyerAdSoyad, @plasiyerCinsiyeti, @plasiyerMeslegi, @plasiyerGorevi, @plasiyerDepartmani, @plasiyerYoneticisi, @plasiyerMail, @plasiyerTel, @plasiyerAdres, @plasiyerIl, @plasiyerIlce, @plasiyerUlke, @plasiyerResim, @plasiyerCv)) 
+            AS Source (PLASIYER_KODU, PLASIYER_ADISOYADI, CINSIYETI, MESLEGI, GOREVI, DEPARTMANI, BAGLI_YONETICI, E_MAIL, TELEFONU, ADRESI, IL, ILCE, ULKE, RESIM, CV)
+            ON Target.PLASIYER_KODU = Source.PLASIYER_KODU
+            WHEN MATCHED THEN
+                UPDATE SET 
+                    PLASIYER_ADISOYADI = Source.PLASIYER_ADISOYADI,
+                    CINSIYETI = Source.CINSIYETI,
+                    MESLEGI = Source.MESLEGI,
+                    GOREVI = Source.GOREVI,
+                    DEPARTMANI = Source.DEPARTMANI,
+                    BAGLI_YONETICI = Source.BAGLI_YONETICI,
+                    E_MAIL = Source.E_MAIL,
+                    TELEFONU = Source.TELEFONU,
+                    ADRESI = Source.ADRESI,
+                    IL = Source.IL,
+                    ILCE = Source.ILCE,
+                    ULKE = Source.ULKE,
+                    RESIM = Source.RESIM,
+                    CV = Source.CV
+            WHEN NOT MATCHED THEN
+                INSERT (PLASIYER_KODU, PLASIYER_ADISOYADI, CINSIYETI, MESLEGI, GOREVI, DEPARTMANI, BAGLI_YONETICI, E_MAIL, TELEFONU, ADRESI, IL, ILCE, ULKE, RESIM, CV)
+                VALUES (Source.PLASIYER_KODU, Source.PLASIYER_ADISOYADI, Source.CINSIYETI, Source.MESLEGI, Source.GOREVI, Source.DEPARTMANI, Source.BAGLI_YONETICI, Source.E_MAIL, Source.TELEFONU, Source.ADRESI, Source.IL, Source.ILCE, Source.ULKE, Source.RESIM, Source.CV);";
+
+                using (SqlCommand mergeCommand = new SqlCommand(mergeQuery, connection))
+                {
+                    mergeCommand.Parameters.AddWithValue("@plasiyerKodu", plasiyerKodu);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerAdSoyad", plasiyerAdıSoyadı);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerCinsiyeti", plasiyerCinsiyeti);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerMeslegi", plasiyerMeslegi);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerGorevi", plasiyerGorevi);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerDepartmani", plasiyerDepartmani);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerYoneticisi", plasiyerYoneticisi);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerMail", plasiyerMail);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerTel", plasiyerTel);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerAdres", plasiyerAdres);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerIl", plasiyerIl);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerIlce", plasiyerIlce);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerUlke", plasiyerUlke);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerResim", plasiyerResim);
+                    mergeCommand.Parameters.AddWithValue("@plasiyerCv", plasiyerCv);
+
+                    int rowsAffected = mergeCommand.ExecuteNonQuery();
+                    if (rowsAffected > 0)
                     {
-                        // Primery key zaten varsa güncelleme yap
-                        string queryUpdate = @"UPDATE dbo.PLASIYER SET 
-                                               PLASIYER_ADISOYADI = @plasiyerAdSoyad,
-                                               CINSIYETI = @plasiyerCinsiyeti,
-                                               MESLEGI = @plasiyerMeslegi,
-                                               GOREVI = @plasiyerGorevi,
-                                               DEPARTMANI = @plasiyerDepartmani,
-                                               BAGLI_YONETICI = @plasiyerYoneticisi,
-                                               E_MAIL = @plasiyerMail,
-                                               TELEFONU = @plasiyerTel,
-                                               ADRESI = @plasiyerAdres,
-                                               Il = @plasiyerIl,
-                                               Ilce = @plasiyerIlce,
-                                               Ulke = @plasiyerUlke,
-                                               RESIM = @plasiyerResim,
-                                               CV = @plasiyerCv 
-                                               WHERE PLASIYER_KODU = @plasiyerKodu";
-
-                        using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
-                        {
-                            commandUpdate.Parameters.AddWithValue("@plasiyerKodu", plasiyerKodu);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerAdSoyad", plasiyerAdıSoyadı);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerCinsiyeti", plasiyerCinsiyeti);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerMeslegi", plasiyerMeslegi);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerGorevi", plasiyerGorevi);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerDepartmani", plasiyerDepartmani);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerYoneticisi", plasiyerYoneticisi);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerMail", plasiyerMail);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerTel", plasiyerTel);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerAdres", plasiyerAdres);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerIl", plasiyerIl);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerIlce", plasiyerIlce);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerUlke", plasiyerUlke);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerResim", plasiyerResim);
-                            commandUpdate.Parameters.AddWithValue("@plasiyerCv", plasiyerCv);
-
-                            int rowsAffected = commandUpdate.ExecuteNonQuery();
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("Veriler güncellendi.");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Veriler güncellenirken bir hata oluştu.");
-                            }
-                        }
+                        MessageBox.Show("Veriler başarıyla kaydedildi veya güncellendi.");
                     }
                     else
                     {
-                        // Yeni bir kayıt ekle
-                        string queryInsert = @"INSERT INTO dbo.PLASIYER (PLASIYER_KODU, PLASIYER_ADISOYADI, CINSIYETI, MESLEGI, GOREVI, DEPARTMANI, BAGLI_YONETICI, E_MAIL, TELEFONU, ADRESI, IL, ILCE, ULKE, RESIM, CV) 
-                               VALUES (@plasiyerKodu, @plasiyerAdSoyad, @plasiyerCinsiyeti, @plasiyerMeslegi, @plasiyerGorevi, @plasiyerDepartmani, @plasiyerYoneticisi, @plasiyerMail, @plasiyerTel, @plasiyerAdres, @plasiyerIl, @plasiyerIlce, @plasiyerUlke, @plasiyerResim, @plasiyerCv)";
-
-                        using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
-                        {
-                            commandInsert.Parameters.AddWithValue("@plasiyerKodu", plasiyerKodu);
-                            commandInsert.Parameters.AddWithValue("@plasiyerAdSoyad", plasiyerAdıSoyadı);
-                            commandInsert.Parameters.AddWithValue("@plasiyerCinsiyeti", plasiyerCinsiyeti);
-                            commandInsert.Parameters.AddWithValue("@plasiyerMeslegi", plasiyerMeslegi);
-                            commandInsert.Parameters.AddWithValue("@plasiyerGorevi", plasiyerGorevi);
-                            commandInsert.Parameters.AddWithValue("@plasiyerDepartmani", plasiyerDepartmani);
-                            commandInsert.Parameters.AddWithValue("@plasiyerYoneticisi", plasiyerYoneticisi);
-                            commandInsert.Parameters.AddWithValue("@plasiyerMail", plasiyerMail);
-                            commandInsert.Parameters.AddWithValue("@plasiyerTel", plasiyerTel);
-                            commandInsert.Parameters.AddWithValue("@plasiyerAdres", plasiyerAdres);
-                            commandInsert.Parameters.AddWithValue("@plasiyerIl", plasiyerIl);
-                            commandInsert.Parameters.AddWithValue("@plasiyerIlce", plasiyerIlce);
-                            commandInsert.Parameters.AddWithValue("@plasiyerUlke", plasiyerUlke);
-                            commandInsert.Parameters.AddWithValue("@plasiyerResim", plasiyerResim);
-                            commandInsert.Parameters.AddWithValue("@plasiyerCv", plasiyerCv);
-
-                            int rowsAffected = commandInsert.ExecuteNonQuery();
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("Veriler başarıyla kaydedildi.");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Veriler kaydedilirken bir hata oluştu.");
-                            }
-                        }
+                        MessageBox.Show("Veriler kaydedilirken veya güncellenirken bir hata oluştu.");
                     }
                 }
             }
             LoadPlasiyerler();
         }
+
 
         private void btnSil_Click(object sender, EventArgs e)
         {
@@ -346,11 +304,11 @@ namespace C_Forms
                     cmbUlkeler.SelectedItem = ulke;
                 }
 
-                if (dataGridView1.Rows[secilen].Cells[2].Value?.ToString() == "Erkek")
+                if (dataGridView1.Rows[secilen].Cells[2].Value?.ToString() == "ERKEK")
                 {
                     rbErkek.Checked = true;
                 }
-                else if (dataGridView1.Rows[secilen].Cells[2].Value?.ToString() == "Kadın")
+                else if (dataGridView1.Rows[secilen].Cells[2].Value?.ToString() == "KADIN")
                 {
                     rbKadin.Checked = true;
                 }
@@ -447,7 +405,7 @@ namespace C_Forms
 
         private void PlasiyerKayit_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.OpenForms["AdminPanel"].Show();
+            Application.OpenForms?["AdminPanel"]?.Show();
         }
     }
 }

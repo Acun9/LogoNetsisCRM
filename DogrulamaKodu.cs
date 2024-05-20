@@ -7,7 +7,7 @@ namespace C_Forms
     public partial class DogrulamaKodu : Form
     {
         private string? dogrulamaKodu;
-        private string? kullaniciAdi;
+        private string kullaniciAdi;
 
         public DogrulamaKodu(string kod, string kullaniciAdi)
         {

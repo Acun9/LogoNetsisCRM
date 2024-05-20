@@ -100,7 +100,7 @@ namespace C_Forms
             txtMeslek.Location = new Point(147, 98);
             txtMeslek.Name = "txtMeslek";
             txtMeslek.Size = new Size(258, 23);
-            txtMeslek.TabIndex = 3;
+            txtMeslek.TabIndex = 5;
             // 
             // label2
             // 
@@ -118,7 +118,7 @@ namespace C_Forms
             txtAdSoyad.Location = new Point(147, 41);
             txtAdSoyad.Name = "txtAdSoyad";
             txtAdSoyad.Size = new Size(258, 23);
-            txtAdSoyad.TabIndex = 7;
+            txtAdSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -146,7 +146,7 @@ namespace C_Forms
             txtMail.Location = new Point(147, 214);
             txtMail.Name = "txtMail";
             txtMail.Size = new Size(258, 23);
-            txtMail.TabIndex = 15;
+            txtMail.TabIndex = 9;
             // 
             // label8
             // 
@@ -164,7 +164,7 @@ namespace C_Forms
             txtYonetici.Location = new Point(147, 185);
             txtYonetici.Name = "txtYonetici";
             txtYonetici.Size = new Size(258, 23);
-            txtYonetici.TabIndex = 13;
+            txtYonetici.TabIndex = 8;
             // 
             // label7
             // 
@@ -182,7 +182,7 @@ namespace C_Forms
             txtDepartman.Location = new Point(147, 156);
             txtDepartman.Name = "txtDepartman";
             txtDepartman.Size = new Size(258, 23);
-            txtDepartman.TabIndex = 11;
+            txtDepartman.TabIndex = 7;
             // 
             // label6
             // 
@@ -200,7 +200,7 @@ namespace C_Forms
             txtGorev.Location = new Point(147, 127);
             txtGorev.Name = "txtGorev";
             txtGorev.Size = new Size(258, 23);
-            txtGorev.TabIndex = 9;
+            txtGorev.TabIndex = 6;
             // 
             // label5
             // 
@@ -238,7 +238,7 @@ namespace C_Forms
             txtAdres.Location = new Point(147, 272);
             txtAdres.Name = "txtAdres";
             txtAdres.Size = new Size(258, 23);
-            txtAdres.TabIndex = 19;
+            txtAdres.TabIndex = 11;
             // 
             // label10
             // 
@@ -256,7 +256,7 @@ namespace C_Forms
             txtTelefon.Location = new Point(147, 243);
             txtTelefon.Name = "txtTelefon";
             txtTelefon.Size = new Size(258, 23);
-            txtTelefon.TabIndex = 17;
+            txtTelefon.TabIndex = 10;
             // 
             // label9
             // 
@@ -286,7 +286,7 @@ namespace C_Forms
             cmbIller.Location = new Point(147, 301);
             cmbIller.Name = "cmbIller";
             cmbIller.Size = new Size(258, 23);
-            cmbIller.TabIndex = 28;
+            cmbIller.TabIndex = 12;
             cmbIller.SelectedIndexChanged += cmbIller_SelectedIndexChanged;
             // 
             // cmbIlceler
@@ -297,7 +297,7 @@ namespace C_Forms
             cmbIlceler.Location = new Point(147, 330);
             cmbIlceler.Name = "cmbIlceler";
             cmbIlceler.Size = new Size(258, 23);
-            cmbIlceler.TabIndex = 29;
+            cmbIlceler.TabIndex = 13;
             // 
             // cmbUlkeler
             // 
@@ -307,14 +307,14 @@ namespace C_Forms
             cmbUlkeler.Location = new Point(147, 359);
             cmbUlkeler.Name = "cmbUlkeler";
             cmbUlkeler.Size = new Size(258, 23);
-            cmbUlkeler.TabIndex = 30;
+            cmbUlkeler.TabIndex = 14;
             // 
             // btnKaydet
             // 
             btnKaydet.Location = new Point(439, 325);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(75, 23);
-            btnKaydet.TabIndex = 32;
+            btnKaydet.TabIndex = 19;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
             btnKaydet.Click += btnKaydet_Click;
@@ -324,7 +324,7 @@ namespace C_Forms
             btnCikis.Location = new Point(541, 354);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(75, 23);
-            btnCikis.TabIndex = 33;
+            btnCikis.TabIndex = 21;
             btnCikis.Text = "Çıkış";
             btnCikis.UseVisualStyleBackColor = true;
             btnCikis.Click += btnCikis_Click;
@@ -343,7 +343,7 @@ namespace C_Forms
             btnResimEkle.Location = new Point(592, 130);
             btnResimEkle.Name = "btnResimEkle";
             btnResimEkle.Size = new Size(24, 23);
-            btnResimEkle.TabIndex = 35;
+            btnResimEkle.TabIndex = 16;
             btnResimEkle.Text = "...";
             btnResimEkle.UseVisualStyleBackColor = true;
             btnResimEkle.Click += btnResimEkle_Click;
@@ -364,7 +364,7 @@ namespace C_Forms
             txtResimYolu.Location = new Point(489, 130);
             txtResimYolu.Name = "txtResimYolu";
             txtResimYolu.Size = new Size(97, 23);
-            txtResimYolu.TabIndex = 37;
+            txtResimYolu.TabIndex = 15;
             // 
             // dataGridView1
             // 
@@ -372,7 +372,7 @@ namespace C_Forms
             dataGridView1.Location = new Point(12, 388);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(604, 314);
-            dataGridView1.TabIndex = 38;
+            dataGridView1.TabIndex = 22;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // openFileDialog1
@@ -386,7 +386,7 @@ namespace C_Forms
             axAcropdf1.Name = "axAcropdf1";
             axAcropdf1.OcxState = (AxHost.State)resources.GetObject("axAcropdf1.OcxState");
             axAcropdf1.Size = new Size(562, 690);
-            axAcropdf1.TabIndex = 39;
+            axAcropdf1.TabIndex = 23;
             // 
             // txtCvYolu
             // 
@@ -394,7 +394,7 @@ namespace C_Forms
             txtCvYolu.Location = new Point(489, 238);
             txtCvYolu.Name = "txtCvYolu";
             txtCvYolu.Size = new Size(97, 23);
-            txtCvYolu.TabIndex = 42;
+            txtCvYolu.TabIndex = 17;
             // 
             // label16
             // 
@@ -411,7 +411,7 @@ namespace C_Forms
             btnCvEkle.Location = new Point(592, 238);
             btnCvEkle.Name = "btnCvEkle";
             btnCvEkle.Size = new Size(24, 23);
-            btnCvEkle.TabIndex = 40;
+            btnCvEkle.TabIndex = 18;
             btnCvEkle.Text = "...";
             btnCvEkle.UseVisualStyleBackColor = true;
             btnCvEkle.Click += btnCvEkle_Click;
@@ -422,7 +422,7 @@ namespace C_Forms
             rbErkek.Location = new Point(147, 69);
             rbErkek.Name = "rbErkek";
             rbErkek.Size = new Size(53, 19);
-            rbErkek.TabIndex = 43;
+            rbErkek.TabIndex = 3;
             rbErkek.TabStop = true;
             rbErkek.Text = "Erkek";
             rbErkek.UseVisualStyleBackColor = true;
@@ -433,7 +433,7 @@ namespace C_Forms
             rbKadin.Location = new Point(206, 69);
             rbKadin.Name = "rbKadin";
             rbKadin.Size = new Size(55, 19);
-            rbKadin.TabIndex = 44;
+            rbKadin.TabIndex = 4;
             rbKadin.TabStop = true;
             rbKadin.Text = "Kadın";
             rbKadin.UseVisualStyleBackColor = true;
@@ -443,7 +443,7 @@ namespace C_Forms
             btnSil.Location = new Point(439, 354);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(75, 23);
-            btnSil.TabIndex = 45;
+            btnSil.TabIndex = 20;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
             btnSil.Click += btnSil_Click;
@@ -497,6 +497,7 @@ namespace C_Forms
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Plasiyer Kaydet";
             FormClosed += PlasiyerKayit_FormClosed;
+            Load += PlasiyerKayit_Load;
             ((System.ComponentModel.ISupportInitialize)pcrResim).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)axAcropdf1).EndInit();

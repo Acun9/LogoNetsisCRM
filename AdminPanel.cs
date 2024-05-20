@@ -12,7 +12,7 @@ namespace C_Forms
 {
     public partial class AdminPanel : Form
     {
-        string? kullaniciAdi;
+        string kullaniciAdi;
         public AdminPanel(string kullaniciAdi)
         {
             InitializeComponent();

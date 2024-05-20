@@ -470,24 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mmura\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dijital1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\VisualStudioProjects\\C#Forms\\SinerjiPanel\\SinerjiPanel.csproj",
+      "projectUniqueName": "C:\\Users\\dijital1\\Documents\\GitHub\\SinerjiPanel\\SinerjiPanel.csproj",
       "projectName": "SinerjiPanel",
-      "projectPath": "D:\\Desktop\\VisualStudioProjects\\C#Forms\\SinerjiPanel\\SinerjiPanel.csproj",
-      "packagesPath": "C:\\Users\\mmura\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\VisualStudioProjects\\C#Forms\\SinerjiPanel\\obj\\",
+      "projectPath": "C:\\Users\\dijital1\\Documents\\GitHub\\SinerjiPanel\\SinerjiPanel.csproj",
+      "packagesPath": "C:\\Users\\dijital1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dijital1\\Documents\\GitHub\\SinerjiPanel\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mmura\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dijital1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
