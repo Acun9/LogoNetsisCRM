@@ -303,11 +303,6 @@ namespace SinerjiPanel
         {
             string sourceConnectionString = "Server=DIJITALOFIS1\\NETSIS;Database=NETSISTEST1;User Id=sa;Password=SA123pass_;";
             string destinationConnectionString = "Server=DIJITALOFIS1\\NETSIS;Database=SINERJI2024TEST;User Id=sa;Password=SA123pass_;";
-            //string destinationConnectionString = "Server=DIJITALOFIS1\\NETSIS;Database=SINERJI2024;User Id=sa;Password=SA123pass_;";
-
-
-            //string sourceConnectionString = @"Data Source=DIJITALOFIS1\NETSIS;Initial Catalog=KullaniciGirisi;Integrated Security=True";
-            //string destinationConnectionString = @"Data Source=DIJITALOFIS1\NETSIS;Initial Catalog=SINERJI2024;Integrated Security=True";
 
             using (SqlConnection sourceConnection = new SqlConnection(sourceConnectionString))
             {
@@ -324,47 +319,47 @@ namespace SinerjiPanel
                         while (reader.Read())
                         {
                             string mergeQuery = @"
-                    MERGE INTO [SINERJI2024TEST].[dbo].[TBLCASABIT] AS Target
-                    USING (SELECT @CARI_KOD AS CARI_KOD,
-                                  @CARI_ISIM AS CARI_ISIM,
-                                  @CARI_ADRES AS CARI_ADRES,
-                                  @ULKE_KODU AS ULKE_KODU,
-                                  @CARI_IL AS CARI_IL,
-                                  @CARI_ILCE AS CARI_ILCE,
-                                  @POSTAKODU AS POSTAKODU,
-                                  @CARI_TEL AS CARI_TEL,
-                                  @FAX AS FAX,
-                                  @EMAIL AS EMAIL,
-                                  @WEB AS WEB,
-                                  @VERGI_DAIRESI AS VERGI_DAIRESI,
-                                  @VERGI_NUMARASI AS VERGI_NUMARASI,
-                                  @GRUP_KODU AS GRUP_KODU,
-                                  @RAPOR_KODU1 AS RAPOR_KODU1,
-                                  @RAPOR_KODU2 AS RAPOR_KODU2,
-                                  @SUBE_KODU AS SUBE_KODU,
-                                  @ISLETME_KODU AS ISLETME_KODU) AS Source
-                    ON Target.CARI_KOD = Source.CARI_KOD
-                    WHEN MATCHED THEN
-                        UPDATE SET CARI_ISIM = Source.CARI_ISIM,
-                                   CARI_ADRES = Source.CARI_ADRES,
-                                   ULKE_KODU = Source.ULKE_KODU,
-                                   CARI_IL = Source.CARI_IL,
-                                   CARI_ILCE = Source.CARI_ILCE,
-                                   POSTAKODU = Source.POSTAKODU,
-                                   CARI_TEL = Source.CARI_TEL,
-                                   FAX = Source.FAX,
-                                   EMAIL = Source.EMAIL,
-                                   WEB = Source.WEB,
-                                   VERGI_DAIRESI = Source.VERGI_DAIRESI,
-                                   VERGI_NUMARASI = Source.VERGI_NUMARASI,
-                                   GRUP_KODU = Source.GRUP_KODU,
-                                   RAPOR_KODU1 = Source.RAPOR_KODU1,
-                                   RAPOR_KODU2 = Source.RAPOR_KODU2,
-                                   SUBE_KODU = Source.SUBE_KODU,
-                                   ISLETME_KODU = Source.ISLETME_KODU
-                    WHEN NOT MATCHED THEN
-                        INSERT (CARI_KOD, CARI_ISIM, CARI_ADRES, ULKE_KODU, CARI_IL, CARI_ILCE, POSTAKODU, CARI_TEL, FAX, EMAIL, WEB, VERGI_DAIRESI, VERGI_NUMARASI, GRUP_KODU, RAPOR_KODU1, RAPOR_KODU2, SUBE_KODU, ISLETME_KODU)
-                        VALUES (Source.CARI_KOD, Source.CARI_ISIM, Source.CARI_ADRES, Source.ULKE_KODU, Source.CARI_IL, Source.CARI_ILCE, Source.POSTAKODU, Source.CARI_TEL, Source.FAX, Source.EMAIL, Source.WEB, Source.VERGI_DAIRESI, Source.VERGI_NUMARASI, Source.GRUP_KODU, Source.RAPOR_KODU1, Source.RAPOR_KODU2, Source.SUBE_KODU, Source.ISLETME_KODU);";
+                        MERGE INTO [SINERJI2024TEST].[dbo].[TBLCASABIT] AS Target
+                        USING (SELECT @CARI_KOD AS CARI_KOD,
+                                      @CARI_ISIM AS CARI_ISIM,
+                                      @CARI_ADRES AS CARI_ADRES,
+                                      @ULKE_KODU AS ULKE_KODU,
+                                      @CARI_IL AS CARI_IL,
+                                      @CARI_ILCE AS CARI_ILCE,
+                                      @POSTAKODU AS POSTAKODU,
+                                      @CARI_TEL AS CARI_TEL,
+                                      @FAX AS FAX,
+                                      @EMAIL AS EMAIL,
+                                      @WEB AS WEB,
+                                      @VERGI_DAIRESI AS VERGI_DAIRESI,
+                                      @VERGI_NUMARASI AS VERGI_NUMARASI,
+                                      @GRUP_KODU AS GRUP_KODU,
+                                      @RAPOR_KODU1 AS RAPOR_KODU1,
+                                      @RAPOR_KODU2 AS RAPOR_KODU2,
+                                      @SUBE_KODU AS SUBE_KODU,
+                                      @ISLETME_KODU AS ISLETME_KODU) AS Source
+                        ON Target.CARI_KOD = Source.CARI_KOD
+                        WHEN MATCHED THEN
+                            UPDATE SET CARI_ISIM = Source.CARI_ISIM,
+                                       CARI_ADRES = Source.CARI_ADRES,
+                                       ULKE_KODU = Source.ULKE_KODU,
+                                       CARI_IL = Source.CARI_IL,
+                                       CARI_ILCE = Source.CARI_ILCE,
+                                       POSTAKODU = Source.POSTAKODU,
+                                       CARI_TEL = Source.CARI_TEL,
+                                       FAX = Source.FAX,
+                                       EMAIL = Source.EMAIL,
+                                       WEB = Source.WEB,
+                                       VERGI_DAIRESI = Source.VERGI_DAIRESI,
+                                       VERGI_NUMARASI = Source.VERGI_NUMARASI,
+                                       GRUP_KODU = Source.GRUP_KODU,
+                                       RAPOR_KODU1 = Source.RAPOR_KODU1,
+                                       RAPOR_KODU2 = Source.RAPOR_KODU2,
+                                       SUBE_KODU = Source.SUBE_KODU,
+                                       ISLETME_KODU = Source.ISLETME_KODU
+                        WHEN NOT MATCHED THEN
+                            INSERT (CARI_KOD, CARI_ISIM, CARI_ADRES, ULKE_KODU, CARI_IL, CARI_ILCE, POSTAKODU, CARI_TEL, FAX, EMAIL, WEB, VERGI_DAIRESI, VERGI_NUMARASI, GRUP_KODU, RAPOR_KODU1, RAPOR_KODU2, SUBE_KODU, ISLETME_KODU)
+                            VALUES (Source.CARI_KOD, Source.CARI_ISIM, Source.CARI_ADRES, Source.ULKE_KODU, Source.CARI_IL, Source.CARI_ILCE, Source.POSTAKODU, Source.CARI_TEL, Source.FAX, Source.EMAIL, Source.WEB, Source.VERGI_DAIRESI, Source.VERGI_NUMARASI, Source.GRUP_KODU, Source.RAPOR_KODU1, Source.RAPOR_KODU2, Source.SUBE_KODU, Source.ISLETME_KODU);";
 
                             SqlCommand mergeCommand = new SqlCommand(mergeQuery, destinationConnection);
 
@@ -389,10 +384,17 @@ namespace SinerjiPanel
 
                             mergeCommand.ExecuteNonQuery();
                         }
+
+                        // Kaynak tablodan silinmiş olan kayıtları hedef tablodan sil
+                        string deleteQuery = @"
+                    DELETE FROM [SINERJI2024TEST].[dbo].[TBLCASABIT]
+                    WHERE CARI_KOD NOT IN (SELECT CARI_KOD FROM [NETSISTEST1].[dbo].[CARI_KAYIT])";
+
+                        SqlCommand deleteCommand = new SqlCommand(deleteQuery, destinationConnection);
+                        deleteCommand.ExecuteNonQuery();
                     }
                 }
             }
-
             MessageBox.Show("Veri aktarımı başarıyla tamamlandı.");
         }
     }

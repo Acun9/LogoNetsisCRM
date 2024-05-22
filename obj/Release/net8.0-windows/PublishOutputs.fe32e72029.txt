@@ -1,0 +1,13 @@
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\SinerjiPanel.exe
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\SinerjiPanel.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\SinerjiPanel.deps.json
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\SinerjiPanel.runtimeconfig.json
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\SinerjiPanel.pdb
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\Interop.AcroPDFLib.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\AxInterop.AcroPDFLib.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\System.Data.SqlClient.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\runtimes\win-arm64\native\sni.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\runtimes\win-x64\native\sni.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\runtimes\win-x86\native\sni.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dijital1\Documents\GitHub\SinerjiPanel\bin\Release\net8.0-windows\app.publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
