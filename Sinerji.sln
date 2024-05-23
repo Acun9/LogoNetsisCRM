@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0_PlasiyerKayitPanel", "0_PlasiyerKayitPanel\0_PlasiyerKayitPanel.csproj", "{5A90AACB-006E-4573-86A8-1113132AC890}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_CariKayitNetOpenXREST", "2_CariKayitNetOpenXREST\2_CariKayitNetOpenXREST.csproj", "{446F2772-F568-4E85-AAFB-D04660733970}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_CariKayitNetOpenX", "1_CariKayitNetOpenX\1_CariKayitNetOpenX.csproj", "{C07AD696-6BF6-400D-8922-6D22ADE017E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|ARM32.Build.0 = Debug|ARM32
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|x86.ActiveCfg = Debug|x86
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Debug|x86.Build.0 = Debug|x86
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|ARM32.ActiveCfg = Release|ARM32
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|ARM32.Build.0 = Release|ARM32
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|x86.ActiveCfg = Release|x86
+		{5A90AACB-006E-4573-86A8-1113132AC890}.Release|x86.Build.0 = Release|x86
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|ARM32.Build.0 = Debug|ARM32
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|x86.ActiveCfg = Debug|x86
+		{446F2772-F568-4E85-AAFB-D04660733970}.Debug|x86.Build.0 = Debug|x86
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|ARM32.ActiveCfg = Release|ARM32
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|ARM32.Build.0 = Release|ARM32
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|x86.ActiveCfg = Release|x86
+		{446F2772-F568-4E85-AAFB-D04660733970}.Release|x86.Build.0 = Release|x86
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|ARM32.Build.0 = Debug|ARM32
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|x86.ActiveCfg = Debug|x86
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Debug|x86.Build.0 = Debug|x86
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|ARM32.ActiveCfg = Release|ARM32
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|ARM32.Build.0 = Release|ARM32
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|x86.ActiveCfg = Release|x86
+		{C07AD696-6BF6-400D-8922-6D22ADE017E0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6908EC2-CDB2-4F77-BEF9-7A9161932988}
+	EndGlobalSection
+EndGlobal

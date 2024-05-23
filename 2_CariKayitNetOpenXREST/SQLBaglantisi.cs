@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using NetOpenX50;
+using System.Runtime.InteropServices;
+
+
+namespace C_Forms
+{
+    internal class SQLBaglantisi
+    {
+        public SqlConnection baglanti()
+        {
+            //SqlConnection baglan = new SqlConnection(@"Data Source=DIJITALOFIS1\NETSIS;Initial Catalog=KullaniciGirisi;Integrated Security=True");
+            SqlConnection baglan = new SqlConnection("Server=SRV1;Database=SINERJICRM;User Id=sa;Password=SA123pass_;");
+            baglan.Open();
+            return baglan;
+        }
+    }
+}
+
+//namespace C_Forms
+//{
+//    internal class SQLBaglantisi
+//    {
+//        public SqlConnection baglanti()
+//        {
+//            //SqlConnection baglan = new SqlConnection(@"Data Source=DIJITALOFIS1\NETSIS;Initial Catalog=KullaniciGirisi;Integrated Security=True");
+//            SqlConnection baglan = new SqlConnection("Server=DIJITALOFIS1\\NETSIS;Database=NETSISTEST1;User Id=sa;Password=SA123pass_;");
+//            baglan.Open();
+//            return baglan;
+//        }
+
+//        private Kernel kernel;
+//        private Sirket sirket;
+
+//        public SQLBaglantisi()
+//        {
+//            InitializeNetOpenX();
+//        }
+
+//        private void InitializeNetOpenX()
+//        {
+//            kernel = new Kernel();
+//            sirket = kernel.yeniSirket(TVTTipi.vtMSSQL, "SINERJI2024", "sa", "SA123pass_", "netsis", "5091", 0);
+//        }
+
+//        public Kernel GetKernel()
+//        {
+//            return kernel;
+//        }
+
+//        public Sirket GetSirket()
+//        {
+//            return sirket;
+//        }
+
+//        public void CleanupNetOpenX()
+//        {
+//            Marshal.ReleaseComObject(sirket);
+//            kernel.FreeNetsisLibrary();
+//            Marshal.ReleaseComObject(kernel);
+//        }
+//    }
+//}
+
