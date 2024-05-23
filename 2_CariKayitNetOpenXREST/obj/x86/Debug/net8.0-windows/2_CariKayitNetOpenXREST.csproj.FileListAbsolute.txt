@@ -32,3 +32,4 @@ C:\Users\dijital1\Documents\GitHub\Sinerji\2_CariKayitNetOpenXREST\obj\x86\Debug
 C:\Users\dijital1\Documents\GitHub\Sinerji\2_CariKayitNetOpenXREST\obj\x86\Debug\net8.0-windows\2_CariKayitNetOpenXREST.pdb
 C:\Users\dijital1\Documents\GitHub\Sinerji\2_CariKayitNetOpenXREST\obj\x86\Debug\net8.0-windows\2_CariKayitNetOpenXREST.genruntimeconfig.cache
 C:\Users\dijital1\Documents\GitHub\Sinerji\2_CariKayitNetOpenXREST\obj\x86\Debug\net8.0-windows\ref\2_CariKayitNetOpenXREST.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\2_CariKayitNetOpenXREST\obj\x86\Debug\net8.0-windows\2_CariKayitNetOpenXREST.sourcelink.json
