@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("1_CariKayitNetOpenX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3edb619269e056414a23b2c94478b06a6808651")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7238f7ca44782af339b0c69ef6d2ea4c8168f2e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("1_CariKayitNetOpenX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("1_CariKayitNetOpenX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

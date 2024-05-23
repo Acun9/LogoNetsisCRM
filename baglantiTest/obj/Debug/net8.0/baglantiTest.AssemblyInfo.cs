@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("baglantiTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44d0a4967844a94266e72c74233381185390aa0c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7238f7ca44782af339b0c69ef6d2ea4c8168f2e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("baglantiTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("baglantiTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
