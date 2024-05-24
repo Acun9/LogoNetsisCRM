@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C07AD696-6BF6-400D-8922-6D22ADE017E0}|1_CariKayitNetOpenX\\1_CariKayitNetOpenX.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\1_carikayitnetopenx\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07AD696-6BF6-400D-8922-6D22ADE017E0}|1_CariKayitNetOpenX\\1_CariKayitNetOpenX.csproj|solutionrelative:1_carikayitnetopenx\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446F2772-F568-4E85-AAFB-D04660733970}|2_CariKayitNetOpenXREST\\2_CariKayitNetOpenXREST.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\2_carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446F2772-F568-4E85-AAFB-D04660733970}|2_CariKayitNetOpenXREST\\2_CariKayitNetOpenXREST.csproj|solutionrelative:2_carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 186,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CariKayit.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\1_CariKayitNetOpenX\\CariKayit.cs",
+              "RelativeDocumentMoniker": "1_CariKayitNetOpenX\\CariKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\1_CariKayitNetOpenX\\CariKayit.cs",
+              "RelativeToolTip": "1_CariKayitNetOpenX\\CariKayit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T08:29:42.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CariKayit.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\2_CariKayitNetOpenXREST\\CariKayit.cs",
+              "RelativeDocumentMoniker": "2_CariKayitNetOpenXREST\\CariKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\2_CariKayitNetOpenXREST\\CariKayit.cs",
+              "RelativeToolTip": "2_CariKayitNetOpenXREST\\CariKayit.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T08:15:33.977Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

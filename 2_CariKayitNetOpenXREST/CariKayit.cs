@@ -1,19 +1,7 @@
 ﻿using C_Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text.Json;
 using Newtonsoft.Json;
 
 
@@ -29,7 +17,7 @@ namespace SinerjiPanel
             InitializeComponent();            
         }
 
-        private async void CariKayit_Load(object sender, EventArgs e)
+        private void CariKayit_Load(object sender, EventArgs e)
         {
             LoadComboboxData();            
         }
@@ -37,7 +25,7 @@ namespace SinerjiPanel
         private async Task InitializeNetOpenX()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://srv1:8491/");
+            client.BaseAddress = new Uri("http://srv1/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

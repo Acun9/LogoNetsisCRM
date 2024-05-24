@@ -10,25 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="NetOpenX50">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>5</VersionMajor>
-      <Guid>184b0a14-1416-44d7-978c-decc4fc09693</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-      <Private>True</Private>
-    </COMReference>
-    <COMReference Include="NetGraphLibrary">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>5</VersionMajor>
-      <Guid>301e1ec3-682b-427b-a230-9613e6c74378</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="CommonQuery">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
