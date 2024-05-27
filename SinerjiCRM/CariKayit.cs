@@ -33,24 +33,40 @@ namespace Sinerji
             string mail = txtMail.Text;
             string web = txtWeb.Text;
             string vergiDaire = cmbVergiDairesi.SelectedItem?.ToString() ?? string.Empty;
-            string vergiNo = txtVergiNo.Text;
+            string vergiTCNo = txtVergiTCNo.Text;
             string grupKodu = cmbGrupKodu.SelectedItem?.ToString() ?? string.Empty;
             string raporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty;
             string raporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty;
 
             //Cari Kod kontrolü
-            if (string.IsNullOrWhiteSpace(cariKod))
+            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
             {
                 MessageBox.Show("Lütfen Cari Kod girin.");
                 return;
             }
 
-            //// Örnek: TC numarası kontrolü
-            //if (!int.TryParse(txtTC.Text, out _) || txtTC.Text.Length != 11)
-            //{
-            //    MessageBox.Show("Lütfen geçerli bir T.C. kimlik numarası girin.");
-            //    return;
-            //}
+            // Vergi/T.C. numarası kontrolü           
+            if (rbVergi.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 10 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 10 haneli geçerli bir Vergi No giriniz.");
+                    return;
+                }
+            }
+            else if (rbTC.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 11 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 11 haneli geçerli bir T.C. No giriniz.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Vergi / T.C. No belirtiniz.");
+                return;
+            }
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
@@ -70,8 +86,8 @@ namespace Sinerji
 
                 // Yeni kayıt ekleme
                 string queryInsert = @"INSERT INTO dbo.CARI_KAYIT 
-                               (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2) 
-                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2)";
+                               (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2) 
+                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2)";
 
                 using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
                 {
@@ -88,7 +104,7 @@ namespace Sinerji
                     commandInsert.Parameters.AddWithValue("@MAIL", mail);
                     commandInsert.Parameters.AddWithValue("@WEB", web);
                     commandInsert.Parameters.AddWithValue("@VERGI_DAIRE", vergiDaire);
-                    commandInsert.Parameters.AddWithValue("@VERGI_NO", vergiNo);
+                    commandInsert.Parameters.AddWithValue("@VERGI_TC_NO", vergiTCNo);
                     commandInsert.Parameters.AddWithValue("@GRUP_KODU", grupKodu);
                     commandInsert.Parameters.AddWithValue("@RAPOR_KODU_1", raporKodu1);
                     commandInsert.Parameters.AddWithValue("@RAPOR_KODU_2", raporKodu2);
@@ -119,10 +135,40 @@ namespace Sinerji
             string mail = txtMail.Text;
             string web = txtWeb.Text;
             string vergiDaire = cmbVergiDairesi.SelectedItem?.ToString() ?? string.Empty;
-            string vergiNo = txtVergiNo.Text;
+            string vergiTCNo = txtVergiTCNo.Text;
             string grupKodu = cmbGrupKodu.SelectedItem?.ToString() ?? string.Empty;
             string raporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty;
             string raporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty;
+
+            //Cari Kod kontrolü
+            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
+            {
+                MessageBox.Show("Lütfen Cari Kod girin.");
+                return;
+            }
+
+            // Vergi/T.C. numarası kontrolü           
+            if (rbVergi.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 10 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 10 haneli geçerli bir Vergi No giriniz.");
+                    return;
+                }
+            }
+            else if (rbTC.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 11 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 11 haneli geçerli bir T.C. No giriniz.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Vergi / T.C. No belirtiniz.");
+                return;
+            }
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
@@ -138,7 +184,7 @@ namespace Sinerji
                                MAIL = @MAIL,
                                WEB = @WEB,
                                VERGI_DAIRE = @VERGI_DAIRE,
-                               VERGI_NO = @VERGI_NO,
+                               VERGI_TC_NO = @VERGI_TC_NO,
                                GRUP_KODU = @GRUP_KODU,
                                RAPOR_KODU_1 = @RAPOR_KODU_1,
                                RAPOR_KODU_2 = @RAPOR_KODU_2
@@ -158,7 +204,7 @@ namespace Sinerji
                     commandUpdate.Parameters.AddWithValue("@MAIL", mail);
                     commandUpdate.Parameters.AddWithValue("@WEB", web);
                     commandUpdate.Parameters.AddWithValue("@VERGI_DAIRE", vergiDaire);
-                    commandUpdate.Parameters.AddWithValue("@VERGI_NO", vergiNo);
+                    commandUpdate.Parameters.AddWithValue("@VERGI_TC_NO", vergiTCNo);
                     commandUpdate.Parameters.AddWithValue("@GRUP_KODU", grupKodu);
                     commandUpdate.Parameters.AddWithValue("@RAPOR_KODU_1", raporKodu1);
                     commandUpdate.Parameters.AddWithValue("@RAPOR_KODU_2", raporKodu2);
@@ -350,7 +396,7 @@ namespace Sinerji
                                 EMAIL = reader["MAIL"].ToString(),
                                 WEB = reader["WEB"].ToString(),
                                 VERGI_DAIRESI = reader["VERGI_DAIRE"].ToString(),
-                                VERGI_NUMARASI = reader["VERGI_NO"].ToString(),
+                                VERGI_NUMARASI = reader["VERGI_TC_NO"].ToString(),
                                 Grup_Kodu = reader["GRUP_KODU"].ToString(),
                                 RAPOR_KODU1 = reader["RAPOR_KODU_1"].ToString(),
                                 Rapor_Kodu2 = reader["RAPOR_KODU_2"].ToString(),

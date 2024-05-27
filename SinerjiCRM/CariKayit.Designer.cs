@@ -52,8 +52,7 @@
             label11 = new Label();
             cmbVergiDairesi = new ComboBox();
             label12 = new Label();
-            label13 = new Label();
-            txtVergiNo = new TextBox();
+            txtVergiTCNo = new TextBox();
             label14 = new Label();
             txtTelefon = new TextBox();
             label15 = new Label();
@@ -63,10 +62,10 @@
             label17 = new Label();
             txtWeb = new TextBox();
             btnAktar = new Button();
-            txtTC = new TextBox();
-            label7 = new Label();
             txtCariIsim = new TextBox();
             txtAdres = new TextBox();
+            rbVergi = new RadioButton();
+            rbTC = new RadioButton();
             SuspendLayout();
             // 
             // label1
@@ -75,9 +74,9 @@
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(56, 15);
+            label1.Size = new Size(53, 15);
             label1.TabIndex = 0;
-            label1.Text = "Cari Kod:";
+            label1.Text = "Cari Kod";
             // 
             // txtCariKod
             // 
@@ -85,7 +84,7 @@
             txtCariKod.Location = new Point(120, 6);
             txtCariKod.MaxLength = 15;
             txtCariKod.Name = "txtCariKod";
-            txtCariKod.Size = new Size(258, 23);
+            txtCariKod.Size = new Size(375, 23);
             txtCariKod.TabIndex = 1;
             // 
             // label2
@@ -94,9 +93,9 @@
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label2.Location = new Point(12, 38);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 2;
-            label2.Text = "Cari İsim:";
+            label2.Text = "Cari İsim";
             // 
             // label3
             // 
@@ -104,9 +103,9 @@
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.Location = new Point(12, 90);
             label3.Name = "label3";
-            label3.Size = new Size(42, 15);
+            label3.Size = new Size(39, 15);
             label3.TabIndex = 7;
-            label3.Text = "Adres:";
+            label3.Text = "Adres";
             // 
             // label4
             // 
@@ -114,9 +113,9 @@
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label4.Location = new Point(12, 142);
             label4.Name = "label4";
-            label4.Size = new Size(36, 15);
+            label4.Size = new Size(33, 15);
             label4.TabIndex = 8;
-            label4.Text = "Ülke:";
+            label4.Text = "Ülke";
             // 
             // cmbUlke
             // 
@@ -126,7 +125,7 @@
             cmbUlke.FormattingEnabled = true;
             cmbUlke.Location = new Point(120, 139);
             cmbUlke.Name = "cmbUlke";
-            cmbUlke.Size = new Size(258, 23);
+            cmbUlke.Size = new Size(375, 23);
             cmbUlke.TabIndex = 4;
             // 
             // label5
@@ -136,9 +135,9 @@
             label5.Location = new Point(12, 171);
             label5.Name = "label5";
             label5.RightToLeft = RightToLeft.No;
-            label5.Size = new Size(17, 15);
+            label5.Size = new Size(14, 15);
             label5.TabIndex = 62;
-            label5.Text = "İl:";
+            label5.Text = "İl";
             // 
             // cmbIl
             // 
@@ -148,7 +147,7 @@
             cmbIl.FormattingEnabled = true;
             cmbIl.Location = new Point(120, 168);
             cmbIl.Name = "cmbIl";
-            cmbIl.Size = new Size(258, 23);
+            cmbIl.Size = new Size(375, 23);
             cmbIl.TabIndex = 5;
             cmbIl.SelectedIndexChanged += cmbIl_SelectedIndexChanged;
             // 
@@ -159,9 +158,9 @@
             label6.Location = new Point(12, 200);
             label6.Name = "label6";
             label6.RightToLeft = RightToLeft.No;
-            label6.Size = new Size(30, 15);
+            label6.Size = new Size(27, 15);
             label6.TabIndex = 64;
-            label6.Text = "İlçe:";
+            label6.Text = "İlçe";
             // 
             // cmbIlce
             // 
@@ -171,7 +170,7 @@
             cmbIlce.FormattingEnabled = true;
             cmbIlce.Location = new Point(120, 197);
             cmbIlce.Name = "cmbIlce";
-            cmbIlce.Size = new Size(258, 23);
+            cmbIlce.Size = new Size(375, 23);
             cmbIlce.TabIndex = 6;
             // 
             // label8
@@ -181,9 +180,9 @@
             label8.Location = new Point(12, 229);
             label8.Name = "label8";
             label8.RightToLeft = RightToLeft.No;
-            label8.Size = new Size(72, 15);
+            label8.Size = new Size(69, 15);
             label8.TabIndex = 67;
-            label8.Text = "Posta Kodu:";
+            label8.Text = "Posta Kodu";
             // 
             // cmbPostaKodu
             // 
@@ -193,13 +192,13 @@
             cmbPostaKodu.FormattingEnabled = true;
             cmbPostaKodu.Location = new Point(120, 226);
             cmbPostaKodu.Name = "cmbPostaKodu";
-            cmbPostaKodu.Size = new Size(258, 23);
+            cmbPostaKodu.Size = new Size(375, 23);
             cmbPostaKodu.TabIndex = 7;
             // 
             // btnEkle
             // 
             btnEkle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEkle.Location = new Point(141, 545);
+            btnEkle.Location = new Point(258, 516);
             btnEkle.Name = "btnEkle";
             btnEkle.Size = new Size(75, 23);
             btnEkle.TabIndex = 18;
@@ -210,7 +209,7 @@
             // btnGuncelle
             // 
             btnGuncelle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGuncelle.Location = new Point(222, 545);
+            btnGuncelle.Location = new Point(339, 516);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(75, 23);
             btnGuncelle.TabIndex = 19;
@@ -221,7 +220,7 @@
             // btnSil
             // 
             btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSil.Location = new Point(303, 545);
+            btnSil.Location = new Point(420, 516);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(75, 23);
             btnSil.TabIndex = 20;
@@ -232,7 +231,7 @@
             // btnGeri
             // 
             btnGeri.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGeri.Location = new Point(303, 574);
+            btnGeri.Location = new Point(420, 545);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(75, 23);
             btnGeri.TabIndex = 22;
@@ -246,21 +245,21 @@
             cmbRaporKodu2.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRaporKodu2.Font = new Font("Segoe UI", 9F);
             cmbRaporKodu2.FormattingEnabled = true;
-            cmbRaporKodu2.Location = new Point(120, 516);
+            cmbRaporKodu2.Location = new Point(120, 487);
             cmbRaporKodu2.Name = "cmbRaporKodu2";
-            cmbRaporKodu2.Size = new Size(258, 23);
+            cmbRaporKodu2.Size = new Size(375, 23);
             cmbRaporKodu2.TabIndex = 17;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label9.Location = new Point(12, 519);
+            label9.Location = new Point(12, 490);
             label9.Name = "label9";
             label9.RightToLeft = RightToLeft.No;
-            label9.Size = new Size(85, 15);
+            label9.Size = new Size(82, 15);
             label9.TabIndex = 77;
-            label9.Text = "Rapor Kodu 2:";
+            label9.Text = "Rapor Kodu 2";
             // 
             // cmbRaporKodu1
             // 
@@ -268,21 +267,21 @@
             cmbRaporKodu1.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRaporKodu1.Font = new Font("Segoe UI", 9F);
             cmbRaporKodu1.FormattingEnabled = true;
-            cmbRaporKodu1.Location = new Point(120, 487);
+            cmbRaporKodu1.Location = new Point(120, 458);
             cmbRaporKodu1.Name = "cmbRaporKodu1";
-            cmbRaporKodu1.Size = new Size(258, 23);
+            cmbRaporKodu1.Size = new Size(375, 23);
             cmbRaporKodu1.TabIndex = 16;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label10.Location = new Point(12, 490);
+            label10.Location = new Point(12, 461);
             label10.Name = "label10";
             label10.RightToLeft = RightToLeft.No;
-            label10.Size = new Size(85, 15);
+            label10.Size = new Size(82, 15);
             label10.TabIndex = 75;
-            label10.Text = "Rapor Kodu 1:";
+            label10.Text = "Rapor Kodu 1";
             // 
             // cmbGrupKodu
             // 
@@ -290,20 +289,20 @@
             cmbGrupKodu.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbGrupKodu.Font = new Font("Segoe UI", 9F);
             cmbGrupKodu.FormattingEnabled = true;
-            cmbGrupKodu.Location = new Point(120, 458);
+            cmbGrupKodu.Location = new Point(120, 429);
             cmbGrupKodu.Name = "cmbGrupKodu";
-            cmbGrupKodu.Size = new Size(258, 23);
+            cmbGrupKodu.Size = new Size(375, 23);
             cmbGrupKodu.TabIndex = 15;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label11.Location = new Point(12, 461);
+            label11.Location = new Point(12, 432);
             label11.Name = "label11";
-            label11.Size = new Size(70, 15);
+            label11.Size = new Size(67, 15);
             label11.TabIndex = 73;
-            label11.Text = "Grup Kodu:";
+            label11.Text = "Grup Kodu";
             // 
             // cmbVergiDairesi
             // 
@@ -313,7 +312,7 @@
             cmbVergiDairesi.FormattingEnabled = true;
             cmbVergiDairesi.Location = new Point(120, 371);
             cmbVergiDairesi.Name = "cmbVergiDairesi";
-            cmbVergiDairesi.Size = new Size(258, 23);
+            cmbVergiDairesi.Size = new Size(375, 23);
             cmbVergiDairesi.TabIndex = 12;
             // 
             // label12
@@ -322,29 +321,18 @@
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label12.Location = new Point(12, 374);
             label12.Name = "label12";
-            label12.Size = new Size(80, 15);
+            label12.Size = new Size(77, 15);
             label12.TabIndex = 79;
-            label12.Text = "Vergi Dairesi:";
+            label12.Text = "Vergi Dairesi";
             // 
-            // label13
+            // txtVergiTCNo
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label13.Location = new Point(12, 403);
-            label13.Name = "label13";
-            label13.RightToLeft = RightToLeft.No;
-            label13.Size = new Size(58, 15);
-            label13.TabIndex = 81;
-            label13.Text = "Vergi No:";
-            // 
-            // txtVergiNo
-            // 
-            txtVergiNo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtVergiNo.Location = new Point(120, 400);
-            txtVergiNo.MaxLength = 15;
-            txtVergiNo.Name = "txtVergiNo";
-            txtVergiNo.Size = new Size(258, 23);
-            txtVergiNo.TabIndex = 13;
+            txtVergiTCNo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtVergiTCNo.Location = new Point(180, 400);
+            txtVergiTCNo.MaxLength = 15;
+            txtVergiTCNo.Name = "txtVergiTCNo";
+            txtVergiTCNo.Size = new Size(315, 23);
+            txtVergiTCNo.TabIndex = 13;
             // 
             // label14
             // 
@@ -353,9 +341,9 @@
             label14.Location = new Point(12, 258);
             label14.Name = "label14";
             label14.RightToLeft = RightToLeft.No;
-            label14.Size = new Size(52, 15);
+            label14.Size = new Size(49, 15);
             label14.TabIndex = 83;
-            label14.Text = "Telefon:";
+            label14.Text = "Telefon";
             // 
             // txtTelefon
             // 
@@ -363,7 +351,7 @@
             txtTelefon.Location = new Point(120, 255);
             txtTelefon.MaxLength = 20;
             txtTelefon.Name = "txtTelefon";
-            txtTelefon.Size = new Size(258, 23);
+            txtTelefon.Size = new Size(375, 23);
             txtTelefon.TabIndex = 8;
             // 
             // label15
@@ -373,9 +361,9 @@
             label15.Location = new Point(12, 287);
             label15.Name = "label15";
             label15.RightToLeft = RightToLeft.No;
-            label15.Size = new Size(34, 15);
+            label15.Size = new Size(31, 15);
             label15.TabIndex = 85;
-            label15.Text = "Faks:";
+            label15.Text = "Faks";
             // 
             // txtFaks
             // 
@@ -383,7 +371,7 @@
             txtFaks.Location = new Point(120, 284);
             txtFaks.MaxLength = 20;
             txtFaks.Name = "txtFaks";
-            txtFaks.Size = new Size(258, 23);
+            txtFaks.Size = new Size(375, 23);
             txtFaks.TabIndex = 9;
             // 
             // label16
@@ -393,9 +381,9 @@
             label16.Location = new Point(12, 316);
             label16.Name = "label16";
             label16.RightToLeft = RightToLeft.No;
-            label16.Size = new Size(51, 15);
+            label16.Size = new Size(48, 15);
             label16.TabIndex = 87;
-            label16.Text = "E-Posta:";
+            label16.Text = "E-Posta";
             // 
             // txtMail
             // 
@@ -403,7 +391,7 @@
             txtMail.Location = new Point(120, 313);
             txtMail.MaxLength = 255;
             txtMail.Name = "txtMail";
-            txtMail.Size = new Size(258, 23);
+            txtMail.Size = new Size(375, 23);
             txtMail.TabIndex = 10;
             // 
             // label17
@@ -413,9 +401,9 @@
             label17.Location = new Point(12, 345);
             label17.Name = "label17";
             label17.RightToLeft = RightToLeft.No;
-            label17.Size = new Size(74, 15);
+            label17.Size = new Size(71, 15);
             label17.TabIndex = 89;
-            label17.Text = "Web Adresi:";
+            label17.Text = "Web Adresi";
             // 
             // txtWeb
             // 
@@ -423,39 +411,19 @@
             txtWeb.Location = new Point(120, 342);
             txtWeb.MaxLength = 60;
             txtWeb.Name = "txtWeb";
-            txtWeb.Size = new Size(258, 23);
+            txtWeb.Size = new Size(375, 23);
             txtWeb.TabIndex = 11;
             // 
             // btnAktar
             // 
             btnAktar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAktar.Location = new Point(141, 574);
+            btnAktar.Location = new Point(258, 545);
             btnAktar.Name = "btnAktar";
             btnAktar.Size = new Size(156, 23);
             btnAktar.TabIndex = 21;
             btnAktar.Text = "Tabloyu NETSIS'e aktar";
             btnAktar.UseVisualStyleBackColor = true;
             btnAktar.Click += btnAktar_Click;
-            // 
-            // txtTC
-            // 
-            txtTC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtTC.Location = new Point(120, 429);
-            txtTC.MaxLength = 11;
-            txtTC.Name = "txtTC";
-            txtTC.Size = new Size(258, 23);
-            txtTC.TabIndex = 14;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label7.Location = new Point(12, 432);
-            label7.Name = "label7";
-            label7.RightToLeft = RightToLeft.No;
-            label7.Size = new Size(86, 15);
-            label7.TabIndex = 66;
-            label7.Text = "T.C. Kimlik No:";
             // 
             // txtCariIsim
             // 
@@ -464,7 +432,7 @@
             txtCariIsim.MaxLength = 100;
             txtCariIsim.Multiline = true;
             txtCariIsim.Name = "txtCariIsim";
-            txtCariIsim.Size = new Size(258, 46);
+            txtCariIsim.Size = new Size(375, 46);
             txtCariIsim.TabIndex = 2;
             // 
             // txtAdres
@@ -474,14 +442,42 @@
             txtAdres.MaxLength = 255;
             txtAdres.Multiline = true;
             txtAdres.Name = "txtAdres";
-            txtAdres.Size = new Size(258, 46);
+            txtAdres.Size = new Size(375, 46);
             txtAdres.TabIndex = 3;
+            // 
+            // rbVergi
+            // 
+            rbVergi.AutoSize = true;
+            rbVergi.CheckAlign = ContentAlignment.MiddleRight;
+            rbVergi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            rbVergi.Location = new Point(12, 401);
+            rbVergi.Name = "rbVergi";
+            rbVergi.Size = new Size(73, 19);
+            rbVergi.TabIndex = 90;
+            rbVergi.TabStop = true;
+            rbVergi.Text = "Vergi No";
+            rbVergi.UseVisualStyleBackColor = true;
+            // 
+            // rbTC
+            // 
+            rbTC.AutoSize = true;
+            rbTC.CheckAlign = ContentAlignment.MiddleRight;
+            rbTC.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            rbTC.Location = new Point(94, 401);
+            rbTC.Name = "rbTC";
+            rbTC.Size = new Size(80, 19);
+            rbTC.TabIndex = 91;
+            rbTC.TabStop = true;
+            rbTC.Text = "/    T.C. No";
+            rbTC.UseVisualStyleBackColor = true;
             // 
             // CariKayit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(396, 608);
+            ClientSize = new Size(513, 651);
+            Controls.Add(rbTC);
+            Controls.Add(rbVergi);
             Controls.Add(txtAdres);
             Controls.Add(txtCariIsim);
             Controls.Add(btnAktar);
@@ -493,8 +489,7 @@
             Controls.Add(txtFaks);
             Controls.Add(label14);
             Controls.Add(txtTelefon);
-            Controls.Add(label13);
-            Controls.Add(txtVergiNo);
+            Controls.Add(txtVergiTCNo);
             Controls.Add(cmbVergiDairesi);
             Controls.Add(label12);
             Controls.Add(cmbRaporKodu2);
@@ -509,7 +504,6 @@
             Controls.Add(btnEkle);
             Controls.Add(cmbPostaKodu);
             Controls.Add(label8);
-            Controls.Add(label7);
             Controls.Add(cmbIlce);
             Controls.Add(label6);
             Controls.Add(cmbIl);
@@ -517,7 +511,6 @@
             Controls.Add(cmbUlke);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(txtTC);
             Controls.Add(label2);
             Controls.Add(txtCariKod);
             Controls.Add(label1);
@@ -554,8 +547,7 @@
         private Label label11;
         private ComboBox cmbVergiDairesi;
         private Label label12;
-        private Label label13;
-        private TextBox txtVergiNo;
+        private TextBox txtVergiTCNo;
         private Label label14;
         private TextBox txtTelefon;
         private Label label15;
@@ -565,9 +557,9 @@
         private Label label17;
         private TextBox txtWeb;
         private Button btnAktar;
-        private TextBox txtTC;
-        private Label label7;
         private TextBox txtCariIsim;
         private TextBox txtAdres;
+        private RadioButton rbVergi;
+        private RadioButton rbTC;
     }
 }

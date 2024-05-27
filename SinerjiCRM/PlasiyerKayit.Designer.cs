@@ -30,7 +30,6 @@ namespace Sinerji
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlasiyerKayit));
             label1 = new Label();
             txtPlasiyerKodu = new TextBox();
             txtMeslek = new TextBox();
@@ -64,7 +63,6 @@ namespace Sinerji
             txtResimYolu = new TextBox();
             dataGridView1 = new DataGridView();
             openFileDialog1 = new OpenFileDialog();
-            axAcropdf1 = new AxAcroPDFLib.AxAcroPDF();
             txtCvYolu = new TextBox();
             label16 = new Label();
             btnCvEkle = new Button();
@@ -73,7 +71,6 @@ namespace Sinerji
             btnSil = new Button();
             ((System.ComponentModel.ISupportInitialize)pcrResim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)axAcropdf1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -379,15 +376,6 @@ namespace Sinerji
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // axAcropdf1
-            // 
-            axAcropdf1.Enabled = true;
-            axAcropdf1.Location = new Point(642, 12);
-            axAcropdf1.Name = "axAcropdf1";
-            axAcropdf1.OcxState = (AxHost.State)resources.GetObject("axAcropdf1.OcxState");
-            axAcropdf1.Size = new Size(562, 690);
-            axAcropdf1.TabIndex = 23;
-            // 
             // txtCvYolu
             // 
             txtCvYolu.Font = new Font("Segoe UI", 9F);
@@ -419,6 +407,8 @@ namespace Sinerji
             // rbErkek
             // 
             rbErkek.AutoSize = true;
+            rbErkek.CheckAlign = ContentAlignment.MiddleRight;
+            rbErkek.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 162);
             rbErkek.Location = new Point(147, 69);
             rbErkek.Name = "rbErkek";
             rbErkek.Size = new Size(53, 19);
@@ -430,12 +420,13 @@ namespace Sinerji
             // rbKadin
             // 
             rbKadin.AutoSize = true;
+            rbKadin.CheckAlign = ContentAlignment.MiddleRight;
             rbKadin.Location = new Point(206, 69);
             rbKadin.Name = "rbKadin";
-            rbKadin.Size = new Size(55, 19);
+            rbKadin.Size = new Size(69, 19);
             rbKadin.TabIndex = 4;
             rbKadin.TabStop = true;
-            rbKadin.Text = "Kadın";
+            rbKadin.Text = "/   Kadın";
             rbKadin.UseVisualStyleBackColor = true;
             // 
             // btnSil
@@ -460,7 +451,6 @@ namespace Sinerji
             Controls.Add(txtCvYolu);
             Controls.Add(label16);
             Controls.Add(btnCvEkle);
-            Controls.Add(axAcropdf1);
             Controls.Add(dataGridView1);
             Controls.Add(txtResimYolu);
             Controls.Add(label15);
@@ -500,7 +490,6 @@ namespace Sinerji
             Load += PlasiyerKayit_Load;
             ((System.ComponentModel.ISupportInitialize)pcrResim).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)axAcropdf1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

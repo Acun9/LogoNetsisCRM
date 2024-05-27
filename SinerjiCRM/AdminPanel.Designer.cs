@@ -70,7 +70,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(316, 143);
+            ClientSize = new Size(686, 317);
             Controls.Add(btnCikis);
             Controls.Add(btnMusteri);
             Controls.Add(btnPlasiyer);

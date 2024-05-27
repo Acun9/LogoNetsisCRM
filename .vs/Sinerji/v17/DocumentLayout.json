@@ -1,12 +1,103 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\plasiyerkayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\plasiyerkayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\plasiyerkayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\plasiyerkayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 186,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Program.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\Program.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Program.cs",
+              "RelativeToolTip": "SinerjiCRM\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:30:50.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CariKayit.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\CariKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs [Tasar\u0131m]",
+              "RelativeToolTip": "SinerjiCRM\\CariKayit.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T14:28:15.526Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CariKayit.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\CariKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs",
+              "RelativeToolTip": "SinerjiCRM\\CariKayit.cs",
+              "ViewState": "AQIAAEcBAAAAAAAAAAAcwF8BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T12:51:38.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlasiyerKayit.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\PlasiyerKayit.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\PlasiyerKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\PlasiyerKayit.cs [Tasar\u0131m]",
+              "RelativeToolTip": "SinerjiCRM\\PlasiyerKayit.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T12:14:52.417Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlasiyerKayit.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\PlasiyerKayit.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\PlasiyerKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\PlasiyerKayit.cs",
+              "RelativeToolTip": "SinerjiCRM\\PlasiyerKayit.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwDYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T13:26:34.101Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
