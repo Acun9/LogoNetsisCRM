@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|solutionrelative:carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|solutionrelative:carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|solutionrelative:carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDEEF81-625A-4528-94D6-A8FF61DFB39D}|CariKayitNetOpenXREST\\CariKayitNetOpenXREST.csproj|solutionrelative:carikayitnetopenxrest\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 186,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CariKayit.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "CariKayit.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\CariKayitNetOpenXREST\\CariKayit.cs",
               "RelativeDocumentMoniker": "CariKayitNetOpenXREST\\CariKayit.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\CariKayitNetOpenXREST\\CariKayit.cs [Design]",
-              "RelativeToolTip": "CariKayitNetOpenXREST\\CariKayit.cs [Design]",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\CariKayitNetOpenXREST\\CariKayit.cs [Tasar\u0131m]",
+              "RelativeToolTip": "CariKayitNetOpenXREST\\CariKayit.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-27T06:06:24.113Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Tasar\u0131m]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CariKayit.cs",
               "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\CariKayitNetOpenXREST\\CariKayit.cs",
               "RelativeDocumentMoniker": "CariKayitNetOpenXREST\\CariKayit.cs",
               "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\CariKayitNetOpenXREST\\CariKayit.cs",
               "RelativeToolTip": "CariKayitNetOpenXREST\\CariKayit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAArAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T06:06:27.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T06:06:27.645Z"
             }
           ]
         }

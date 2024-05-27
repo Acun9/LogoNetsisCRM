@@ -39,6 +39,20 @@ namespace SinerjiPanel
             string raporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty;
             string raporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty;
 
+            //Cari Kod kontrolü
+            if (string.IsNullOrWhiteSpace(cariKod))
+            {
+                MessageBox.Show("Lütfen Cari Kod girin.");
+                return;
+            }
+
+            //// Örnek: TC numarası kontrolü
+            //if (!int.TryParse(txtTC.Text, out _) || txtTC.Text.Length != 11)
+            //{
+            //    MessageBox.Show("Lütfen geçerli bir T.C. kimlik numarası girin.");
+            //    return;
+            //}
+
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
                 // CARI_KOD zaten var mı kontrolü

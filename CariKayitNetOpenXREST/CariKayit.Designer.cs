@@ -71,7 +71,6 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(12, 9);
@@ -84,13 +83,13 @@
             // 
             txtCariKod.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtCariKod.Location = new Point(120, 6);
+            txtCariKod.MaxLength = 15;
             txtCariKod.Name = "txtCariKod";
             txtCariKod.Size = new Size(258, 23);
             txtCariKod.TabIndex = 1;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label2.Location = new Point(12, 38);
@@ -101,7 +100,6 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.Location = new Point(12, 90);
@@ -112,7 +110,6 @@
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label4.Location = new Point(12, 142);
@@ -124,6 +121,7 @@
             // cmbUlke
             // 
             cmbUlke.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbUlke.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUlke.Font = new Font("Segoe UI", 9F);
             cmbUlke.FormattingEnabled = true;
             cmbUlke.Location = new Point(120, 139);
@@ -133,7 +131,6 @@
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label5.Location = new Point(12, 171);
@@ -146,6 +143,7 @@
             // cmbIl
             // 
             cmbIl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbIl.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbIl.Font = new Font("Segoe UI", 9F);
             cmbIl.FormattingEnabled = true;
             cmbIl.Location = new Point(120, 168);
@@ -156,7 +154,6 @@
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label6.Location = new Point(12, 200);
@@ -169,6 +166,7 @@
             // cmbIlce
             // 
             cmbIlce.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbIlce.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbIlce.Font = new Font("Segoe UI", 9F);
             cmbIlce.FormattingEnabled = true;
             cmbIlce.Location = new Point(120, 197);
@@ -178,7 +176,6 @@
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label8.Location = new Point(12, 229);
@@ -191,6 +188,7 @@
             // cmbPostaKodu
             // 
             cmbPostaKodu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbPostaKodu.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPostaKodu.Font = new Font("Segoe UI", 9F);
             cmbPostaKodu.FormattingEnabled = true;
             cmbPostaKodu.Location = new Point(120, 226);
@@ -245,6 +243,7 @@
             // cmbRaporKodu2
             // 
             cmbRaporKodu2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbRaporKodu2.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRaporKodu2.Font = new Font("Segoe UI", 9F);
             cmbRaporKodu2.FormattingEnabled = true;
             cmbRaporKodu2.Location = new Point(120, 516);
@@ -254,7 +253,6 @@
             // 
             // label9
             // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label9.Location = new Point(12, 519);
@@ -267,6 +265,7 @@
             // cmbRaporKodu1
             // 
             cmbRaporKodu1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbRaporKodu1.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRaporKodu1.Font = new Font("Segoe UI", 9F);
             cmbRaporKodu1.FormattingEnabled = true;
             cmbRaporKodu1.Location = new Point(120, 487);
@@ -276,7 +275,6 @@
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label10.Location = new Point(12, 490);
@@ -289,6 +287,7 @@
             // cmbGrupKodu
             // 
             cmbGrupKodu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbGrupKodu.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbGrupKodu.Font = new Font("Segoe UI", 9F);
             cmbGrupKodu.FormattingEnabled = true;
             cmbGrupKodu.Location = new Point(120, 458);
@@ -298,7 +297,6 @@
             // 
             // label11
             // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label11.Location = new Point(12, 461);
@@ -310,6 +308,7 @@
             // cmbVergiDairesi
             // 
             cmbVergiDairesi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbVergiDairesi.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbVergiDairesi.Font = new Font("Segoe UI", 9F);
             cmbVergiDairesi.FormattingEnabled = true;
             cmbVergiDairesi.Location = new Point(120, 371);
@@ -319,7 +318,6 @@
             // 
             // label12
             // 
-            label12.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label12.Location = new Point(12, 374);
@@ -330,7 +328,6 @@
             // 
             // label13
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label13.Location = new Point(12, 403);
@@ -344,13 +341,13 @@
             // 
             txtVergiNo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtVergiNo.Location = new Point(120, 400);
+            txtVergiNo.MaxLength = 15;
             txtVergiNo.Name = "txtVergiNo";
             txtVergiNo.Size = new Size(258, 23);
             txtVergiNo.TabIndex = 13;
             // 
             // label14
             // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label14.Location = new Point(12, 258);
@@ -364,13 +361,13 @@
             // 
             txtTelefon.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtTelefon.Location = new Point(120, 255);
+            txtTelefon.MaxLength = 20;
             txtTelefon.Name = "txtTelefon";
             txtTelefon.Size = new Size(258, 23);
             txtTelefon.TabIndex = 8;
             // 
             // label15
             // 
-            label15.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label15.Location = new Point(12, 287);
@@ -384,13 +381,13 @@
             // 
             txtFaks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtFaks.Location = new Point(120, 284);
+            txtFaks.MaxLength = 20;
             txtFaks.Name = "txtFaks";
             txtFaks.Size = new Size(258, 23);
             txtFaks.TabIndex = 9;
             // 
             // label16
             // 
-            label16.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label16.Location = new Point(12, 316);
@@ -404,13 +401,13 @@
             // 
             txtMail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtMail.Location = new Point(120, 313);
+            txtMail.MaxLength = 255;
             txtMail.Name = "txtMail";
             txtMail.Size = new Size(258, 23);
             txtMail.TabIndex = 10;
             // 
             // label17
             // 
-            label17.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label17.Location = new Point(12, 345);
@@ -424,6 +421,7 @@
             // 
             txtWeb.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtWeb.Location = new Point(120, 342);
+            txtWeb.MaxLength = 60;
             txtWeb.Name = "txtWeb";
             txtWeb.Size = new Size(258, 23);
             txtWeb.TabIndex = 11;
@@ -443,13 +441,13 @@
             // 
             txtTC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtTC.Location = new Point(120, 429);
+            txtTC.MaxLength = 11;
             txtTC.Name = "txtTC";
             txtTC.Size = new Size(258, 23);
             txtTC.TabIndex = 14;
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label7.Location = new Point(12, 432);
@@ -463,6 +461,7 @@
             // 
             txtCariIsim.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtCariIsim.Location = new Point(120, 35);
+            txtCariIsim.MaxLength = 100;
             txtCariIsim.Multiline = true;
             txtCariIsim.Name = "txtCariIsim";
             txtCariIsim.Size = new Size(258, 46);
@@ -472,6 +471,7 @@
             // 
             txtAdres.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtAdres.Location = new Point(120, 87);
+            txtAdres.MaxLength = 255;
             txtAdres.Multiline = true;
             txtAdres.Name = "txtAdres";
             txtAdres.Size = new Size(258, 46);

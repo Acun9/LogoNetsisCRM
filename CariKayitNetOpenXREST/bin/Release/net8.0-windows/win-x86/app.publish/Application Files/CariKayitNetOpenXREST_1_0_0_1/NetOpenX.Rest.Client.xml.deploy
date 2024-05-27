@@ -1,0 +1,932 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetOpenX.Rest.Client</name>
+    </assembly>
+    <members>
+        <member name="T:NetOpenX.Rest.Client.BLL.ARPTransactionsManager">
+            <summary>
+            NetOpenX in CariHareket nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.GetInternal(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            verilen filtre değerlerine göre CariHareket listesi döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.GetInternalAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak verilen filtre değerlerine göre CariHareket listesi döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.GetInternalById(System.Int32)">
+            <summary>
+            tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.GetInternalByIdAsync(System.Int32)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.ARPTransactions)">
+            <summary>
+            cari haraket kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.ARPTransactions)">
+            <summary>
+            Async olarak cari haraket kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.PutInternal(System.Int32,NetOpenX.Rest.Client.Model.NetOpenX.ARPTransactions)">
+            <summary>
+            kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.PutInternalAsync(System.Int32,NetOpenX.Rest.Client.Model.NetOpenX.ARPTransactions)">
+            <summary>
+            Async olarak kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.DeleteInternalById(System.Int32)">
+            <summary>
+            kayit silmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPTransactionsManager.DeleteInternalByIdAsync(System.Int32)">
+            <summary>
+             Async olarak kayit silmektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.BatchInvoicingManager">
+            <summary>
+            NetOpenX in TopluFatura nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.BatchInvoicingManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.BatchInvoicing)">
+            <summary>
+            toplu fatura kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.BatchInvoicingManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.BatchInvoicing)">
+            <summary>
+            Async olarak  toplu fatura kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager">
+            <summary>
+            NetOpenX in CekSenetAna nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternal(NetOpenX.Rest.Client.Model.Enums.JTCekSenType,NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Ceksenet kaydı döndürmektedir. 
+            </summary>
+            <param name="tip"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternalAsync(NetOpenX.Rest.Client.Model.Enums.JTCekSenType,NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak  Ceksenet kaydı döndürmektedir. 
+            </summary>
+            <param name="tip"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.CheckAndPNotesMain)">
+            <summary>
+            CekSenet kaydı atmaktadır.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.CheckAndPNotesMain)">
+            <summary>
+            Async olarak CekSenet kaydı atmaktadır.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternalById(System.String)">
+            <summary>
+            tek kayıt döndürmektedir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternalByParam(NetOpenX.Rest.Client.Model.Custom.CheckAndPNotesMainParam)">
+            <summary>
+            tek kayıt döndürmektedir. 
+            </summary>
+            <param name="restParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.GetInternalByParamAsync(NetOpenX.Rest.Client.Model.Custom.CheckAndPNotesMainParam)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir. 
+            </summary>
+            <param name="restParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.DeleteInternalById(System.String)">
+            <summary>
+            kayıt silmektedir.
+            </summary>
+            <param name="id">csMCEK;B20000000000006</param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.DeleteInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak kayıt silmektedir.
+            </summary>
+            <param name="id">csMCEK;B20000000000006</param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.DeleteInternalByParam(NetOpenX.Rest.Client.Model.Custom.CheckAndPNotesMainParam)">
+            <summary>
+            kayıt silmektedir.
+            </summary>
+            <param name="restParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CheckAndPNotesMainManager.DeleteInternalByParamAsync(NetOpenX.Rest.Client.Model.Custom.CheckAndPNotesMainParam)">
+            <summary>
+            Async olarak kayıt silmektedir.
+            </summary>
+            <param name="restParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ContractsMainManager">
+            <summary>
+            NetOpenX in BaglantiAna nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ContractsMainManager.GetInternalById(System.String)">
+            <summary>
+            baglanti bilgisini döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ContractsMainManager.GetInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak baglanti bilgisini döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.DynamicWarehsSlipsManager">
+            <summary>
+            NetOpenX in DinamikDepo nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.DynamicWarehsSlipsManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.DynamicWarehsSlips)">
+            <summary>
+            dinamik depo kaydı oluşturmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.DynamicWarehsSlipsManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.DynamicWarehsSlips)">
+            <summary>
+            Async olarak  dinamik depo kaydı oluşturmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.EDocumentManager">
+            <summary>
+            EArsiv kaydi olusturmaktadir. 
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.EDocumentManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.EDocument)">
+            <summary>
+            EArsiv kaydi olusturmaktadir. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.EDocumentManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.EDocument)">
+            <summary>
+            Async olarak  EArsiv kaydi olusturmaktadir. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.GLAccountsManager">
+            <summary>
+            NetOpenX in MuPlan nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.GetInternal(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            MuPlan kaydı döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.GetInternalAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak MuPlan kaydı döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.GetInternalById(System.String)">
+            <summary>
+            tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.GetInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.GLAccounts)">
+            <summary>
+            MuPLan kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.GLAccounts)">
+            <summary>
+            Async olarak MuPLan kaydı atmaktadır. 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.PutInternal(System.String,NetOpenX.Rest.Client.Model.NetOpenX.GLAccounts)">
+            <summary>
+            kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.PutInternalAsync(System.String,NetOpenX.Rest.Client.Model.NetOpenX.GLAccounts)">
+            <summary>
+            Async olarak kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.DeleteInternalById(System.String)">
+            <summary>
+            kayıt silmektedir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.GLAccountsManager.DeleteInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak kayıt silmektedir. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.GLSlipsManager">
+            <summary>
+            NetOpenX in FisAna nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ItemTransactionsManager">
+            <summary>
+            NetOpenX in StokHareket nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.PrintManager">
+            <summary>
+            NetOpenX in Basim nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.ItemSlipsPrinting(NetOpenX.Rest.Client.Model.Custom.ItemSlipsPrintParam)">
+            <summary>
+            NetOpenX FaturaBasimDizaynNo
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.ItemSlipsPrintingAsync(NetOpenX.Rest.Client.Model.Custom.ItemSlipsPrintParam)">
+            <summary>
+            Async olarak NetOpenX FaturaBasimDizaynNo çalıştırmaktadır.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.GLSlipsPrinting(NetOpenX.Rest.Client.Model.Custom.GLSlipsPrintParam)">
+            <summary>
+            NetOpenX YevmiyeFisBasimDizaynNo
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.CheckAndPNotesMainPrinting(NetOpenX.Rest.Client.Model.Custom.CheckAndPNotesMainPrintParam)">
+            <summary>
+            NetOpenX CekSenetBasimDizaynNo
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.StatementsHeaderPrinting(NetOpenX.Rest.Client.Model.Custom.StatementsHeaderPrintParam)">
+            <summary>
+            NetOpenX DekontBasimDizaynNo
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.PrintManager.SafeDepositsPrinting(NetOpenX.Rest.Client.Model.Custom.SafeDepositPrintParam)">
+            <summary>
+            NetOpenX KasaBasim
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ProducerReceiptManager">
+            <summary>
+            NetOpenX in Mustahsil nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ProducerReceiptManager.ReadLastNumber(System.String)">
+            <summary>
+            NetOpenx SonNumaraOku
+            </summary>
+            <param name="customerCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ProjectManager">
+            <summary>
+            NetOpenX in Proje nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.QueryManager">
+            <summary>
+            NetOPenX in NetRs nesnesi üzerinden sorgu seçmemizi sağlayan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.QueryManager.GetInternal(System.String)">
+            <summary>
+            Select, insert, update, delete işlemlerini desteklemektedir.
+            </summary>
+            <param name="tsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.QueryManager.GetInternalAsync(System.String)">
+            <summary>
+            Async olarak Select, insert, update, delete işlemlerini desteklemektedir.
+            </summary>
+            <param name="tsql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.QueryManager.PostInternal(NetOpenX.Rest.Client.Model.Custom.QueryParam,System.Boolean)">
+            <summary>
+             Select, insert, update, delete işlemlerini desteklemektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <param name="useTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.QueryManager.PostInternalAsync(NetOpenX.Rest.Client.Model.Custom.QueryParam,System.Boolean)">
+            <summary>
+             Async olarak Select, insert, update, delete işlemlerini desteklemektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <param name="useTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.BaseManager.baseCreateClient(System.String)">
+            <summary>
+            Ornek : url> ARPs/
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.BaseManager.CallAsync``1(System.Func{``0})">
+            <summary>
+            Async olarak mevcut method ya da başka action yapılarını çalıştırılabilinmektedir.
+            Async olarak desteklenmeyen methodları ya da kendi methodlarınızı bu yapı üzerinden kolayca async olarak çalıştırabilirsiniz. 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.CompaniesManager">
+            <summary>
+            Şirket (NETSIS..SIRKETLER30) ile ilgili işlemleri kapsayan sınıfımız
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CompaniesManager.GetInternal(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            sirket bilgisini döndürmektedir. 
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CompaniesManager.GetInternalAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak sirket bilgisini döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CompaniesManager.GetInternalById(System.String)">
+            <summary>
+            tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.CompaniesManager.GetInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ExRatesManager">
+            <summary>
+            NetOpenX in Kur nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ForExsManager">
+            <summary>
+            NetOpenX in Doviz nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.GetInternal(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            filtreye göre kayıt döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.GetInternalAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak filtreye göre kayıt döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.GetInternalById(System.Int32)">
+            <summary>
+            tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.GetInternalByIdAsync(System.Int32)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.ForExs)">
+            <summary>
+            kayit eklemektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.ForExs)">
+            <summary>
+            Async olarak  kayit eklemektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.PutInternal(System.Int32,NetOpenX.Rest.Client.Model.NetOpenX.ForExs)">
+            <summary>
+            Kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.PutInternalAsync(System.Int32,NetOpenX.Rest.Client.Model.NetOpenX.ForExs)">
+            <summary>
+            Async olarak Kayıt güncellemektedir.
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.DeleteInternalById(System.Int32)">
+            <summary>
+            kayıt silmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.DeleteInternalByIdAsync(System.Int32)">
+            <summary>
+            Async olarak kayıt silmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.RefreshExRatesInternal(System.String)">
+            <summary>
+            Kur degerlerini gunceller.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ForExsManager.RefreshExRatesInternalAsync(System.String)">
+            <summary>
+            Async olarak Kur degerlerini gunceller.
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.MixedReceiptsMainManager">
+            <summary>
+            NetOpenX in HizliTahsilatAna nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.PublicManager">
+            <summary>
+            Rest servisine login (access_token) gerektirmeden cagri yaptigimiz methodlari barindirmaktir.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ItemSlipsManager">
+            <summary>
+            NetOpenX in Fatura nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.Calculate(NetOpenX.Rest.Client.Model.NetOpenX.ItemSlips)">
+            <summary>
+            HesaplamalariYap
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.CalculateAsync(NetOpenX.Rest.Client.Model.NetOpenX.ItemSlips)">
+            <summary>
+            Async olarak HesaplamalariYap
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.GetHtmlItemSlips(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            NetOpenX GetFaturaHTML
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.NewEItemSlipsNumber(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            NetOpenX YeniEfaturaNumara
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.NewEItemSlipsNumberAsync(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            Async olarak YeniEfaturaNumara methodunu çağırmaktadır. (yeni e-faurana numarası döndürür)
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.NewNumber(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            NetOpenX YeniNumara
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.NewNumberAsync(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            Async olarak yeni numara döndürür.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.IncrementNumber(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            NetOpenX NoArtiBir
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.IrsToFat(NetOpenX.Rest.Client.Model.Custom.ItemSlipsDetailParam)">
+            <summary>
+            NetOpenX Irsaliye2Fatura
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.SiparisToIrsFat(NetOpenX.Rest.Client.Model.Custom.ItemSlipsDetailParam)">
+            <summary>
+            NetOpenX Siparis2IrsFat
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.ChangeNumber(NetOpenX.Rest.Client.Model.Custom.ItemSlipsChangeNumberParam)">
+            <summary>
+            NetOpenX NumaraDegistir
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.SendEMailDesign(NetOpenX.Rest.Client.Model.Custom.ItemSlipsCodeParam)">
+            <summary>
+            NetOpenX DizaynEpostaGonder
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>   
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.ChangeCode(NetOpenX.Rest.Client.Model.Custom.ItemSlipsChangeCodeParam)">
+            <summary>
+            NetOpenX KodDegistir
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.ContractsOpenPrice(System.Int32)">
+            <summary>
+            BaglantiAcikTutar
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemSlipsManager.ContractsOpenPriceAsync(System.Int32)">
+            <summary>
+            BaglantiAcikTutar 
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ARPsManager">
+            <summary>
+            NetOpenX in Cari nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.GetInternal(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            verilen filtre bilgisine göre cari listesini temel ve ek bilgiler şeklinde döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.GetInternalAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak verilen filtre bilgisine göre cari listesini temel ve ek bilgiler şeklinde döndürmektedir.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.GetInternalById(System.String)">
+            <summary>
+            tek kayıt döndürmektedir. (temel + ek bilgi)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.GetInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak tek kayıt döndürmektedir. (temel + ek bilgi)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.PostInternal(NetOpenX.Rest.Client.Model.NetOpenX.ARPs)">
+            <summary>
+            cari kaydetmektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.PostInternalAsync(NetOpenX.Rest.Client.Model.NetOpenX.ARPs)">
+            <summary>
+            Async olarak cari kaydetmektedir.
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.PutInternal(System.String,NetOpenX.Rest.Client.Model.NetOpenX.ARPs)">
+            <summary>
+            kayıt güncellemektedir. (update işlemi)
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.PutInternalAsync(System.String,NetOpenX.Rest.Client.Model.NetOpenX.ARPs)">
+            <summary>
+            Async olarak  kayıt güncellemektedir. (update işlemi)
+            </summary>
+            <param name="id"></param>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.DeleteInternalById(System.String)">
+            <summary>
+             kayit silmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.DeleteInternalByIdAsync(System.String)">
+            <summary>
+            Async olarak kayit silmektedir.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.CustomerRisk(NetOpenX.Rest.Client.Model.Custom.ARPsRiskParam)">
+            <summary>
+            (RiskBul) Cari Risk Bul
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.CustomerRiskAsync(NetOpenX.Rest.Client.Model.Custom.ARPsRiskParam)">
+            <summary>
+            Async olarak (RiskBul) Cari Risk Bul
+            </summary>
+            <param name="restRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.CustomCustomerMainInfo(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Sadece Cari Temel Bilgisi (TBLCASABIT) değerlerini çekmektedir. 
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ARPsManager.CustomCustomerMainInfoAsync(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Async olarak sadece Cari Temel Bilgisi (TBLCASABIT) değerlerini çekmektedir. 
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.LoginManager">
+            <summary>
+            Rest üzerinden access_token alıp, şirket-kernel oluşturan sınıfımız.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.OperationsManager">
+            <summary>
+            Login - LogOut , transaction aç- kapa işlemlerinin desteklendiği sınıfımız. 
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.OperationsManager.Ping">
+            <summary>
+            servis erişebilirlik ve access token testi sağlamaktadır. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.OperationsManager.PingAsync">
+            <summary>
+            servis erişebilirlik ve access token testini async olarak sağlamaktadır. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.RequestManager">
+            <summary>
+            Rest üzerinde her türlü çağrı işlemlerinin yapılıp, json data döndürdüğümüz sınıfımız. Tüm managerların yaptığı işi bu sınıf üzerinden de gerçekleştirilebilinir. 
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.ItemsManager">
+            <summary>
+            NetOpenX in Stok nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.ItemsManager.CustomStockMainInfo(NetOpenX.Rest.Client.Model.SelectFilter)">
+            <summary>
+            Stok Temel Bilgisi (TBLSTSABIT)
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.SafeDepositsManager">
+            <summary>
+            NetOpenX in Kasa nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.BLL.SafeDepositsManager.LastBalance(System.String)">
+            <summary>
+            NetOpenx 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.StatementsHeaderManager">
+            <summary>
+            NetOpenX in Dekomas nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.BLL.WorkFlowManager">
+            <summary>
+            NetOpenX in WFTObject nesnesinin yaptigi islemleri yapan sinifimiz.
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.Helper.JSonSerializer`1">
+            <summary>
+            JSON serialize, deserialize islemleri gerceklestirilmektedir.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.Helper.UtiliyExtentions">
+            <summary>
+            kullanilan genel extentionlar
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.Model.Custom.ItemSlipsParam.SetParam(System.String[])">
+            <summary>
+            0 - JTFaturaTip
+            1 - evrak numarasi
+            2 - cari kodu
+            </summary>
+            <param name="_params"></param>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.Model.NetOpenX.ItemSlipLinesAssortment">
+            <summary>
+            AsortiKalemIsle
+            </summary>
+        </member>
+        <member name="T:NetOpenX.Rest.Client.oAuth2">
+            <summary>
+            Login bilgilerinin tasindigi, access_token alan sinifimiz
+            </summary>
+        </member>
+        <member name="E:NetOpenX.Rest.Client.oAuth2.ChangeHeader">
+            <summary>
+            HttpClient üst bilgisine parametre eklemek için , event değeri.
+            </summary>
+        </member>
+        <member name="P:NetOpenX.Rest.Client.oAuth2.AllowCompress">
+            <summary>
+            gzip | deflate compress türleri desteklenmektedir.
+            </summary>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.oAuth2.Login(NetOpenX.Rest.Client.Model.JLogin)">
+            <summary>
+            oturum açmak için kullanılan method. başarılısı ise AccessToken property değeri dolu gelir. 
+            oAuth2loginResult property üzerinden dönen değerlere ulaşabilirsiniz.
+            </summary>
+            <param name="loginInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetOpenX.Rest.Client.oAuth2.LogOut">
+            <summary>
+            Oturumu sonlandırmak için. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NetOpenX.Rest.Client.oAuth2.AccessToken">
+            <summary>
+            Kullanıcı bilgilerinize göre oluşan erişim bilgisi.
+            </summary>
+        </member>
+        <member name="P:NetOpenX.Rest.Client.oAuth2.TimeOut">
+            <summary>
+            HttpClient timeout süresi. Uzun süren işlemlerde saniye olarak set edilmelidir. Default değeri 100
+            </summary>
+        </member>
+    </members>
+</doc>

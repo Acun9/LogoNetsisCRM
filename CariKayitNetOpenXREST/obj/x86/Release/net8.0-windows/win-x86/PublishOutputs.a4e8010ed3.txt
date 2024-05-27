@@ -1,0 +1,13 @@
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\CariKayitNetOpenXREST.exe
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\CariKayitNetOpenXREST.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\CariKayitNetOpenXREST.deps.json
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\CariKayitNetOpenXREST.runtimeconfig.json
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\CariKayitNetOpenXREST.pdb
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\System.Net.Http.Formatting.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\Newtonsoft.Json.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\Newtonsoft.Json.Bson.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\System.Data.SqlClient.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\sni.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\NetOpenX.Rest.Client.dll
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\NetOpenX.Rest.Client.xml
+C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\bin\Release\net8.0-windows\win-x86\app.publish\NetOpenX.Rest.Client.dll.config

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CariKayitNetOpenXREST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+577c8b954c7527dbed4348134ebcc478ca755191")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29967a405420bbc85982dfbbb9069759342c31d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CariKayitNetOpenXREST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CariKayitNetOpenXREST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

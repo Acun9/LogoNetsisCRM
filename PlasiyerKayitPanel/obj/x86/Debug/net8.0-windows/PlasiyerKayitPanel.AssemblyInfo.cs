@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlasiyerKayitPanel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ba77a2367a91bcff8f0d1f4ad1f3845e5b1f02a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29967a405420bbc85982dfbbb9069759342c31d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlasiyerKayitPanel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlasiyerKayitPanel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
