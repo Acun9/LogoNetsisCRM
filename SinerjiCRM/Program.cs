@@ -1,5 +1,3 @@
-using Sinerji;
-
 namespace SinerjiCRM
 {
     internal static class Program

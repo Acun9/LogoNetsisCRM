@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sinerji
+namespace SinerjiCRM
 {
     public partial class AdminPanel : Form
     {

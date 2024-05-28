@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Data.SqlClient;
 
-namespace Sinerji
+namespace SinerjiCRM
 {
     public partial class AnaSayfa : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace Sinerji
+﻿namespace SinerjiCRM
 {
     partial class AnaSayfa
     {

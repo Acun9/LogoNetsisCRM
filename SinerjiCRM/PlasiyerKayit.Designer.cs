@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Sinerji
+namespace SinerjiCRM
 {
     partial class PlasiyerKayit
     {

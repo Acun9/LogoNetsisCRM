@@ -1,5 +1,5 @@
 ﻿
-namespace Sinerji
+namespace SinerjiCRM
 {
     public partial class DogrulamaKodu : Form
     {

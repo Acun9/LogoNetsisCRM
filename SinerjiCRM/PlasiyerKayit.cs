@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Sinerji
+namespace SinerjiCRM
 {
     public partial class PlasiyerKayit : Form
     {

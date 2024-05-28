@@ -1,4 +1,4 @@
-﻿namespace Sinerji
+﻿namespace SinerjiCRM
 {
     partial class CariKayit
     {
@@ -66,6 +66,8 @@
             txtAdres = new TextBox();
             rbVergi = new RadioButton();
             rbTC = new RadioButton();
+            cmbRaporKodu3 = new ComboBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -198,7 +200,7 @@
             // btnEkle
             // 
             btnEkle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEkle.Location = new Point(258, 516);
+            btnEkle.Location = new Point(258, 545);
             btnEkle.Name = "btnEkle";
             btnEkle.Size = new Size(75, 23);
             btnEkle.TabIndex = 18;
@@ -209,7 +211,7 @@
             // btnGuncelle
             // 
             btnGuncelle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGuncelle.Location = new Point(339, 516);
+            btnGuncelle.Location = new Point(339, 545);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(75, 23);
             btnGuncelle.TabIndex = 19;
@@ -220,7 +222,7 @@
             // btnSil
             // 
             btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSil.Location = new Point(420, 516);
+            btnSil.Location = new Point(420, 545);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(75, 23);
             btnSil.TabIndex = 20;
@@ -231,7 +233,7 @@
             // btnGeri
             // 
             btnGeri.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGeri.Location = new Point(420, 545);
+            btnGeri.Location = new Point(420, 574);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(75, 23);
             btnGeri.TabIndex = 22;
@@ -417,7 +419,7 @@
             // btnAktar
             // 
             btnAktar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAktar.Location = new Point(258, 545);
+            btnAktar.Location = new Point(258, 574);
             btnAktar.Name = "btnAktar";
             btnAktar.Size = new Size(156, 23);
             btnAktar.TabIndex = 21;
@@ -471,11 +473,35 @@
             rbTC.Text = "/    T.C. No";
             rbTC.UseVisualStyleBackColor = true;
             // 
+            // cmbRaporKodu3
+            // 
+            cmbRaporKodu3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbRaporKodu3.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRaporKodu3.Font = new Font("Segoe UI", 9F);
+            cmbRaporKodu3.FormattingEnabled = true;
+            cmbRaporKodu3.Location = new Point(120, 516);
+            cmbRaporKodu3.Name = "cmbRaporKodu3";
+            cmbRaporKodu3.Size = new Size(375, 23);
+            cmbRaporKodu3.TabIndex = 92;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label7.Location = new Point(12, 519);
+            label7.Name = "label7";
+            label7.RightToLeft = RightToLeft.No;
+            label7.Size = new Size(82, 15);
+            label7.TabIndex = 93;
+            label7.Text = "Rapor Kodu 3";
+            // 
             // CariKayit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(513, 651);
+            ClientSize = new Size(513, 625);
+            Controls.Add(cmbRaporKodu3);
+            Controls.Add(label7);
             Controls.Add(rbTC);
             Controls.Add(rbVergi);
             Controls.Add(txtAdres);
@@ -561,5 +587,7 @@
         private TextBox txtAdres;
         private RadioButton rbVergi;
         private RadioButton rbTC;
+        private ComboBox cmbRaporKodu3;
+        private Label label7;
     }
 }

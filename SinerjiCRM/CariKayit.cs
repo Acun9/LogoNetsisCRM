@@ -3,8 +3,10 @@ using NetOpenX.Rest.Client.BLL;
 using NetOpenX.Rest.Client.Model.NetOpenX;
 using NetOpenX.Rest.Client.Model;
 using NetOpenX.Rest.Client;
+using System.Data;
+using System.Text;
 
-namespace Sinerji
+namespace SinerjiCRM
 {
     public partial class CariKayit : Form
     {
@@ -20,53 +22,14 @@ namespace Sinerji
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            // Kullanıcı girişlerini al
-            string cariKod = txtCariKod.Text;
-            string cariIsım = txtCariIsim.Text;
-            string adres = txtAdres.Text;
-            string ulke = cmbUlke.SelectedItem?.ToString() ?? string.Empty;
-            string il = cmbIl.SelectedItem?.ToString() ?? string.Empty;
-            string ilce = cmbIlce.SelectedItem?.ToString() ?? string.Empty;
-            string postaKodu = cmbPostaKodu.SelectedItem?.ToString() ?? string.Empty;
-            string tel = txtTelefon.Text;
-            string faks = txtFaks.Text;
-            string mail = txtMail.Text;
-            string web = txtWeb.Text;
-            string vergiDaire = cmbVergiDairesi.SelectedItem?.ToString() ?? string.Empty;
-            string vergiTCNo = txtVergiTCNo.Text;
-            string grupKodu = cmbGrupKodu.SelectedItem?.ToString() ?? string.Empty;
-            string raporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty;
-            string raporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty;
-
-            //Cari Kod kontrolü
-            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
+            // Girişlerin kontrolü
+            if (!ValidateInputs())
             {
-                MessageBox.Show("Lütfen Cari Kod girin.");
                 return;
             }
 
-            // Vergi/T.C. numarası kontrolü           
-            if (rbVergi.Checked)
-            {
-                if (txtVergiTCNo.Text.Length != 10 || !long.TryParse(txtVergiTCNo.Text, out _))
-                {
-                    MessageBox.Show("Lütfen rakamlardan oluşan 10 haneli geçerli bir Vergi No giriniz.");
-                    return;
-                }
-            }
-            else if (rbTC.Checked)
-            {
-                if (txtVergiTCNo.Text.Length != 11 || !long.TryParse(txtVergiTCNo.Text, out _))
-                {
-                    MessageBox.Show("Lütfen rakamlardan oluşan 11 haneli geçerli bir T.C. No giriniz.");
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Lütfen Vergi / T.C. No belirtiniz.");
-                return;
-            }
+            // Girişleri al
+            var cariData = GetCariData();
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
@@ -74,7 +37,7 @@ namespace Sinerji
                 string queryCheck = "SELECT COUNT(*) FROM dbo.CARI_KAYIT WHERE CARI_KOD = @CARI_KOD";
                 using (SqlCommand commandCheck = new SqlCommand(queryCheck, connection))
                 {
-                    commandCheck.Parameters.AddWithValue("@CARI_KOD", cariKod);
+                    commandCheck.Parameters.AddWithValue("@CARI_KOD", cariData.CariKod);
                     int count = (int)commandCheck.ExecuteScalar();
 
                     if (count > 0)
@@ -86,28 +49,13 @@ namespace Sinerji
 
                 // Yeni kayıt ekleme
                 string queryInsert = @"INSERT INTO dbo.CARI_KAYIT 
-                               (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2) 
-                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2)";
+                               (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2, RAPOR_KODU_3) 
+                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2, RAPOR_KODU_3)";
 
                 using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
                 {
                     // Parametreleri ekle
-                    commandInsert.Parameters.AddWithValue("@CARI_KOD", cariKod);
-                    commandInsert.Parameters.AddWithValue("@CARI_ISIM", cariIsım);
-                    commandInsert.Parameters.AddWithValue("@ADRES", adres);
-                    commandInsert.Parameters.AddWithValue("@ULKE", ulke);
-                    commandInsert.Parameters.AddWithValue("@IL", il);
-                    commandInsert.Parameters.AddWithValue("@ILCE", ilce);
-                    commandInsert.Parameters.AddWithValue("@POSTA_KODU", postaKodu);
-                    commandInsert.Parameters.AddWithValue("@TEL", tel);
-                    commandInsert.Parameters.AddWithValue("@FAKS", faks);
-                    commandInsert.Parameters.AddWithValue("@MAIL", mail);
-                    commandInsert.Parameters.AddWithValue("@WEB", web);
-                    commandInsert.Parameters.AddWithValue("@VERGI_DAIRE", vergiDaire);
-                    commandInsert.Parameters.AddWithValue("@VERGI_TC_NO", vergiTCNo);
-                    commandInsert.Parameters.AddWithValue("@GRUP_KODU", grupKodu);
-                    commandInsert.Parameters.AddWithValue("@RAPOR_KODU_1", raporKodu1);
-                    commandInsert.Parameters.AddWithValue("@RAPOR_KODU_2", raporKodu2);
+                    AddParametersToCommand(commandInsert, cariData);
 
                     int rowsAffected = commandInsert.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -123,52 +71,14 @@ namespace Sinerji
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            string cariKod = txtCariKod.Text;
-            string cariIsım = txtCariIsim.Text;
-            string adres = txtAdres.Text;
-            string ulke = cmbUlke.SelectedItem?.ToString() ?? string.Empty;
-            string il = cmbIl.SelectedItem?.ToString() ?? string.Empty;
-            string ilce = cmbIlce.SelectedItem?.ToString() ?? string.Empty;
-            string postaKodu = cmbPostaKodu.SelectedItem?.ToString() ?? string.Empty;
-            string tel = txtTelefon.Text;
-            string faks = txtFaks.Text;
-            string mail = txtMail.Text;
-            string web = txtWeb.Text;
-            string vergiDaire = cmbVergiDairesi.SelectedItem?.ToString() ?? string.Empty;
-            string vergiTCNo = txtVergiTCNo.Text;
-            string grupKodu = cmbGrupKodu.SelectedItem?.ToString() ?? string.Empty;
-            string raporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty;
-            string raporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty;
-
-            //Cari Kod kontrolü
-            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
+            // Girişlerin kontrolü
+            if (!ValidateInputs())
             {
-                MessageBox.Show("Lütfen Cari Kod girin.");
                 return;
             }
 
-            // Vergi/T.C. numarası kontrolü           
-            if (rbVergi.Checked)
-            {
-                if (txtVergiTCNo.Text.Length != 10 || !long.TryParse(txtVergiTCNo.Text, out _))
-                {
-                    MessageBox.Show("Lütfen rakamlardan oluşan 10 haneli geçerli bir Vergi No giriniz.");
-                    return;
-                }
-            }
-            else if (rbTC.Checked)
-            {
-                if (txtVergiTCNo.Text.Length != 11 || !long.TryParse(txtVergiTCNo.Text, out _))
-                {
-                    MessageBox.Show("Lütfen rakamlardan oluşan 11 haneli geçerli bir T.C. No giriniz.");
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Lütfen Vergi / T.C. No belirtiniz.");
-                return;
-            }
+            // Girişleri al
+            var cariData = GetCariData();
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
@@ -187,27 +97,14 @@ namespace Sinerji
                                VERGI_TC_NO = @VERGI_TC_NO,
                                GRUP_KODU = @GRUP_KODU,
                                RAPOR_KODU_1 = @RAPOR_KODU_1,
-                               RAPOR_KODU_2 = @RAPOR_KODU_2
+                               RAPOR_KODU_2 = @RAPOR_KODU_2,
+                               RAPOR_KODU_3 = @RAPOR_KODU_3
                                WHERE CARI_KOD = @CARI_KOD";
 
                 using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
                 {
-                    commandUpdate.Parameters.AddWithValue("@CARI_KOD", cariKod);
-                    commandUpdate.Parameters.AddWithValue("@CARI_ISIM", cariIsım);
-                    commandUpdate.Parameters.AddWithValue("@ADRES", adres);
-                    commandUpdate.Parameters.AddWithValue("@ULKE", ulke);
-                    commandUpdate.Parameters.AddWithValue("@IL", il);
-                    commandUpdate.Parameters.AddWithValue("@ILCE", ilce);
-                    commandUpdate.Parameters.AddWithValue("@POSTA_KODU", postaKodu);
-                    commandUpdate.Parameters.AddWithValue("@TEL", tel);
-                    commandUpdate.Parameters.AddWithValue("@FAKS", faks);
-                    commandUpdate.Parameters.AddWithValue("@MAIL", mail);
-                    commandUpdate.Parameters.AddWithValue("@WEB", web);
-                    commandUpdate.Parameters.AddWithValue("@VERGI_DAIRE", vergiDaire);
-                    commandUpdate.Parameters.AddWithValue("@VERGI_TC_NO", vergiTCNo);
-                    commandUpdate.Parameters.AddWithValue("@GRUP_KODU", grupKodu);
-                    commandUpdate.Parameters.AddWithValue("@RAPOR_KODU_1", raporKodu1);
-                    commandUpdate.Parameters.AddWithValue("@RAPOR_KODU_2", raporKodu2);
+                    // Parametreleri ekle
+                    AddParametersToCommand(commandUpdate, cariData);
 
                     int rowsAffected = commandUpdate.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -250,12 +147,96 @@ namespace Sinerji
             this.Close();
         }
 
+        //Kullanıcı girişlerini kontrol et
+        private bool ValidateInputs()
+        {
+            //Cari Kod kontrolü
+            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
+            {
+                MessageBox.Show("Lütfen Cari Kod girin.");
+                return false;
+            }
+
+            // Vergi/T.C. numarası kontrolü           
+            if (rbVergi.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 10 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 10 haneli geçerli bir Vergi No giriniz.");
+                    return false;
+                }
+            }
+            else if (rbTC.Checked)
+            {
+                if (txtVergiTCNo.Text.Length != 11 || !long.TryParse(txtVergiTCNo.Text, out _))
+                {
+                    MessageBox.Show("Lütfen rakamlardan oluşan 11 haneli geçerli bir T.C. No giriniz.");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Vergi / T.C. No belirtiniz.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Kullanıcı girişlerini al
+        private CariData GetCariData()
+        {
+            return new CariData
+            {
+                CariKod = txtCariKod.Text,
+                CariIsim = txtCariIsim.Text,
+                Adres = txtAdres.Text,
+                Ulke = cmbUlke.SelectedItem?.ToString() ?? string.Empty,
+                Il = cmbIl.SelectedItem?.ToString() ?? string.Empty,
+                Ilce = cmbIlce.SelectedItem?.ToString() ?? string.Empty,
+                PostaKodu = cmbPostaKodu.SelectedItem?.ToString() ?? string.Empty,
+                Tel = txtTelefon.Text,
+                Faks = txtFaks.Text,
+                Mail = txtMail.Text,
+                Web = txtWeb.Text,
+                VergiDaire = cmbVergiDairesi.SelectedItem?.ToString() ?? string.Empty,
+                VergiTCNo = txtVergiTCNo.Text,
+                GrupKodu = cmbGrupKodu.SelectedItem?.ToString() ?? string.Empty,
+                RaporKodu1 = cmbRaporKodu1.SelectedItem?.ToString() ?? string.Empty,
+                RaporKodu2 = cmbRaporKodu2.SelectedItem?.ToString() ?? string.Empty,
+                RaporKodu3 = cmbRaporKodu3?.SelectedItem?.ToString() ?? string.Empty
+            };
+        }
+
+        // Parametreleri ekle
+        private void AddParametersToCommand(SqlCommand command, CariData cariData)
+        {
+            command.Parameters.AddWithValue("@CARI_KOD", cariData.CariKod);
+            command.Parameters.AddWithValue("@CARI_ISIM", cariData.CariIsim);
+            command.Parameters.AddWithValue("@ADRES", cariData.Adres);
+            command.Parameters.AddWithValue("@ULKE", cariData.Ulke);
+            command.Parameters.AddWithValue("@IL", cariData.Il);
+            command.Parameters.AddWithValue("@ILCE", cariData.Ilce);
+            command.Parameters.AddWithValue("@POSTA_KODU", cariData.PostaKodu);
+            command.Parameters.AddWithValue("@TEL", cariData.Tel);
+            command.Parameters.AddWithValue("@FAKS", cariData.Faks);
+            command.Parameters.AddWithValue("@MAIL", cariData.Mail);
+            command.Parameters.AddWithValue("@WEB", cariData.Web);
+            command.Parameters.AddWithValue("@VERGI_DAIRE", cariData.VergiDaire);
+            command.Parameters.AddWithValue("@VERGI_TC_NO", cariData.VergiTCNo);
+            command.Parameters.AddWithValue("@GRUP_KODU", cariData.GrupKodu);
+            command.Parameters.AddWithValue("@RAPOR_KODU_1", cariData.RaporKodu1);
+            command.Parameters.AddWithValue("@RAPOR_KODU_2", cariData.RaporKodu2);
+            command.Parameters.AddWithValue("@RAPOR_KODU_3", cariData.RaporKodu3);
+        }
+
         private void LoadComboboxData()
         {
             LoadUlkeler();
             LoadIller();
             LoadGrupKodlari();
-            LoadRaporKodlari();
+            LoadRaporKodu1();
+            LoadRaporKodu2();
             LoadPostaKodlari();
         }
 
@@ -304,18 +285,6 @@ namespace Sinerji
             }
         }
 
-        private void LoadGrupKodlari()
-        {
-            // Grup kodlarını yükleyecek kod
-            cmbGrupKodu.Items.Add("grpkod");
-        }
-
-        private void LoadRaporKodlari()
-        {
-            // Rapor kodlarını yükleyecek kod
-            cmbRaporKodu1.Items.Add("rprkod1");
-            cmbRaporKodu2.Items.Add("rprkod2");
-        }
 
         private void LoadPostaKodlari()
         {
@@ -474,6 +443,70 @@ namespace Sinerji
             catch (Exception ex)
             {
                 MessageBox.Show($"Veri aktarımı sırasında hata oluştu: {ex.Message}");
+            }
+        }
+
+        
+
+        private void LoadRaporKodu1()
+        {
+            
+        }
+
+        private void LoadRaporKodu2()
+        {
+           
+        }
+
+        private void LoadRaporKodu3()
+        {
+            
+        }
+
+        private void LoadGrupKodlari()
+        {
+            try
+            {
+                // NetOpenX-REST için OAuth2 ile kimlik doğrulama
+                oAuth2 _oAuth2 = new oAuth2("http://srv1:7070");
+                _oAuth2.Login(new JLogin()
+                {
+                    BranchCode = 0,
+                    NetsisUser = "netsis",
+                    NetsisPassword = "5091",
+                    DbType = JNVTTipi.vtMSSQL,
+                    DbName = "SINERJISMART",
+                    DbPassword = "",
+                    DbUser = "TEMELSET"
+                });
+
+                // Verileri çekmek için gerekli API isteği
+                //string selectQuery = "SELECT GRUP_KOD, GRUP_ISIM FROM TBLCAGRUP";
+                string selectQuery = "SELECT GRUP_KOD, GRUP_ISIM, dbo.TRK(GRUP_KOD) AS TRK_GRUP_KOD, dbo.TRK(GRUP_ISIM) AS TRK_GRUP_ISIM FROM TBLCAGRUP";
+
+                using (SqlConnection sourceConnection = new SqlConnection("Server=SRV1;Database=SINERJISMART;User Id=sa;Password=SA123pass_;"))
+                {
+                    sourceConnection.Open();
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, sourceConnection);
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            //string grupKod = reader["GRUP_KOD"].ToString();
+                            //string grupIsim = reader["GRUP_ISIM"].ToString();
+
+                            string grupKod = reader["TRK_GRUP_KOD"].ToString();
+                            string grupIsim = reader["TRK_GRUP_ISIM"].ToString();
+
+                            string combinedText = $"{grupKod} ({grupIsim})";
+                            cmbGrupKodu.Items.Add(combinedText);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
             }
         }
     }
