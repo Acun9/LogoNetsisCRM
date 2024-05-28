@@ -4,12 +4,12 @@ using NetOpenX.Rest.Client.Model.NetOpenX;
 using NetOpenX.Rest.Client.Model;
 using NetOpenX.Rest.Client;
 using System.Data;
-using System.Text;
 
 namespace SinerjiCRM
 {
     public partial class CariKayit : Form
     {
+
         public CariKayit()
         {
             InitializeComponent();            
@@ -22,6 +22,7 @@ namespace SinerjiCRM
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+
             // Girişlerin kontrolü
             if (!ValidateInputs())
             {
@@ -33,6 +34,7 @@ namespace SinerjiCRM
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
+
                 // CARI_KOD zaten var mı kontrolü
                 string queryCheck = "SELECT COUNT(*) FROM dbo.CARI_KAYIT WHERE CARI_KOD = @CARI_KOD";
                 using (SqlCommand commandCheck = new SqlCommand(queryCheck, connection))
@@ -50,10 +52,11 @@ namespace SinerjiCRM
                 // Yeni kayıt ekleme
                 string queryInsert = @"INSERT INTO dbo.CARI_KAYIT 
                                (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2, RAPOR_KODU_3) 
-                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2, RAPOR_KODU_3)";
+                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2, @RAPOR_KODU_3)";
 
                 using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
                 {
+
                     // Parametreleri ekle
                     AddParametersToCommand(commandInsert, cariData);
 
@@ -69,6 +72,7 @@ namespace SinerjiCRM
                 }
             }
         }
+
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             // Girişlerin kontrolü
@@ -103,6 +107,7 @@ namespace SinerjiCRM
 
                 using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
                 {
+
                     // Parametreleri ekle
                     AddParametersToCommand(commandUpdate, cariData);
 
@@ -145,6 +150,23 @@ namespace SinerjiCRM
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // Stringdeki boşluğa kadar olan kısmı al
+        private string GetStringUntilSpace(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return string.Empty; // Eğer input boş veya null ise boş string döner
+            }
+
+            int spaceIndex = input.IndexOf(' ');
+            if (spaceIndex == -1)
+            {
+                return input; // Eğer boşluk karakteri yoksa tüm string döner
+            }
+
+            return input.Substring(0, spaceIndex); // Boşluk karakterine kadar olan kısmı döner
         }
 
         //Kullanıcı girişlerini kontrol et
@@ -224,10 +246,10 @@ namespace SinerjiCRM
             command.Parameters.AddWithValue("@WEB", cariData.Web);
             command.Parameters.AddWithValue("@VERGI_DAIRE", cariData.VergiDaire);
             command.Parameters.AddWithValue("@VERGI_TC_NO", cariData.VergiTCNo);
-            command.Parameters.AddWithValue("@GRUP_KODU", cariData.GrupKodu);
-            command.Parameters.AddWithValue("@RAPOR_KODU_1", cariData.RaporKodu1);
-            command.Parameters.AddWithValue("@RAPOR_KODU_2", cariData.RaporKodu2);
-            command.Parameters.AddWithValue("@RAPOR_KODU_3", cariData.RaporKodu3);
+            command.Parameters.AddWithValue("@GRUP_KODU", GetStringUntilSpace(cariData.GrupKodu));
+            command.Parameters.AddWithValue("@RAPOR_KODU_1", GetStringUntilSpace(cariData.RaporKodu1));
+            command.Parameters.AddWithValue("@RAPOR_KODU_2", GetStringUntilSpace(cariData.RaporKodu2));
+            command.Parameters.AddWithValue("@RAPOR_KODU_3", GetStringUntilSpace(cariData.RaporKodu3));
         }
 
         private void LoadComboboxData()
@@ -237,6 +259,7 @@ namespace SinerjiCRM
             LoadGrupKodlari();
             LoadRaporKodu1();
             LoadRaporKodu2();
+            LoadRaporKodu3();
             LoadPostaKodlari();
         }
 
@@ -284,7 +307,6 @@ namespace SinerjiCRM
                 }
             }
         }
-
 
         private void LoadPostaKodlari()
         {
@@ -369,6 +391,7 @@ namespace SinerjiCRM
                                 Grup_Kodu = reader["GRUP_KODU"].ToString(),
                                 RAPOR_KODU1 = reader["RAPOR_KODU_1"].ToString(),
                                 Rapor_Kodu2 = reader["RAPOR_KODU_2"].ToString(),
+
                                 //Zorunlular
                                 Sube_Kodu = 0, // Varsayılan değer
                                 ISLETME_KODU = 1, // Varsayılan değer
@@ -446,23 +469,6 @@ namespace SinerjiCRM
             }
         }
 
-        
-
-        private void LoadRaporKodu1()
-        {
-            
-        }
-
-        private void LoadRaporKodu2()
-        {
-           
-        }
-
-        private void LoadRaporKodu3()
-        {
-            
-        }
-
         private void LoadGrupKodlari()
         {
             try
@@ -509,5 +515,136 @@ namespace SinerjiCRM
                 MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
             }
         }
+
+        private void LoadRaporKodu1()
+        {
+            try
+            {
+                // NetOpenX-REST için OAuth2 ile kimlik doğrulama
+                oAuth2 _oAuth2 = new oAuth2("http://srv1:7070");
+                _oAuth2.Login(new JLogin()
+                {
+                    BranchCode = 0,
+                    NetsisUser = "netsis",
+                    NetsisPassword = "5091",
+                    DbType = JNVTTipi.vtMSSQL,
+                    DbName = "SINERJISMART",
+                    DbPassword = "",
+                    DbUser = "TEMELSET"
+                });
+
+                // Verileri çekmek için gerekli API isteği                
+                string selectQuery = "SELECT GRUP_KOD, GRUP_ISIM, dbo.TRK(GRUP_KOD) AS TRK_GRUP_KOD, dbo.TRK(GRUP_ISIM) AS TRK_GRUP_ISIM FROM TBLCARIKOD1";
+
+                using (SqlConnection sourceConnection = new SqlConnection("Server=SRV1;Database=SINERJISMART;User Id=sa;Password=SA123pass_;"))
+                {
+                    sourceConnection.Open();
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, sourceConnection);
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {                           
+                            string grupKod = reader["TRK_GRUP_KOD"].ToString();
+                            string grupIsim = reader["TRK_GRUP_ISIM"].ToString();
+
+                            string combinedText = $"{grupKod} ({grupIsim})";
+                            cmbRaporKodu1.Items.Add(combinedText);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
+            }
+        }
+
+        private void LoadRaporKodu2()
+        {
+            try
+            {
+                // NetOpenX-REST için OAuth2 ile kimlik doğrulama
+                oAuth2 _oAuth2 = new oAuth2("http://srv1:7070");
+                _oAuth2.Login(new JLogin()
+                {
+                    BranchCode = 0,
+                    NetsisUser = "netsis",
+                    NetsisPassword = "5091",
+                    DbType = JNVTTipi.vtMSSQL,
+                    DbName = "SINERJISMART",
+                    DbPassword = "",
+                    DbUser = "TEMELSET"
+                });
+
+                // Verileri çekmek için gerekli API isteği                
+                string selectQuery = "SELECT GRUP_KOD, GRUP_ISIM, dbo.TRK(GRUP_KOD) AS TRK_GRUP_KOD, dbo.TRK(GRUP_ISIM) AS TRK_GRUP_ISIM FROM TBLCARIKOD2";
+
+                using (SqlConnection sourceConnection = new SqlConnection("Server=SRV1;Database=SINERJISMART;User Id=sa;Password=SA123pass_;"))
+                {
+                    sourceConnection.Open();
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, sourceConnection);
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string grupKod = reader["TRK_GRUP_KOD"].ToString();
+                            string grupIsim = reader["TRK_GRUP_ISIM"].ToString();
+
+                            string combinedText = $"{grupKod} ({grupIsim})";
+                            cmbRaporKodu2.Items.Add(combinedText);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
+            }
+        }
+
+        private void LoadRaporKodu3()
+        {
+            try
+            {
+                // NetOpenX-REST için OAuth2 ile kimlik doğrulama
+                oAuth2 _oAuth2 = new oAuth2("http://srv1:7070");
+                _oAuth2.Login(new JLogin()
+                {
+                    BranchCode = 0,
+                    NetsisUser = "netsis",
+                    NetsisPassword = "5091",
+                    DbType = JNVTTipi.vtMSSQL,
+                    DbName = "SINERJISMART",
+                    DbPassword = "",
+                    DbUser = "TEMELSET"
+                });
+
+                // Verileri çekmek için gerekli API isteği                
+                string selectQuery = "SELECT GRUP_KOD, GRUP_ISIM, dbo.TRK(GRUP_KOD) AS TRK_GRUP_KOD, dbo.TRK(GRUP_ISIM) AS TRK_GRUP_ISIM FROM TBLCARIKOD3";
+
+                using (SqlConnection sourceConnection = new SqlConnection("Server=SRV1;Database=SINERJISMART;User Id=sa;Password=SA123pass_;"))
+                {
+                    sourceConnection.Open();
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, sourceConnection);
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string grupKod = reader["TRK_GRUP_KOD"].ToString();
+                            string grupIsim = reader["TRK_GRUP_ISIM"].ToString();
+
+                            string combinedText = $"{grupKod} ({grupIsim})";
+                            cmbRaporKodu3.Items.Add(combinedText);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
+            }
+        }
+
+        
     }
 }
