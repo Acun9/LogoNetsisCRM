@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\caridata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\caridata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 186,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CariKayit.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\CariKayit.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariKayit.cs",
-              "RelativeToolTip": "SinerjiCRM\\CariKayit.cs",
-              "ViewState": "AQIAAGkBAAAAAAAAAAAQwIwBAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T12:51:38.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CariData.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariData.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\CariData.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\CariData.cs",
-              "RelativeToolTip": "SinerjiCRM\\CariData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T14:34:09.776Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

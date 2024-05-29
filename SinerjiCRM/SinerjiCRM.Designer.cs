@@ -1,6 +1,6 @@
 ﻿namespace SinerjiCRM
 {
-    partial class AdminPanel
+    partial class SinerjiCRM
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnPlasiyer = new Button();
+            btnKisi = new Button();
             btnMusteri = new Button();
             btnCikis = new Button();
+            btnCari = new Button();
             SuspendLayout();
             // 
-            // btnPlasiyer
+            // btnKisi
             // 
-            btnPlasiyer.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnPlasiyer.Location = new Point(36, 56);
-            btnPlasiyer.Name = "btnPlasiyer";
-            btnPlasiyer.Size = new Size(113, 23);
-            btnPlasiyer.TabIndex = 0;
-            btnPlasiyer.Text = "Plasiyer İşlemleri";
-            btnPlasiyer.UseVisualStyleBackColor = true;
-            btnPlasiyer.Click += btnPlasiyer_Click;
+            btnKisi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnKisi.Location = new Point(12, 12);
+            btnKisi.Name = "btnKisi";
+            btnKisi.Size = new Size(80, 60);
+            btnKisi.TabIndex = 0;
+            btnKisi.Text = "Kişi İşlemleri";
+            btnKisi.UseVisualStyleBackColor = true;
+            btnKisi.Click += btnKisi_Click;
             // 
             // btnMusteri
             // 
             btnMusteri.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnMusteri.Location = new Point(155, 56);
+            btnMusteri.Location = new Point(98, 12);
             btnMusteri.Name = "btnMusteri";
-            btnMusteri.Size = new Size(113, 23);
+            btnMusteri.Size = new Size(80, 60);
             btnMusteri.TabIndex = 1;
             btnMusteri.Text = "Müşteri İşlemleri";
             btnMusteri.UseVisualStyleBackColor = true;
@@ -57,7 +58,8 @@
             // 
             // btnCikis
             // 
-            btnCikis.Location = new Point(117, 97);
+            btnCikis.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCikis.Location = new Point(216, 189);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(75, 23);
             btnCikis.TabIndex = 2;
@@ -65,26 +67,39 @@
             btnCikis.UseVisualStyleBackColor = true;
             btnCikis.Click += btnCikis_Click;
             // 
-            // AdminPanel
+            // btnCari
+            // 
+            btnCari.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnCari.Location = new Point(184, 12);
+            btnCari.Name = "btnCari";
+            btnCari.Size = new Size(80, 60);
+            btnCari.TabIndex = 3;
+            btnCari.Text = "Cari İşlemleri";
+            btnCari.UseVisualStyleBackColor = true;
+            btnCari.Click += btnCari_Click;
+            // 
+            // SinerjiCRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(686, 317);
+            ClientSize = new Size(303, 224);
+            Controls.Add(btnCari);
             Controls.Add(btnCikis);
             Controls.Add(btnMusteri);
-            Controls.Add(btnPlasiyer);
-            Name = "AdminPanel";
+            Controls.Add(btnKisi);
+            Name = "SinerjiCRM";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Admin Paneli";
-            FormClosed += AdminPanelForm_FormClosed;
+            Text = "Sinerji CRM";
+            FormClosed += SinerjiCRM_FormClosed;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnPlasiyer;
+        private Button btnKisi;
         private Button btnMusteri;
         private Button btnCikis;
+        private Button btnCari;
     }
 }

@@ -69,6 +69,8 @@ namespace SinerjiCRM
             rbErkek = new RadioButton();
             rbKadin = new RadioButton();
             btnSil = new Button();
+            comboBox1 = new ComboBox();
+            label14 = new Label();
             ((System.ComponentModel.ISupportInitialize)pcrResim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -79,9 +81,9 @@ namespace SinerjiCRM
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label1.Location = new Point(12, 15);
             label1.Name = "label1";
-            label1.Size = new Size(84, 15);
+            label1.Size = new Size(58, 15);
             label1.TabIndex = 0;
-            label1.Text = "Plasiyer Kodu:";
+            label1.Text = "Kişi Kodu";
             // 
             // txtPlasiyerKodu
             // 
@@ -366,7 +368,7 @@ namespace SinerjiCRM
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 388);
+            dataGridView1.Location = new Point(12, 430);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(604, 314);
             dataGridView1.TabIndex = 22;
@@ -439,12 +441,34 @@ namespace SinerjiCRM
             btnSil.UseVisualStyleBackColor = true;
             btnSil.Click += btnSil_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Segoe UI", 9F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(147, 388);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(258, 23);
+            comboBox1.TabIndex = 42;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label14.Location = new Point(12, 391);
+            label14.Name = "label14";
+            label14.Size = new Size(36, 15);
+            label14.TabIndex = 43;
+            label14.Text = "Ülke:";
+            // 
             // PlasiyerKayit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1411, 714);
+            ClientSize = new Size(1411, 746);
+            Controls.Add(comboBox1);
+            Controls.Add(label14);
             Controls.Add(btnSil);
             Controls.Add(rbKadin);
             Controls.Add(rbErkek);
@@ -485,7 +509,7 @@ namespace SinerjiCRM
             Controls.Add(label1);
             Name = "PlasiyerKayit";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Plasiyer Kaydet";
+            Text = "Kişi Kaydet";
             FormClosed += PlasiyerKayit_FormClosed;
             Load += PlasiyerKayit_Load;
             ((System.ComponentModel.ISupportInitialize)pcrResim).EndInit();
@@ -536,5 +560,7 @@ namespace SinerjiCRM
         private RadioButton rbErkek;
         private RadioButton rbKadin;
         private Button btnSil;
+        private ComboBox comboBox1;
+        private Label label14;
     }
 }

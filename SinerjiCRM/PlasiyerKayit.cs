@@ -193,11 +193,16 @@ namespace SinerjiCRM
             }
         }
 
-
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void PlasiyerKayit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms?["SinerjiCRM"]?.Show();
+        }
+
         private void LoadPlasiyerler()
         {
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
@@ -372,7 +377,7 @@ namespace SinerjiCRM
         {
             if (cmbIller.SelectedItem != null)
             {
-                string sehirAdi = cmbIller.SelectedItem.ToString(); // Seçilen ilin adını al
+                string sehirAdi = cmbIller.SelectedItem?.ToString() ?? string.Empty; // Seçilen ilin adını al
                 int sehirId;
 
                 // Seçilen ilin id'sini bul
@@ -401,11 +406,6 @@ namespace SinerjiCRM
                 }
                 //LoadIlceler(sehirId); // Ilceleri yukle
             }
-        }
-
-        private void PlasiyerKayit_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.OpenForms?["AdminPanel"]?.Show();
-        }
+        }    
     }
 }

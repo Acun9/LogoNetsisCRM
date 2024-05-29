@@ -1,6 +1,6 @@
 ﻿namespace SinerjiCRM
 {
-    partial class AnaSayfa
+    partial class Giris
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             btnGiris = new Button();
             btnCikis = new Button();
             cbSifre = new CheckBox();
+            btnKayitOl = new Button();
             SuspendLayout();
             // 
             // txtKullaniciAdi
@@ -63,9 +64,9 @@
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label1.Location = new Point(50, 61);
             label1.Name = "label1";
-            label1.Size = new Size(77, 15);
+            label1.Size = new Size(74, 15);
             label1.TabIndex = 38;
-            label1.Text = "Kullanıcı Adı:";
+            label1.Text = "Kullanıcı Adı";
             // 
             // label2
             // 
@@ -74,14 +75,14 @@
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.Location = new Point(90, 106);
             label2.Name = "label2";
-            label2.Size = new Size(37, 15);
+            label2.Size = new Size(34, 15);
             label2.TabIndex = 39;
-            label2.Text = "Şifre:";
+            label2.Text = "Şifre";
             // 
             // btnGiris
             // 
             btnGiris.Anchor = AnchorStyles.Top;
-            btnGiris.Location = new Point(216, 162);
+            btnGiris.Location = new Point(181, 165);
             btnGiris.Name = "btnGiris";
             btnGiris.Size = new Size(75, 23);
             btnGiris.TabIndex = 63;
@@ -92,7 +93,7 @@
             // btnCikis
             // 
             btnCikis.Anchor = AnchorStyles.Top;
-            btnCikis.Location = new Point(216, 202);
+            btnCikis.Location = new Point(224, 194);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(75, 23);
             btnCikis.TabIndex = 64;
@@ -112,12 +113,23 @@
             cbSifre.UseVisualStyleBackColor = true;
             cbSifre.CheckStateChanged += cbSifre_CheckStateChanged;
             // 
-            // AnaSayfa
+            // btnKayitOl
+            // 
+            btnKayitOl.Location = new Point(262, 165);
+            btnKayitOl.Name = "btnKayitOl";
+            btnKayitOl.Size = new Size(75, 23);
+            btnKayitOl.TabIndex = 66;
+            btnKayitOl.Text = "Kayıt Ol";
+            btnKayitOl.UseVisualStyleBackColor = true;
+            btnKayitOl.Click += btnKayitOl_Click;
+            // 
+            // Giris
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(505, 266);
+            ClientSize = new Size(504, 261);
+            Controls.Add(btnKayitOl);
             Controls.Add(cbSifre);
             Controls.Add(btnCikis);
             Controls.Add(btnGiris);
@@ -125,9 +137,11 @@
             Controls.Add(label1);
             Controls.Add(txtSifre);
             Controls.Add(txtKullaniciAdi);
-            Name = "AnaSayfa";
+            KeyPreview = true;
+            Name = "Giris";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sinerji CRM";
+            Text = "Giriş";
+            KeyDown += btnGiris_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +155,6 @@
         private Button btnGiris;
         private Button btnCikis;
         private CheckBox cbSifre;
+        private Button btnKayitOl;
     }
 }

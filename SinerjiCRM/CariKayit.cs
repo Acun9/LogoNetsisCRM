@@ -12,17 +12,16 @@ namespace SinerjiCRM
 
         public CariKayit()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void CariKayit_Load(object sender, EventArgs e)
         {
-            LoadComboboxData();            
+            LoadComboboxData();
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
+        private void btnEkleGuncelle_Click(object sender, EventArgs e)
         {
-
             // Girişlerin kontrolü
             if (!ValidateInputs())
             {
@@ -34,7 +33,6 @@ namespace SinerjiCRM
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
-
                 // CARI_KOD zaten var mı kontrolü
                 string queryCheck = "SELECT COUNT(*) FROM dbo.CARI_KAYIT WHERE CARI_KOD = @CARI_KOD";
                 using (SqlCommand commandCheck = new SqlCommand(queryCheck, connection))
@@ -44,81 +42,64 @@ namespace SinerjiCRM
 
                     if (count > 0)
                     {
-                        MessageBox.Show("Bu Cari Kod zaten mevcut. Güncelleme yapmak istiyorsanız 'Güncelle' butonunu kullanın. ");
-                        return;
-                    }
-                }
+                        // Kayıt varsa güncelleme yap
+                        string queryUpdate = @"UPDATE dbo.CARI_KAYIT SET 
+                       CARI_ISIM = @CARI_ISIM,
+                       ADRES = @ADRES,
+                       ULKE = @ULKE,
+                       IL = @IL,
+                       ILCE = @ILCE,
+                       POSTA_KODU = @POSTA_KODU,
+                       TEL = @TEL,
+                       FAKS = @FAKS,
+                       MAIL = @MAIL,
+                       WEB = @WEB,
+                       VERGI_DAIRE = @VERGI_DAIRE,
+                       VERGI_TC_NO = @VERGI_TC_NO,
+                       GRUP_KODU = @GRUP_KODU,
+                       RAPOR_KODU_1 = @RAPOR_KODU_1,
+                       RAPOR_KODU_2 = @RAPOR_KODU_2,
+                       RAPOR_KODU_3 = @RAPOR_KODU_3
+                       WHERE CARI_KOD = @CARI_KOD";
 
-                // Yeni kayıt ekleme
-                string queryInsert = @"INSERT INTO dbo.CARI_KAYIT 
-                               (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2, RAPOR_KODU_3) 
-                               VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2, @RAPOR_KODU_3)";
+                        using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
+                        {
+                            // Parametreleri ekle
+                            AddParametersToCommand(commandUpdate, cariData);
 
-                using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
-                {
-
-                    // Parametreleri ekle
-                    AddParametersToCommand(commandInsert, cariData);
-
-                    int rowsAffected = commandInsert.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Veriler başarıyla kaydedildi.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Veriler kaydedilirken bir hata oluştu.");
-                    }
-                }
-            }
-        }
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            // Girişlerin kontrolü
-            if (!ValidateInputs())
-            {
-                return;
-            }
-
-            // Girişleri al
-            var cariData = GetCariData();
-
-            using (SqlConnection connection = new SQLBaglantisi().baglanti())
-            {
-                string queryUpdate = @"UPDATE dbo.CARI_KAYIT SET 
-                               CARI_ISIM = @CARI_ISIM,
-                               ADRES = @ADRES,
-                               ULKE = @ULKE,
-                               IL = @IL,
-                               ILCE = @ILCE,
-                               POSTA_KODU = @POSTA_KODU,
-                               TEL = @TEL,
-                               FAKS = @FAKS,
-                               MAIL = @MAIL,
-                               WEB = @WEB,
-                               VERGI_DAIRE = @VERGI_DAIRE,
-                               VERGI_TC_NO = @VERGI_TC_NO,
-                               GRUP_KODU = @GRUP_KODU,
-                               RAPOR_KODU_1 = @RAPOR_KODU_1,
-                               RAPOR_KODU_2 = @RAPOR_KODU_2,
-                               RAPOR_KODU_3 = @RAPOR_KODU_3
-                               WHERE CARI_KOD = @CARI_KOD";
-
-                using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
-                {
-
-                    // Parametreleri ekle
-                    AddParametersToCommand(commandUpdate, cariData);
-
-                    int rowsAffected = commandUpdate.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Veriler güncellendi.");
+                            int rowsAffected = commandUpdate.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Veriler güncellendi.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Veriler güncellenirken bir hata oluştu.");
+                            }
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Veriler güncellenirken bir hata oluştu.");
+                        // Kayıt yoksa yeni kayıt ekle
+                        string queryInsert = @"INSERT INTO dbo.CARI_KAYIT 
+                       (CARI_KOD, CARI_ISIM, ADRES, ULKE, IL, ILCE, POSTA_KODU, TEL, FAKS, MAIL, WEB, VERGI_DAIRE, VERGI_TC_NO, GRUP_KODU, RAPOR_KODU_1, RAPOR_KODU_2, RAPOR_KODU_3) 
+                       VALUES (@CARI_KOD, @CARI_ISIM, @ADRES, @ULKE, @IL, @ILCE, @POSTA_KODU, @TEL, @FAKS, @MAIL, @WEB, @VERGI_DAIRE, @VERGI_TC_NO, @GRUP_KODU, @RAPOR_KODU_1, @RAPOR_KODU_2, @RAPOR_KODU_3)";
+
+                        using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
+                        {
+                            // Parametreleri ekle
+                            AddParametersToCommand(commandInsert, cariData);
+
+                            int rowsAffected = commandInsert.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Veriler başarıyla kaydedildi.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Veriler kaydedilirken bir hata oluştu.");
+                            }
+                        }
                     }
                 }
             }
@@ -150,6 +131,10 @@ namespace SinerjiCRM
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void CariKayit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms?["SinerjiCRM"]?.Show();
         }
 
         // Stringdeki boşluğa kadar olan kısmı al
@@ -543,7 +528,7 @@ namespace SinerjiCRM
                     using (SqlDataReader reader = selectCommand.ExecuteReader())
                     {
                         while (reader.Read())
-                        {                           
+                        {
                             string grupKod = reader["TRK_GRUP_KOD"].ToString();
                             string grupIsim = reader["TRK_GRUP_ISIM"].ToString();
 
@@ -643,8 +628,6 @@ namespace SinerjiCRM
             {
                 MessageBox.Show($"Veri çekme sırasında hata oluştu: {ex.Message}");
             }
-        }
-
-        
+        }        
     }
 }

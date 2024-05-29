@@ -1,6 +1,6 @@
 ﻿namespace SinerjiCRM
 {
-    partial class DogrulamaKodu
+    partial class Dogrula
     {
         /// <summary>
         /// Required designer variable.
@@ -56,9 +56,9 @@
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(12, 44);
             label1.Name = "label1";
-            label1.Size = new Size(103, 15);
+            label1.Size = new Size(100, 15);
             label1.TabIndex = 2;
-            label1.Text = "Doğrulama Kodu:";
+            label1.Text = "Doğrulama Kodu";
             // 
             // DogrulamaKodu
             // 

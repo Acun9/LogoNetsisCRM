@@ -41,12 +41,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AdminPanel.cs">
+    <Compile Update="SinerjiCRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AnaSayfa.cs" />
+    <Compile Update="Giris.cs" />
     <Compile Update="CariKayit.cs" />
-    <Compile Update="DogrulamaKodu.cs" />
+    <Compile Update="Dogrula.cs" />
     <Compile Update="MusteriKayit.cs" />
     <Compile Update="PlasiyerKayit.cs">
       <SubType>Form</SubType>

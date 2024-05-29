@@ -40,8 +40,6 @@
             cmbIlce = new ComboBox();
             label8 = new Label();
             cmbPostaKodu = new ComboBox();
-            btnEkle = new Button();
-            btnGuncelle = new Button();
             btnSil = new Button();
             btnGeri = new Button();
             cmbRaporKodu2 = new ComboBox();
@@ -68,6 +66,7 @@
             rbTC = new RadioButton();
             cmbRaporKodu3 = new ComboBox();
             label7 = new Label();
+            btnEkleGuncelle = new Button();
             SuspendLayout();
             // 
             // label1
@@ -196,28 +195,6 @@
             cmbPostaKodu.Name = "cmbPostaKodu";
             cmbPostaKodu.Size = new Size(375, 23);
             cmbPostaKodu.TabIndex = 7;
-            // 
-            // btnEkle
-            // 
-            btnEkle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEkle.Location = new Point(258, 545);
-            btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(75, 23);
-            btnEkle.TabIndex = 18;
-            btnEkle.Text = "Ekle";
-            btnEkle.UseVisualStyleBackColor = true;
-            btnEkle.Click += btnEkle_Click;
-            // 
-            // btnGuncelle
-            // 
-            btnGuncelle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGuncelle.Location = new Point(339, 545);
-            btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(75, 23);
-            btnGuncelle.TabIndex = 19;
-            btnGuncelle.Text = "Güncelle";
-            btnGuncelle.UseVisualStyleBackColor = true;
-            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnSil
             // 
@@ -495,11 +472,24 @@
             label7.TabIndex = 93;
             label7.Text = "Rapor Kodu 3";
             // 
+            // btnEkleGuncelle
+            // 
+            btnEkleGuncelle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnEkleGuncelle.Location = new Point(258, 545);
+            btnEkleGuncelle.Name = "btnEkleGuncelle";
+            btnEkleGuncelle.Size = new Size(156, 23);
+            btnEkleGuncelle.TabIndex = 94;
+            btnEkleGuncelle.Text = "Ekle / Güncelle";
+            btnEkleGuncelle.UseVisualStyleBackColor = true;
+            btnEkleGuncelle.Click += btnEkleGuncelle_Click;
+            // 
             // CariKayit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(513, 625);
+            Controls.Add(btnEkleGuncelle);
             Controls.Add(cmbRaporKodu3);
             Controls.Add(label7);
             Controls.Add(rbTC);
@@ -526,8 +516,6 @@
             Controls.Add(label11);
             Controls.Add(btnGeri);
             Controls.Add(btnSil);
-            Controls.Add(btnGuncelle);
-            Controls.Add(btnEkle);
             Controls.Add(cmbPostaKodu);
             Controls.Add(label8);
             Controls.Add(cmbIlce);
@@ -541,7 +529,9 @@
             Controls.Add(txtCariKod);
             Controls.Add(label1);
             Name = "CariKayit";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cari Kayıt";
+            FormClosed += CariKayit_FormClosed;
             Load += CariKayit_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -561,8 +551,6 @@
         private ComboBox cmbIlce;
         private Label label8;
         private ComboBox cmbPostaKodu;
-        private Button btnEkle;
-        private Button btnGuncelle;
         private Button btnSil;
         private Button btnGeri;
         private ComboBox cmbRaporKodu2;
@@ -589,5 +577,6 @@
         private RadioButton rbTC;
         private ComboBox cmbRaporKodu3;
         private Label label7;
+        private Button btnEkleGuncelle;
     }
 }
