@@ -4,16 +4,16 @@
     <_LastSelectedProfileId>C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Forms\Dogrula.cs">
+    <Compile Update="Forms\Login&amp;Register\Dogrula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Giris.cs">
+    <Compile Update="Forms\Login&amp;Register\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\KayitOl.cs">
+    <Compile Update="Forms\Login&amp;Register\KayitOl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\MusteriKayit.cs">
+    <Compile Update="Forms\Menu\MusteriKayit.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

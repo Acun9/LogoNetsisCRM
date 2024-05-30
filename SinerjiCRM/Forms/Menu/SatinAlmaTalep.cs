@@ -8,15 +8,15 @@ using SinerjiCRM.Scripts;
 
 namespace SinerjiCRM
 {
-    public partial class CariKayit : Form
+    public partial class SatinAlmaTalep : Form
     {
 
-        public CariKayit()
+        public SatinAlmaTalep()
         {
             InitializeComponent();
         }
 
-        private void CariKayit_Load(object sender, EventArgs e)
+        private void SatinAlmaTalep_Load(object sender, EventArgs e)
         {
             LoadComboboxData();
         }
@@ -30,7 +30,7 @@ namespace SinerjiCRM
             }
 
             // Girişleri al
-            var cariData = GetCariData();
+            var satinAlmaTalepData = GetSatinAlmaTalepData();
 
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
@@ -38,7 +38,7 @@ namespace SinerjiCRM
                 string queryCheck = "SELECT COUNT(*) FROM dbo.CARI_KAYIT WHERE CARI_KOD = @CARI_KOD";
                 using (SqlCommand commandCheck = new SqlCommand(queryCheck, connection))
                 {
-                    commandCheck.Parameters.AddWithValue("@CARI_KOD", cariData.Kod);
+                    commandCheck.Parameters.AddWithValue("@CARI_KOD", satinAlmaTalepData.Kod);
                     int count = (int)commandCheck.ExecuteScalar();
 
                     if (count > 0)
@@ -66,7 +66,7 @@ namespace SinerjiCRM
                         using (SqlCommand commandUpdate = new SqlCommand(queryUpdate, connection))
                         {
                             // Parametreleri ekle
-                            AddParametersToCommand(commandUpdate, cariData);
+                            AddParametersToCommand(commandUpdate, satinAlmaTalepData);
 
                             int rowsAffected = commandUpdate.ExecuteNonQuery();
                             if (rowsAffected > 0)
@@ -89,7 +89,7 @@ namespace SinerjiCRM
                         using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
                         {
                             // Parametreleri ekle
-                            AddParametersToCommand(commandInsert, cariData);
+                            AddParametersToCommand(commandInsert, satinAlmaTalepData);
 
                             int rowsAffected = commandInsert.ExecuteNonQuery();
                             if (rowsAffected > 0)
@@ -114,7 +114,7 @@ namespace SinerjiCRM
 
                 using (SqlCommand commandDelete = new SqlCommand(queryDelete, connection))
                 {
-                    commandDelete.Parameters.AddWithValue("@CARI_KOD", txtCariKod.Text);
+                    commandDelete.Parameters.AddWithValue("@CARI_KOD", txtKod.Text);
 
                     int rowsAffected = commandDelete.ExecuteNonQuery();
                     if (rowsAffected > 0)
@@ -133,7 +133,7 @@ namespace SinerjiCRM
         {
             this.Close();
         }
-        private void CariKayit_FormClosed(object sender, FormClosedEventArgs e)
+        private void SatinAlmaTalep_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms?["SinerjiCRM"]?.Show();
         }
@@ -159,7 +159,7 @@ namespace SinerjiCRM
         private bool ValidateInputs()
         {
             //Cari Kod kontrolü
-            if (string.IsNullOrWhiteSpace(txtCariKod.Text))
+            if (string.IsNullOrWhiteSpace(txtKod.Text))
             {
                 MessageBox.Show("Lütfen Cari Kod girin.");
                 return false;
@@ -192,12 +192,12 @@ namespace SinerjiCRM
         }
 
         // Kullanıcı girişlerini al
-        private Data GetCariData()
+        private Data GetSatinAlmaTalepData()
         {
             return new Data
             {
-                Kod = txtCariKod.Text,
-                Isim = txtCariIsim.Text,
+                Kod = txtKod.Text,
+                Isim = txtIsim.Text,
                 Adres = txtAdres.Text,
                 Ulke = cmbUlke.SelectedItem?.ToString() ?? string.Empty,
                 Il = cmbIl.SelectedItem?.ToString() ?? string.Empty,
@@ -349,7 +349,7 @@ namespace SinerjiCRM
 
                 // Kaynak veritabanından verileri çekme
                 string selectQuery = "SELECT * FROM CARI_KAYIT";
-                List<ARPsPrimInfo> cariler = new List<ARPsPrimInfo>();
+                List<ARPsPrimInfo> list = new List<ARPsPrimInfo>();
 
                 using (SqlConnection sourceConnection = new SqlConnection("Server=SRV1;Database=SINERJICRM;User Id=sa;Password=SA123pass_;"))
                 {
@@ -359,7 +359,7 @@ namespace SinerjiCRM
                     {
                         while (reader.Read())
                         {
-                            ARPsPrimInfo cariTmlBlg = new ARPsPrimInfo
+                            ARPsPrimInfo data = new ARPsPrimInfo
                             {
                                 CARI_KOD = reader["CARI_KOD"].ToString(),
                                 CARI_ISIM = reader["CARI_ISIM"].ToString(),
@@ -384,27 +384,27 @@ namespace SinerjiCRM
                                 CARI_TIP = "A"
 
                             };
-                            cariler.Add(cariTmlBlg);
+                            list.Add(data);
                         }
                     }
                 }
 
                 // Hedef veritabanına verileri aktarma
                 var _ARPsManager = new ARPsManager(_oAuth2);
-                foreach (var cari in cariler)
+                foreach (var data in list)
                 {
-                    var existingRecordResult = _ARPsManager.GetInternalById(cari.CARI_KOD);
+                    var existingRecordResult = _ARPsManager.GetInternalById(data.CARI_KOD);
                     if (existingRecordResult.IsSuccessful && existingRecordResult.Data != null)
                     {
                         // Kayıt mevcutsa güncelle
-                        var result = _ARPsManager.PutInternal(cari.CARI_KOD, new ARPs()
+                        var result = _ARPsManager.PutInternal(data.CARI_KOD, new ARPs()
                         {
-                            CariTemelBilgi = cari
+                            CariTemelBilgi = data                            
                         });
 
                         if (!result.IsSuccessful)
                         {
-                            throw new Exception($"Cari kodu {cari.CARI_KOD} olan kaydın güncellenmesi başarısız: {result.ErrorDesc}");
+                            throw new Exception($"Cari kodu {data.CARI_KOD} olan kaydın güncellenmesi başarısız: {result.ErrorDesc}");
                         }
                     }
                     else
@@ -412,12 +412,12 @@ namespace SinerjiCRM
                         // Kayıt mevcut değilse yeni kayıt oluştur
                         var result = _ARPsManager.PostInternal(new ARPs()
                         {
-                            CariTemelBilgi = cari
+                            CariTemelBilgi = data
                         });
 
                         if (!result.IsSuccessful)
                         {
-                            throw new Exception($"Cari kodu {cari.CARI_KOD} olan kaydın oluşturulması başarısız: {result.ErrorDesc}");
+                            throw new Exception($"Cari kodu {data.CARI_KOD} olan kaydın oluşturulması başarısız: {result.ErrorDesc}");
                         }
                     }
                 }
@@ -427,7 +427,7 @@ namespace SinerjiCRM
                 if (existingRecordsResult.IsSuccessful)
                 {
                     var existingRecords = existingRecordsResult.Data;
-                    var sourceCariKodlar = new HashSet<string>(cariler.Select(c => c.CARI_KOD));
+                    var sourceCariKodlar = new HashSet<string>(list.Select(h => h.CARI_KOD));
 
                     foreach (var record in existingRecords)
                     {

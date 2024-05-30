@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SinerjiCRM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ee81afd13c0a7acde3c58bbce6b1fe5cab0434c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d4b4fe8f7692c4576776769f2f77a3b2eb052b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SinerjiCRM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SinerjiCRM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
