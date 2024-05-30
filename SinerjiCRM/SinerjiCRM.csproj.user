@@ -4,9 +4,6 @@
     <_LastSelectedProfileId>C:\Users\dijital1\Documents\GitHub\Sinerji\CariKayitNetOpenXREST\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="CariKayit.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Dogrula.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,6 +1,6 @@
 ﻿namespace SinerjiCRM
 {
-    partial class CariKayit
+    partial class SatinAlmaTalep
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            txtCariKod = new TextBox();
+            txtKod = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -60,7 +60,7 @@
             label17 = new Label();
             txtWeb = new TextBox();
             btnAktar = new Button();
-            txtCariIsim = new TextBox();
+            txtIsim = new TextBox();
             txtAdres = new TextBox();
             rbVergi = new RadioButton();
             rbTC = new RadioButton();
@@ -84,14 +84,14 @@
             label1.TabIndex = 0;
             label1.Text = "Cari Kod";
             // 
-            // txtCariKod
+            // txtKod
             // 
-            txtCariKod.Anchor = AnchorStyles.Top;
-            txtCariKod.Location = new Point(64, 3);
-            txtCariKod.MaxLength = 15;
-            txtCariKod.Name = "txtCariKod";
-            txtCariKod.Size = new Size(236, 23);
-            txtCariKod.TabIndex = 1;
+            txtKod.Anchor = AnchorStyles.Top;
+            txtKod.Location = new Point(64, 3);
+            txtKod.MaxLength = 15;
+            txtKod.Name = "txtKod";
+            txtKod.Size = new Size(236, 23);
+            txtKod.TabIndex = 1;
             // 
             // label2
             // 
@@ -423,15 +423,15 @@
             btnAktar.UseVisualStyleBackColor = true;
             btnAktar.Click += btnAktar_Click;
             // 
-            // txtCariIsim
+            // txtIsim
             // 
-            txtCariIsim.Anchor = AnchorStyles.Top;
-            txtCariIsim.Location = new Point(64, 32);
-            txtCariIsim.MaxLength = 100;
-            txtCariIsim.Multiline = true;
-            txtCariIsim.Name = "txtCariIsim";
-            txtCariIsim.Size = new Size(236, 46);
-            txtCariIsim.TabIndex = 2;
+            txtIsim.Anchor = AnchorStyles.Top;
+            txtIsim.Location = new Point(64, 32);
+            txtIsim.MaxLength = 100;
+            txtIsim.Multiline = true;
+            txtIsim.Name = "txtIsim";
+            txtIsim.Size = new Size(236, 46);
+            txtIsim.TabIndex = 2;
             // 
             // txtAdres
             // 
@@ -507,7 +507,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(txtCariKod);
+            panel1.Controls.Add(txtKod);
             panel1.Controls.Add(btnEkleGuncelle);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(cmbRaporKodu3);
@@ -520,7 +520,7 @@
             panel1.Controls.Add(cmbUlke);
             panel1.Controls.Add(txtAdres);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(txtCariIsim);
+            panel1.Controls.Add(txtIsim);
             panel1.Controls.Add(cmbIl);
             panel1.Controls.Add(btnAktar);
             panel1.Controls.Add(label6);
@@ -571,9 +571,9 @@
             Controls.Add(panel1);
             Name = "SatinAlmaTalep";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cari Kayıt";
-            FormClosed += CariKayit_FormClosed;
-            Load += CariKayit_Load;
+            Text = "Satın Alma Talep";
+            FormClosed += SatinAlmaTalep_FormClosed;
+            Load += SatinAlmaTalep_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -583,7 +583,7 @@
         #endregion
 
         private Label label1;
-        private TextBox txtCariKod;
+        private TextBox txtKod;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -614,7 +614,7 @@
         private Label label17;
         private TextBox txtWeb;
         private Button btnAktar;
-        private TextBox txtCariIsim;
+        private TextBox txtIsim;
         private TextBox txtAdres;
         private RadioButton rbVergi;
         private RadioButton rbTC;

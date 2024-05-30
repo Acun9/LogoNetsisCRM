@@ -1,10 +1,10 @@
 ﻿
 namespace SinerjiCRM
 {
-    public class CariData
+    public class Data
     {
-        public string CariKod { get; set; }
-        public string CariIsim { get; set; }
+        public string Kod { get; set; }
+        public string Isim { get; set; }
         public string Adres { get; set; }
         public string Ulke { get; set; }
         public string Il { get; set; }
