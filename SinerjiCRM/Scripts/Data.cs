@@ -1,5 +1,4 @@
-﻿
-namespace SinerjiCRM
+﻿namespace SinerjiCRM.Scripts
 {
     public class Data
     {

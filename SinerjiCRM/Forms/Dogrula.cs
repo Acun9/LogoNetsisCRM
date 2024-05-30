@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using SinerjiCRM.Scripts;
 
 namespace SinerjiCRM
 {

@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using SinerjiCRM.Scripts;
 
 
 namespace SinerjiCRM
@@ -56,7 +57,7 @@ namespace SinerjiCRM
                 }
             }
 
-            using (SqlConnection connection = new SQLBaglantisi().baglanti())
+            using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
             {
                 string mergeQuery = @"
             MERGE INTO dbo.PLASIYER AS Target
@@ -320,7 +321,7 @@ namespace SinerjiCRM
         // İl ve ilçeleri veritabanından yükle
         private void LoadIller()
         {
-            using (SqlConnection connection = new SQLBaglantisi().baglanti())
+            using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
             {
                 string query = "SELECT id, sehiradi FROM iller";
 
@@ -341,7 +342,7 @@ namespace SinerjiCRM
         {
             cmbIlceler.Items.Clear();
 
-            using (SqlConnection connection = new SQLBaglantisi().baglanti())
+            using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
             {
                 string query = "SELECT id, ilceadi FROM ilceler WHERE sehirid = @sehirid";
 
@@ -373,7 +374,7 @@ namespace SinerjiCRM
                 int sehirId;
 
                 // Seçilen ilin id'sini bul
-                using (SqlConnection connection = new SQLBaglantisi().baglanti())
+                using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
                 {
                     string query = "SELECT id FROM iller WHERE sehiradi = @sehiradi";
                     using (SqlCommand command = new SqlCommand(query, connection))

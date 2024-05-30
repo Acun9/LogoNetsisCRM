@@ -1,4 +1,4 @@
-namespace SinerjiCRM
+namespace SinerjiCRM.Scripts
 {
     internal static class Program
     {
