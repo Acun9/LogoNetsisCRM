@@ -19,6 +19,7 @@ namespace SinerjiCRM
         private void CariKayit_Load(object sender, EventArgs e)
         {
             LoadComboboxData();
+            LoadDataGridView();
         }
 
         private void btnEkleGuncelle_Click(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace SinerjiCRM
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Veriler güncellendi.");
+                                LoadDataGridView();
                             }
                             else
                             {
@@ -95,6 +97,7 @@ namespace SinerjiCRM
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Veriler başarıyla kaydedildi.");
+                                LoadDataGridView();
                             }
                             else
                             {
@@ -120,6 +123,7 @@ namespace SinerjiCRM
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Veri başarıyla silindi.");
+                        LoadDataGridView();
                     }
                     else
                     {
@@ -324,6 +328,21 @@ namespace SinerjiCRM
                 else
                 {
                     cmbIlce.Items.Clear();
+                }
+            }
+        }
+
+        private void LoadDataGridView()
+        {
+            using (SqlConnection connection = new SQLBaglantisi().baglanti())
+            {
+                string query = "SELECT * FROM dbo.CARI_KAYIT";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    dataGridView1.DataSource = dataTable;
                 }
             }
         }

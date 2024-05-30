@@ -554,14 +554,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 178);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(1343, 447);
             dataGridView1.TabIndex = 96;
             // 
-            // SatinAlmaTalep
+            // CariKayit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -569,7 +572,7 @@
             ClientSize = new Size(1343, 625);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
-            Name = "SatinAlmaTalep";
+            Name = "CariKayit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cari Kayıt";
             FormClosed += CariKayit_FormClosed;

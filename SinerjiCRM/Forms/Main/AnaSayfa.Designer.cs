@@ -1,6 +1,6 @@
 ﻿namespace SinerjiCRM
 {
-    partial class SinerjiCRM
+    partial class AnaSayfa
     {
         /// <summary>
         /// Required designer variable.

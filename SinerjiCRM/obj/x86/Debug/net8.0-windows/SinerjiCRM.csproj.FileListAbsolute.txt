@@ -38,6 +38,6 @@ C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windo
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.PlasiyerKayit.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Giris.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.KayitOl.resources
-C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.SinerjiCRM.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Dogrula.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.SatinAlmaTalep.resources
+C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.AnaSayfa.resources

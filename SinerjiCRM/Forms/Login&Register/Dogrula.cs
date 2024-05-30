@@ -40,7 +40,7 @@ namespace SinerjiCRM
             {
                 MessageBox.Show("Doğrulama başarılı!");                                
                 KayitOlVeritabaninaKaydet(kullaniciAdi, sifre, mail); // Kullanıcıyı veritabanına kaydet                
-                SinerjiCRM sinerjiCRMForm = new SinerjiCRM();
+                AnaSayfa sinerjiCRMForm = new AnaSayfa();
                 sinerjiCRMForm.Show();
                 Application.OpenForms?["Giris"]?.Hide(); // Giris formunu gizle
                 this.Close(); // Mevcut formu kapat

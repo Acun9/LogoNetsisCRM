@@ -44,7 +44,7 @@ namespace SinerjiCRM
             if (!string.IsNullOrEmpty(dogruSifre) && girilenSifre == dogruSifre)
             {
                 // Giriş başarılı, ana uygulama formunu aç
-                SinerjiCRM sinerjiCRMForm = new SinerjiCRM();
+                AnaSayfa sinerjiCRMForm = new AnaSayfa();
                 sinerjiCRMForm.Show();
                 txtKullaniciAdi.Clear();
                 txtSifre.Clear();

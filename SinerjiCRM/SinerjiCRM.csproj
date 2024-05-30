@@ -41,25 +41,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Forms\Menu\CariKayit.cs">
+    <Compile Update="Forms\Main\Menu\CariKayit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Menu\SatinAlmaTalep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Main\SinerjiCRM.cs">
+    <Compile Update="Forms\Main\Menu\SatinAlmaTalep.cs" />
+    <Compile Update="Forms\Main\AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Login&amp;Register\Giris.cs" />
     <Compile Update="Forms\Login&amp;Register\Dogrula.cs" />
-    <Compile Update="Forms\Menu\MusteriKayit.cs" />
-    <Compile Update="Forms\Menu\PlasiyerKayit.cs">
+    <Compile Update="Forms\Main\Menu\MusteriKayit.cs" />
+    <Compile Update="Forms\Main\Menu\PlasiyerKayit.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Forms\Menu\PlasiyerKayit.resx">
+    <EmbeddedResource Update="Forms\Main\Menu\PlasiyerKayit.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

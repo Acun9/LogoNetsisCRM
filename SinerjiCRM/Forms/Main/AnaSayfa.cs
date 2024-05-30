@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace SinerjiCRM
 {
-    public partial class SinerjiCRM : Form
+    public partial class AnaSayfa : Form
     {
 
-        public SinerjiCRM()
+        public AnaSayfa()
         {
             InitializeComponent();
 
