@@ -268,6 +268,7 @@ namespace SinerjiCRM
                 {
                     LoadIller();
                     cmbIller.SelectedItem = il;
+                                       
                 }
 
                 if (ilce != null)
@@ -321,7 +322,7 @@ namespace SinerjiCRM
         // İl ve ilçeleri veritabanından yükle
         private void LoadIller()
         {
-            using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
+            using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
                 string query = "SELECT id, sehiradi FROM iller";
 
@@ -342,7 +343,7 @@ namespace SinerjiCRM
         {
             cmbIlceler.Items.Clear();
 
-            using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
+            using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
                 string query = "SELECT id, ilceadi FROM ilceler WHERE sehirid = @sehirid";
 
@@ -374,7 +375,7 @@ namespace SinerjiCRM
                 int sehirId;
 
                 // Seçilen ilin id'sini bul
-                using (SqlConnection connection = new Scripts.SQLBaglantisi().baglanti())
+                using (SqlConnection connection = new SQLBaglantisi().baglanti())
                 {
                     string query = "SELECT id FROM iller WHERE sehiradi = @sehiradi";
                     using (SqlCommand command = new SqlCommand(query, connection))

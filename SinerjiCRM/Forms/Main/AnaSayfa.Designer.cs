@@ -59,7 +59,7 @@
             // btnCikis
             // 
             btnCikis.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnCikis.Location = new Point(216, 189);
+            btnCikis.Location = new Point(191, 189);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(75, 23);
             btnCikis.TabIndex = 2;
@@ -78,17 +78,17 @@
             btnCari.UseVisualStyleBackColor = true;
             btnCari.Click += btnCari_Click;
             // 
-            // SinerjiCRM
+            // AnaSayfa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(303, 224);
+            ClientSize = new Size(278, 224);
             Controls.Add(btnCari);
             Controls.Add(btnCikis);
             Controls.Add(btnMusteri);
             Controls.Add(btnKisi);
-            Name = "SinerjiCRM";
+            Name = "AnaSayfa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sinerji CRM";
             FormClosed += SinerjiCRM_FormClosed;
