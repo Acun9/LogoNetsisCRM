@@ -1,3 +1,5 @@
+using SinerjiCRM.Forms.Main.Menu;
+
 namespace SinerjiCRM.Scripts
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace SinerjiCRM.Scripts
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new SatinAlmaTalep());
+            Application.Run(new gridTest());
         }
     }
 }

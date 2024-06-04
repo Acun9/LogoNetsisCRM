@@ -240,7 +240,6 @@
             btnAktar.TabIndex = 21;
             btnAktar.Text = "Tabloyu NETSIS'e aktar";
             btnAktar.UseVisualStyleBackColor = true;
-            btnAktar.Click += btnAktar_Click;
             // 
             // txtNo
             // 
@@ -786,10 +785,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(1343, 372);
             dataGridView1.TabIndex = 96;
-            dataGridView1.CellClick += dataGridView1_CellClick;
-            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView1.UserAddedRow += dataGridView1_UserAddedRow;
-            dataGridView1.UserDeletingRow += dataGridView1_UserDeletingRow;
             // 
             // SatinAlmaTalep
             // 

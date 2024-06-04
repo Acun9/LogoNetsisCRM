@@ -1,87 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\satinalmatalep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\satinalmatalep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\scripts\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\satinalmatalep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\satinalmatalep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\scripts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 186,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SatinAlmaTalep.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs [Tasar\u0131m]",
-              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs [Tasar\u0131m]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T06:26:51.761Z",
-              "EditorCaption": " [Tasar\u0131m]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SatinAlmaTalep.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\SatinAlmaTalep.cs",
-              "ViewState": "AQIAAEoBAAAAAAAAAAAQwFQBAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T07:21:30.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Scripts\\Program.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Scripts\\Program.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Scripts\\Program.cs",
-              "RelativeToolTip": "SinerjiCRM\\Scripts\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T07:48:27.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Scripts\\Data.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Scripts\\Data.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Scripts\\Data.cs",
-              "RelativeToolTip": "SinerjiCRM\\Scripts\\Data.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAIwC0AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T08:57:23.583Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

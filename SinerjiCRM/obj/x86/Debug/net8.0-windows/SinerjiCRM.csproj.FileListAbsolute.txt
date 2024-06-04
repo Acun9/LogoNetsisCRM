@@ -42,3 +42,5 @@ C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windo
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.SatinAlmaTalep.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.AnaSayfa.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Properties.Resources.resources
+C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Forms.Main.Menu.gridTest.resources
+C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Forms.Main.Menu.gridTest2.resources
