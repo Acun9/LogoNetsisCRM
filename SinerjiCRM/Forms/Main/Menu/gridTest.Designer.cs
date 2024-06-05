@@ -41,6 +41,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(800, 450);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView1.RowValidated += dataGridView1_RowValidated;
             dataGridView1.UserDeletingRow += dataGridView1_UserDeletingRow;
             // 

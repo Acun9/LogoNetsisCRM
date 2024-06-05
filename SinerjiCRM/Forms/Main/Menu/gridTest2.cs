@@ -8,8 +8,7 @@ namespace SinerjiCRM.Forms.Main.Menu
 {
     public partial class gridTest2 : Form
     {
-        private SqlDataAdapter adapter;
-        private DataTable dataTable;
+        private string _previousTeklifNo;
 
         public gridTest2()
         {
@@ -25,102 +24,95 @@ namespace SinerjiCRM.Forms.Main.Menu
         {
             using (SqlConnection connection = new SQLBaglantisi().baglanti())
             {
-                adapter = new SqlDataAdapter("SELECT * FROM dbo.TEKLIFTRA", connection);
-                dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM dbo.TEKLIFTRA", connection);
+                DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
-
-                // RowVersion kolonunu ekleyin
-                dataTable.Columns["TEKLIF_NO"].Unique = true;
-                dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["TEKLIF_NO"] };
-
-                // Update, Insert ve Delete komutlarını manuel olarak ayarlayın
-                SetUpdateCommand(adapter);
-                SetInsertCommand(adapter);
-                SetDeleteCommand(adapter);
 
                 dataGridView1.DataSource = dataTable;
             }
         }
 
-        private void SetUpdateCommand(SqlDataAdapter adapter)
+        private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            SqlCommand updateCommand = new SqlCommand(
-                "UPDATE dbo.TEKLIFTRA SET STOK_KODU = @STOK_KODU, STOK_ADI = @STOK_ADI, TESLIM_TARIHI = @TESLIM_TARIHI, MIKTAR = @MIKTAR, " +
-                "MIKTAR_OLCU_BIRIMI = @MIKTAR_OLCU_BIRIMI, DOVIZ_KURU = @DOVIZ_KURU, TL_FIYATI = @TL_FIYATI, KDV_ORANI = @KDV_ORANI, TUTAR = @TUTAR, " +
-                "SIRA_NO = @SIRA_NO, PROJE_KODU = @PROJE_KODU, EK_ALAN_1 = @EK_ALAN_1, EK_ALAN_2 = @EK_ALAN_2 WHERE TEKLIF_NO = @TEKLIF_NO", adapter.SelectCommand.Connection);
-            updateCommand.Parameters.Add("@TEKLIF_NO", SqlDbType.VarChar, 50, "TEKLIF_NO");
-            updateCommand.Parameters.Add("@STOK_KODU", SqlDbType.VarChar, 50, "STOK_KODU");
-            updateCommand.Parameters.Add("@STOK_ADI", SqlDbType.VarChar, 100, "STOK_ADI");
-            updateCommand.Parameters.Add("@TESLIM_TARIHI", SqlDbType.DateTime, 0, "TESLIM_TARIHI");
-            updateCommand.Parameters.Add("@MIKTAR", SqlDbType.Decimal, 0, "MIKTAR");
-            updateCommand.Parameters.Add("@MIKTAR_OLCU_BIRIMI", SqlDbType.VarChar, 50, "MIKTAR_OLCU_BIRIMI");
-            updateCommand.Parameters.Add("@DOVIZ_KURU", SqlDbType.Decimal, 0, "DOVIZ_KURU");
-            updateCommand.Parameters.Add("@TL_FIYATI", SqlDbType.Decimal, 0, "TL_FIYATI");
-            updateCommand.Parameters.Add("@KDV_ORANI", SqlDbType.Decimal, 0, "KDV_ORANI");
-            updateCommand.Parameters.Add("@TUTAR", SqlDbType.Decimal, 0, "TUTAR");
-            updateCommand.Parameters.Add("@SIRA_NO", SqlDbType.Int, 0, "SIRA_NO");
-            updateCommand.Parameters.Add("@PROJE_KODU", SqlDbType.VarChar, 50, "PROJE_KODU");
-            updateCommand.Parameters.Add("@EK_ALAN_1", SqlDbType.VarChar, 50, "EK_ALAN_1");
-            updateCommand.Parameters.Add("@EK_ALAN_2", SqlDbType.VarChar, 50, "EK_ALAN_2");
-
-            adapter.UpdateCommand = updateCommand;
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "TEKLIF_NO")
+            {
+                _previousTeklifNo = dataGridView1[e.ColumnIndex, e.RowIndex].Value?.ToString();
+            }
         }
 
-        private void SetInsertCommand(SqlDataAdapter adapter)
-        {
-            SqlCommand insertCommand = new SqlCommand(
-                "INSERT INTO dbo.TEKLIFTRA (TEKLIF_NO, STOK_KODU, STOK_ADI, TESLIM_TARIHI, MIKTAR, MIKTAR_OLCU_BIRIMI, DOVIZ_KURU, TL_FIYATI, KDV_ORANI, TUTAR, " +
-                "SIRA_NO, PROJE_KODU, EK_ALAN_1, EK_ALAN_2) VALUES (@TEKLIF_NO, @STOK_KODU, @STOK_ADI, @TESLIM_TARIHI, @MIKTAR, @MIKTAR_OLCU_BIRIMI, " +
-                "@DOVIZ_KURU, @TL_FIYATI, @KDV_ORANI, @TUTAR, @SIRA_NO, @PROJE_KODU, @EK_ALAN_1, @EK_ALAN_2)", adapter.SelectCommand.Connection);
-            insertCommand.Parameters.Add("@TEKLIF_NO", SqlDbType.VarChar, 50, "TEKLIF_NO");
-            insertCommand.Parameters.Add("@STOK_KODU", SqlDbType.VarChar, 50, "STOK_KODU");
-            insertCommand.Parameters.Add("@STOK_ADI", SqlDbType.VarChar, 100, "STOK_ADI");
-            insertCommand.Parameters.Add("@TESLIM_TARIHI", SqlDbType.DateTime, 0, "TESLIM_TARIHI");
-            insertCommand.Parameters.Add("@MIKTAR", SqlDbType.Decimal, 0, "MIKTAR");
-            insertCommand.Parameters.Add("@MIKTAR_OLCU_BIRIMI", SqlDbType.VarChar, 50, "MIKTAR_OLCU_BIRIMI");
-            insertCommand.Parameters.Add("@DOVIZ_KURU", SqlDbType.Decimal, 0, "DOVIZ_KURU");
-            insertCommand.Parameters.Add("@TL_FIYATI", SqlDbType.Decimal, 0, "TL_FIYATI");
-            insertCommand.Parameters.Add("@KDV_ORANI", SqlDbType.Decimal, 0, "KDV_ORANI");
-            insertCommand.Parameters.Add("@TUTAR", SqlDbType.Decimal, 0, "TUTAR");
-            insertCommand.Parameters.Add("@SIRA_NO", SqlDbType.Int, 0, "SIRA_NO");
-            insertCommand.Parameters.Add("@PROJE_KODU", SqlDbType.VarChar, 50, "PROJE_KODU");
-            insertCommand.Parameters.Add("@EK_ALAN_1", SqlDbType.VarChar, 50, "EK_ALAN_1");
-            insertCommand.Parameters.Add("@EK_ALAN_2", SqlDbType.VarChar, 50, "EK_ALAN_2");
-
-            adapter.InsertCommand = insertCommand;
-        }
-
-        private void SetDeleteCommand(SqlDataAdapter adapter)
-        {
-            SqlCommand deleteCommand = new SqlCommand("DELETE FROM dbo.TEKLIFTRA WHERE TEKLIF_NO = @TEKLIF_NO", adapter.SelectCommand.Connection);
-            deleteCommand.Parameters.Add("@TEKLIF_NO", SqlDbType.VarChar, 50, "TEKLIF_NO");
-
-            adapter.DeleteCommand = deleteCommand;
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                dataGridView1.EndEdit();
+                DataGridViewRow newRow = dataGridView1.Rows[e.RowIndex];
+                var teklifNo = newRow.Cells["TEKLIF_NO"].Value?.ToString();
+
+                if (string.IsNullOrWhiteSpace(teklifNo))
+                {
+                    MessageBox.Show("Teklif No boş olamaz. Lütfen Teklif No girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    newRow.Cells["TEKLIF_NO"].Value = _previousTeklifNo; // Eski değeri geri yükle
+                    return;
+                }
+
+                var stokKodu = newRow.Cells["STOK_KODU"].Value?.ToString();
+                var stokAdi = newRow.Cells["STOK_ADI"].Value?.ToString();
+                var teslimTarihi = newRow.Cells["TESLIM_TARIHI"].Value?.ToString();
+                var miktar = newRow.Cells["MIKTAR"].Value?.ToString();
+                var miktarOlcuBirimi = newRow.Cells["MIKTAR_OLCU_BIRIMI"].Value?.ToString();
+                var dovizKuru = newRow.Cells["DOVIZ_KURU"].Value?.ToString();
+                var tlFiyati = newRow.Cells["TL_FIYATI"].Value?.ToString();
+                var kdvOrani = newRow.Cells["KDV_ORANI"].Value?.ToString();
+                var tutar = newRow.Cells["TUTAR"].Value?.ToString();
+                var siraNo = newRow.Cells["SIRA_NO"].Value?.ToString();
+                var projeKodu = newRow.Cells["PROJE_KODU"].Value?.ToString();
+                var ekAlan1 = newRow.Cells["EK_ALAN_1"].Value?.ToString();
+                var ekAlan2 = newRow.Cells["EK_ALAN_2"].Value?.ToString();
+
                 using (SqlConnection connection = new SQLBaglantisi().baglanti())
                 {
-                    adapter.SelectCommand.Connection = connection;
-                    SetUpdateCommand(adapter);
 
-                    // Değişiklikleri kabul edin ve güncelleyin
-                    dataTable.AcceptChanges();
-                    int affectedRows = adapter.Update(dataTable);
+                    // TEKLIF_NO değerinin veritabanında olup olmadığını kontrol et
+                    string checkQuery = "SELECT COUNT(*) FROM dbo.TEKLIFTRA WHERE TEKLIF_NO = @TeklifNo";
+                    SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
+                    checkCommand.Parameters.AddWithValue("@TeklifNo", teklifNo);
+                    int count = (int)checkCommand.ExecuteScalar();
 
-                    if (affectedRows == 0)
+                    string query;
+                    if (count > 0) // TEKLIF_NO zaten varsa güncelle
                     {
-                        MessageBox.Show("Güncelleme işlemi başarısız oldu, çünkü beklenen satır bulunamadı.");
+                        query = "UPDATE dbo.TEKLIFTRA SET STOK_KODU = @StokKodu, STOK_ADI = @StokAdi, TESLIM_TARIHI = @TeslimTarihi, MIKTAR = @Miktar, MIKTAR_OLCU_BIRIMI = @MiktarOlcuBirimi, DOVIZ_KURU = @DovizKuru, TL_FIYATI = @TlFiyati, KDV_ORANI = @KdvOrani, TUTAR = @Tutar, SIRA_NO = @SiraNo, PROJE_KODU = @ProjeKodu, EK_ALAN_1 = @EkAlan1, EK_ALAN_2 = @EkAlan2 " +
+                                "WHERE TEKLIF_NO = @TeklifNo";
+                    }
+                    else // TEKLIF_NO yoksa yeni kayıt ekle
+                    {
+                        query = "INSERT INTO dbo.TEKLIFTRA (TEKLIF_NO, STOK_KODU, STOK_ADI, TESLIM_TARIHI, MIKTAR, MIKTAR_OLCU_BIRIMI, DOVIZ_KURU, TL_FIYATI, KDV_ORANI, TUTAR, SIRA_NO, PROJE_KODU, EK_ALAN_1, EK_ALAN_2) " +
+                                "VALUES (@TeklifNo, @StokKodu, @StokAdi, @TeslimTarihi, @Miktar, @MiktarOlcuBirimi, @DovizKuru, @TlFiyati, @KdvOrani, @Tutar, @SiraNo, @ProjeKodu, @EkAlan1, @EkAlan2)";
+                    }
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@TeklifNo", teklifNo);
+                        command.Parameters.AddWithValue("@StokKodu", stokKodu);
+                        command.Parameters.AddWithValue("@StokAdi", stokAdi);
+                        command.Parameters.AddWithValue("@TeslimTarihi", teslimTarihi);
+                        command.Parameters.AddWithValue("@Miktar", miktar);
+                        command.Parameters.AddWithValue("@MiktarOlcuBirimi", miktarOlcuBirimi);
+                        command.Parameters.AddWithValue("@DovizKuru", dovizKuru);
+                        command.Parameters.AddWithValue("@TlFiyati", tlFiyati);
+                        command.Parameters.AddWithValue("@KdvOrani", kdvOrani);
+                        command.Parameters.AddWithValue("@Tutar", tutar);
+                        command.Parameters.AddWithValue("@SiraNo", siraNo);
+                        command.Parameters.AddWithValue("@ProjeKodu", projeKodu);
+                        command.Parameters.AddWithValue("@EkAlan1", ekAlan1);
+                        command.Parameters.AddWithValue("@EkAlan2", ekAlan2);
+
+                        command.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Veritabanı güncelleme hatası: " + ex.Message);
+                MessageBox.Show("Veritabanına ekleme/güncelleme hatası: " + ex.Message);
             }
         }
 
@@ -133,55 +125,33 @@ namespace SinerjiCRM.Forms.Main.Menu
             }
             else
             {
-                try
+                var teklifNo = e.Row.Cells["TEKLIF_NO"].Value?.ToString();
+
+                if (teklifNo != null)
                 {
-                    dataGridView1.EndEdit();
-                    using (SqlConnection connection = new SQLBaglantisi().baglanti())
+                    try
                     {
-                        adapter.SelectCommand.Connection = connection;
-                        SetDeleteCommand(adapter);
-
-                        // Değişiklikleri kabul edin ve güncelleyin
-                        dataTable.AcceptChanges();
-                        int affectedRows = adapter.Update(dataTable);
-
-                        if (affectedRows == 0)
+                        using (SqlConnection connection = new SQLBaglantisi().baglanti())
                         {
-                            MessageBox.Show("Silme işlemi başarısız oldu, çünkü beklenen satır bulunamadı.");
+                            string query = "DELETE FROM dbo.TEKLIFTRA WHERE TEKLIF_NO = @TeklifNo";
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@TeklifNo", teklifNo);
+                                command.ExecuteNonQuery();
+                            }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Veritabanından silme hatası: " + ex.Message);
-                    e.Cancel = true; // Hata durumunda silme işlemini iptal et
-                }
-            }
-        }
-
-        private void dataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            try
-            {
-                dataGridView1.EndEdit();
-                using (SqlConnection connection = new SQLBaglantisi().baglanti())
-                {
-                    adapter.SelectCommand.Connection = connection;
-                    SetInsertCommand(adapter);
-
-                    // Değişiklikleri kabul edin ve güncelleyin
-                    dataTable.AcceptChanges();
-                    int affectedRows = adapter.Update(dataTable);
-
-                    if (affectedRows == 0)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Ekleme işlemi başarısız oldu.");
+                        MessageBox.Show("Veritabanından silme hatası: " + ex.Message);
+                        e.Cancel = true;
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Veritabanına ekleme hatası: " + ex.Message);
+                else
+                {
+                    MessageBox.Show("Silinecek satırın TEKLIF_NO değeri alınamadı.");
+                    e.Cancel = true;
+                }
             }
         }
     }
