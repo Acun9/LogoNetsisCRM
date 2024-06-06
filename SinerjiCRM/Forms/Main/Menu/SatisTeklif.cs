@@ -11,9 +11,9 @@ using System.Data.Common;
 
 namespace SinerjiCRM
 {
-    public partial class SatinAlmaTalep : Form
+    public partial class SatisTeklif : Form
     {        
-        public SatinAlmaTalep()
+        public SatisTeklif()
         {
             InitializeComponent();
         }

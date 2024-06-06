@@ -32,15 +32,13 @@ namespace SinerjiCRM
 
         private void btnKisi_Click(object sender, EventArgs e)
         {
-            PlasiyerKayit plasiyerKayitForm = new PlasiyerKayit();
+            KisiKayit plasiyerKayitForm = new KisiKayit();
             plasiyerKayitForm.Show();
             this.Hide();
         }
 
         private void btnMusteri_Click(object sender, EventArgs e)
         {
-            MusteriKayit musteriKayitForm = new MusteriKayit();
-            musteriKayitForm.Show();
             this.Hide();
         }
 

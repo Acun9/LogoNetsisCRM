@@ -5,10 +5,10 @@ using SinerjiCRM.Scripts;
 
 namespace SinerjiCRM
 {
-    public partial class PlasiyerKayit : Form
+    public partial class KisiKayit : Form
     {
 
-        public PlasiyerKayit()
+        public KisiKayit()
         {
             InitializeComponent();
 

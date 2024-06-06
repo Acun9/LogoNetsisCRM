@@ -2,7 +2,7 @@
 
 namespace SinerjiCRM
 {
-    partial class PlasiyerKayit
+    partial class KisiKayit
     {
         /// <summary>
         /// Required designer variable.

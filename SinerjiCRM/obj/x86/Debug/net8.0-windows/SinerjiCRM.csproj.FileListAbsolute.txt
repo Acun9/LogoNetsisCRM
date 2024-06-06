@@ -34,13 +34,11 @@ C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windo
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.genruntimeconfig.cache
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\ref\SinerjiCRM.dll
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.CariKayit.resources
-C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.MusteriKayit.resources
-C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.PlasiyerKayit.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Giris.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.KayitOl.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Dogrula.resources
-C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.SatinAlmaTalep.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.AnaSayfa.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Properties.Resources.resources
 C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Forms.Main.Menu.gridTest.resources
-C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.Forms.Main.Menu.gridTest2.resources
+C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.KisiKayit.resources
+C:\Users\dijital1\Documents\GitHub\Sinerji\SinerjiCRM\obj\x86\Debug\net8.0-windows\SinerjiCRM.SatisTeklif.resources
