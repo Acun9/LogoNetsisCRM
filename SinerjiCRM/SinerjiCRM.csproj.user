@@ -16,9 +16,6 @@
     <Compile Update="Forms\Main\Menu\gridTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Main\Menu\gridTest2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\Main\Menu\MusteriKayit.cs">
       <SubType>Form</SubType>
     </Compile>

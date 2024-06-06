@@ -39,9 +39,8 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(800, 450);
+            dataGridView1.Size = new Size(1230, 450);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView1.RowValidated += dataGridView1_RowValidated;
             dataGridView1.UserDeletingRow += dataGridView1_UserDeletingRow;
             // 
@@ -49,7 +48,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1230, 450);
             Controls.Add(dataGridView1);
             Name = "gridTest";
             StartPosition = FormStartPosition.CenterScreen;

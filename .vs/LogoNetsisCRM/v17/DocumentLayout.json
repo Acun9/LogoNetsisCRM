@@ -1,69 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\gridtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\gridtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\sinerjicrm\\forms\\main\\menu\\gridtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\gridtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\gridtest2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\gridtest2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 214,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "gridTest.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs [Tasar\u0131m]",
-              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs [Tasar\u0131m]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T15:18:42.227Z",
-              "EditorCaption": " [Tasar\u0131m]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "gridTest.cs",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAAwJgAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T15:18:49.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "gridTest2.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest2.cs",
-              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest2.cs",
-              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\gridTest2.cs [Tasar\u0131m]",
-              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\gridTest2.cs [Tasar\u0131m]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T13:52:08.103Z",
-              "EditorCaption": " [Tasar\u0131m]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
