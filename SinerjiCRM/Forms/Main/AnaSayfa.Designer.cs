@@ -28,38 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnKisi = new Button();
-            btnMusteri = new Button();
+            btnKisiKaydet = new Button();
+            btnSatisTeklif = new Button();
             btnCikis = new Button();
-            btnCari = new Button();
+            btnCariKaydet = new Button();
             SuspendLayout();
             // 
-            // btnKisi
+            // btnKisiKaydet
             // 
-            btnKisi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnKisi.Location = new Point(12, 12);
-            btnKisi.Name = "btnKisi";
-            btnKisi.Size = new Size(80, 60);
-            btnKisi.TabIndex = 0;
-            btnKisi.Text = "Kişi İşlemleri";
-            btnKisi.UseVisualStyleBackColor = true;
-            btnKisi.Click += btnKisi_Click;
+            btnKisiKaydet.Anchor = AnchorStyles.Top;
+            btnKisiKaydet.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnKisiKaydet.Location = new Point(95, 12);
+            btnKisiKaydet.Name = "btnKisiKaydet";
+            btnKisiKaydet.Size = new Size(80, 60);
+            btnKisiKaydet.TabIndex = 0;
+            btnKisiKaydet.Text = "Kişi Kaydet";
+            btnKisiKaydet.UseVisualStyleBackColor = true;
+            btnKisiKaydet.Click += btnKisi_Click;
             // 
-            // btnMusteri
+            // btnSatisTeklif
             // 
-            btnMusteri.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnMusteri.Location = new Point(98, 12);
-            btnMusteri.Name = "btnMusteri";
-            btnMusteri.Size = new Size(80, 60);
-            btnMusteri.TabIndex = 1;
-            btnMusteri.Text = "Müşteri İşlemleri";
-            btnMusteri.UseVisualStyleBackColor = true;
-            btnMusteri.Click += btnMusteri_Click;
+            btnSatisTeklif.Anchor = AnchorStyles.Top;
+            btnSatisTeklif.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnSatisTeklif.Location = new Point(181, 12);
+            btnSatisTeklif.Name = "btnSatisTeklif";
+            btnSatisTeklif.Size = new Size(80, 60);
+            btnSatisTeklif.TabIndex = 1;
+            btnSatisTeklif.Text = "Satış Teklif";
+            btnSatisTeklif.UseVisualStyleBackColor = true;
+            btnSatisTeklif.Click += btnSatisTeklif_Click;
             // 
             // btnCikis
             // 
             btnCikis.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnCikis.Location = new Point(191, 189);
+            btnCikis.Location = new Point(185, 94);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(75, 23);
             btnCikis.TabIndex = 2;
@@ -67,27 +69,29 @@
             btnCikis.UseVisualStyleBackColor = true;
             btnCikis.Click += btnCikis_Click;
             // 
-            // btnCari
+            // btnCariKaydet
             // 
-            btnCari.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnCari.Location = new Point(184, 12);
-            btnCari.Name = "btnCari";
-            btnCari.Size = new Size(80, 60);
-            btnCari.TabIndex = 3;
-            btnCari.Text = "Cari İşlemleri";
-            btnCari.UseVisualStyleBackColor = true;
-            btnCari.Click += btnCari_Click;
+            btnCariKaydet.Anchor = AnchorStyles.Top;
+            btnCariKaydet.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnCariKaydet.Location = new Point(9, 12);
+            btnCariKaydet.Name = "btnCariKaydet";
+            btnCariKaydet.Size = new Size(80, 60);
+            btnCariKaydet.TabIndex = 3;
+            btnCariKaydet.Text = "Cari Kaydet";
+            btnCariKaydet.UseVisualStyleBackColor = true;
+            btnCariKaydet.Click += btnCari_Click;
             // 
             // AnaSayfa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(278, 224);
-            Controls.Add(btnCari);
+            ClientSize = new Size(272, 129);
+            Controls.Add(btnCariKaydet);
             Controls.Add(btnCikis);
-            Controls.Add(btnMusteri);
-            Controls.Add(btnKisi);
+            Controls.Add(btnSatisTeklif);
+            Controls.Add(btnKisiKaydet);
+            MaximizeBox = false;
             Name = "AnaSayfa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sinerji CRM";
@@ -97,9 +101,9 @@
 
         #endregion
 
-        private Button btnKisi;
-        private Button btnMusteri;
+        private Button btnKisiKaydet;
+        private Button btnSatisTeklif;
         private Button btnCikis;
-        private Button btnCari;
+        private Button btnCariKaydet;
     }
 }

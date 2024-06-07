@@ -100,6 +100,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(12, 35);
@@ -110,14 +111,16 @@
             // 
             // txtKod
             // 
+            txtKod.Anchor = AnchorStyles.Top;
             txtKod.Location = new Point(71, 32);
             txtKod.MaxLength = 15;
             txtKod.Name = "txtKod";
             txtKod.Size = new Size(120, 23);
-            txtKod.TabIndex = 1;
+            txtKod.TabIndex = 2;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label2.Location = new Point(12, 6);
@@ -128,6 +131,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.Location = new Point(12, 64);
@@ -138,26 +142,29 @@
             // 
             // btnSil
             // 
+            btnSil.Anchor = AnchorStyles.Top;
             btnSil.Location = new Point(957, 180);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(75, 23);
-            btnSil.TabIndex = 20;
+            btnSil.TabIndex = 29;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
             btnSil.Click += btnSil_Click;
             // 
             // btnGeri
             // 
+            btnGeri.Anchor = AnchorStyles.Top;
             btnGeri.Location = new Point(957, 209);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(75, 23);
-            btnGeri.TabIndex = 22;
+            btnGeri.TabIndex = 31;
             btnGeri.Text = "Geri";
             btnGeri.UseVisualStyleBackColor = true;
             btnGeri.Click += btnGeri_Click;
             // 
             // label14
             // 
+            label14.Anchor = AnchorStyles.Top;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label14.Location = new Point(247, 122);
@@ -169,14 +176,16 @@
             // 
             // txtNot1
             // 
+            txtNot1.Anchor = AnchorStyles.Top;
             txtNot1.Location = new Point(291, 119);
             txtNot1.MaxLength = 20;
             txtNot1.Name = "txtNot1";
             txtNot1.Size = new Size(236, 23);
-            txtNot1.TabIndex = 8;
+            txtNot1.TabIndex = 12;
             // 
             // label15
             // 
+            label15.Anchor = AnchorStyles.Top;
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label15.Location = new Point(247, 151);
@@ -188,14 +197,16 @@
             // 
             // txtNot2
             // 
+            txtNot2.Anchor = AnchorStyles.Top;
             txtNot2.Location = new Point(291, 148);
             txtNot2.MaxLength = 20;
             txtNot2.Name = "txtNot2";
             txtNot2.Size = new Size(236, 23);
-            txtNot2.TabIndex = 9;
+            txtNot2.TabIndex = 13;
             // 
             // label16
             // 
+            label16.Anchor = AnchorStyles.Top;
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label16.Location = new Point(247, 180);
@@ -207,14 +218,16 @@
             // 
             // txtNot3
             // 
+            txtNot3.Anchor = AnchorStyles.Top;
             txtNot3.Location = new Point(291, 177);
             txtNot3.MaxLength = 255;
             txtNot3.Name = "txtNot3";
             txtNot3.Size = new Size(236, 23);
-            txtNot3.TabIndex = 10;
+            txtNot3.TabIndex = 14;
             // 
             // label17
             // 
+            label17.Anchor = AnchorStyles.Top;
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label17.Location = new Point(247, 209);
@@ -226,32 +239,37 @@
             // 
             // txtNot4
             // 
+            txtNot4.Anchor = AnchorStyles.Top;
             txtNot4.Location = new Point(291, 206);
             txtNot4.MaxLength = 60;
             txtNot4.Name = "txtNot4";
             txtNot4.Size = new Size(236, 23);
-            txtNot4.TabIndex = 11;
+            txtNot4.TabIndex = 15;
             // 
             // btnAktar
             // 
+            btnAktar.Anchor = AnchorStyles.Top;
             btnAktar.Location = new Point(795, 209);
             btnAktar.Name = "btnAktar";
             btnAktar.Size = new Size(156, 23);
-            btnAktar.TabIndex = 21;
+            btnAktar.TabIndex = 30;
             btnAktar.Text = "Tabloyu NETSIS'e aktar";
             btnAktar.UseVisualStyleBackColor = true;
+            btnAktar.Click += btnAktar_Click;
             // 
             // txtNo
             // 
+            txtNo.Anchor = AnchorStyles.Top;
             txtNo.Location = new Point(71, 3);
             txtNo.MaxLength = 100;
             txtNo.Multiline = true;
             txtNo.Name = "txtNo";
             txtNo.Size = new Size(152, 23);
-            txtNo.TabIndex = 2;
+            txtNo.TabIndex = 1;
             // 
             // txtTarih
             // 
+            txtTarih.Anchor = AnchorStyles.Top;
             txtTarih.Location = new Point(71, 61);
             txtTarih.MaxLength = 255;
             txtTarih.Multiline = true;
@@ -261,10 +279,11 @@
             // 
             // btnEkleGuncelle
             // 
+            btnEkleGuncelle.Anchor = AnchorStyles.Top;
             btnEkleGuncelle.Location = new Point(795, 180);
             btnEkleGuncelle.Name = "btnEkleGuncelle";
             btnEkleGuncelle.Size = new Size(156, 23);
-            btnEkleGuncelle.TabIndex = 94;
+            btnEkleGuncelle.TabIndex = 28;
             btnEkleGuncelle.Text = "Ekle / Güncelle";
             btnEkleGuncelle.UseVisualStyleBackColor = true;
             btnEkleGuncelle.Click += btnEkleGuncelle_Click;
@@ -338,36 +357,40 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1343, 253);
+            panel1.Size = new Size(1086, 247);
             panel1.TabIndex = 95;
             // 
             // txtAciklama
             // 
+            txtAciklama.Anchor = AnchorStyles.Top;
             txtAciklama.Location = new Point(795, 98);
             txtAciklama.Multiline = true;
             txtAciklama.Name = "txtAciklama";
             txtAciklama.Size = new Size(278, 76);
-            txtAciklama.TabIndex = 173;
+            txtAciklama.TabIndex = 27;
             // 
             // txtDovizTip
             // 
+            txtDovizTip.Anchor = AnchorStyles.Top;
             txtDovizTip.Location = new Point(80, 90);
             txtDovizTip.MaxLength = 255;
             txtDovizTip.Multiline = true;
             txtDovizTip.Name = "txtDovizTip";
             txtDovizTip.Size = new Size(110, 23);
-            txtDovizTip.TabIndex = 172;
+            txtDovizTip.TabIndex = 4;
             // 
             // txtResimYolu
             // 
+            txtResimYolu.Anchor = AnchorStyles.Top;
             txtResimYolu.Font = new Font("Segoe UI", 9F);
             txtResimYolu.Location = new Point(946, 65);
             txtResimYolu.Name = "txtResimYolu";
             txtResimYolu.Size = new Size(97, 23);
-            txtResimYolu.TabIndex = 97;
+            txtResimYolu.TabIndex = 26;
             // 
             // label42
             // 
+            label42.Anchor = AnchorStyles.Top;
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label42.Location = new Point(899, 70);
@@ -378,6 +401,7 @@
             // 
             // label40
             // 
+            label40.Anchor = AnchorStyles.Top;
             label40.AutoSize = true;
             label40.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label40.Location = new Point(795, 38);
@@ -389,6 +413,7 @@
             // 
             // btnResimEkle
             // 
+            btnResimEkle.Anchor = AnchorStyles.Top;
             btnResimEkle.Location = new Point(1049, 64);
             btnResimEkle.Name = "btnResimEkle";
             btnResimEkle.Size = new Size(24, 23);
@@ -398,14 +423,16 @@
             // 
             // txtVadeGunu
             // 
+            txtVadeGunu.Anchor = AnchorStyles.Top;
             txtVadeGunu.Location = new Point(868, 35);
             txtVadeGunu.MaxLength = 20;
             txtVadeGunu.Name = "txtVadeGunu";
             txtVadeGunu.Size = new Size(205, 23);
-            txtVadeGunu.TabIndex = 169;
+            txtVadeGunu.TabIndex = 25;
             // 
             // label41
             // 
+            label41.Anchor = AnchorStyles.Top;
             label41.AutoSize = true;
             label41.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label41.Location = new Point(795, 9);
@@ -417,14 +444,16 @@
             // 
             // txtVadeTarihi
             // 
+            txtVadeTarihi.Anchor = AnchorStyles.Top;
             txtVadeTarihi.Location = new Point(868, 6);
             txtVadeTarihi.MaxLength = 20;
             txtVadeTarihi.Name = "txtVadeTarihi";
             txtVadeTarihi.Size = new Size(205, 23);
-            txtVadeTarihi.TabIndex = 168;
+            txtVadeTarihi.TabIndex = 24;
             // 
             // label39
             // 
+            label39.Anchor = AnchorStyles.Top;
             label39.AutoSize = true;
             label39.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label39.Location = new Point(556, 212);
@@ -436,14 +465,16 @@
             // 
             // txtGenelToplam
             // 
+            txtGenelToplam.Anchor = AnchorStyles.Top;
             txtGenelToplam.Location = new Point(645, 209);
             txtGenelToplam.MaxLength = 255;
             txtGenelToplam.Name = "txtGenelToplam";
             txtGenelToplam.Size = new Size(120, 23);
-            txtGenelToplam.TabIndex = 166;
+            txtGenelToplam.TabIndex = 23;
             // 
             // label33
             // 
+            label33.Anchor = AnchorStyles.Top;
             label33.AutoSize = true;
             label33.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label33.Location = new Point(561, 183);
@@ -455,14 +486,16 @@
             // 
             // txtKdvToplami
             // 
+            txtKdvToplami.Anchor = AnchorStyles.Top;
             txtKdvToplami.Location = new Point(645, 180);
             txtKdvToplami.MaxLength = 255;
             txtKdvToplami.Name = "txtKdvToplami";
             txtKdvToplami.Size = new Size(120, 23);
-            txtKdvToplami.TabIndex = 163;
+            txtKdvToplami.TabIndex = 22;
             // 
             // label31
             // 
+            label31.Anchor = AnchorStyles.Top;
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label31.Location = new Point(574, 154);
@@ -474,14 +507,16 @@
             // 
             // txtKdvOrani
             // 
+            txtKdvOrani.Anchor = AnchorStyles.Top;
             txtKdvOrani.Location = new Point(645, 151);
             txtKdvOrani.MaxLength = 255;
             txtKdvOrani.Name = "txtKdvOrani";
             txtKdvOrani.Size = new Size(120, 23);
-            txtKdvOrani.TabIndex = 148;
+            txtKdvOrani.TabIndex = 21;
             // 
             // label32
             // 
+            label32.Anchor = AnchorStyles.Top;
             label32.AutoSize = true;
             label32.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label32.Location = new Point(564, 125);
@@ -493,14 +528,16 @@
             // 
             // txtBrutToplam
             // 
+            txtBrutToplam.Anchor = AnchorStyles.Top;
             txtBrutToplam.Location = new Point(645, 122);
             txtBrutToplam.MaxLength = 20;
             txtBrutToplam.Name = "txtBrutToplam";
             txtBrutToplam.Size = new Size(120, 23);
-            txtBrutToplam.TabIndex = 147;
+            txtBrutToplam.TabIndex = 20;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label5.Location = new Point(575, 98);
@@ -512,14 +549,16 @@
             // 
             // txtHazirlayan
             // 
+            txtHazirlayan.Anchor = AnchorStyles.Top;
             txtHazirlayan.Location = new Point(645, 93);
             txtHazirlayan.MaxLength = 60;
             txtHazirlayan.Name = "txtHazirlayan";
             txtHazirlayan.Size = new Size(120, 23);
-            txtHazirlayan.TabIndex = 123;
+            txtHazirlayan.TabIndex = 19;
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label6.Location = new Point(572, 69);
@@ -531,14 +570,16 @@
             // 
             // txtPaketleme
             // 
+            txtPaketleme.Anchor = AnchorStyles.Top;
             txtPaketleme.Location = new Point(645, 64);
             txtPaketleme.MaxLength = 255;
             txtPaketleme.Name = "txtPaketleme";
             txtPaketleme.Size = new Size(120, 23);
-            txtPaketleme.TabIndex = 122;
+            txtPaketleme.TabIndex = 18;
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label8.Location = new Point(579, 38);
@@ -550,14 +591,16 @@
             // 
             // txtGecerlilik
             // 
+            txtGecerlilik.Anchor = AnchorStyles.Top;
             txtGecerlilik.Location = new Point(645, 35);
             txtGecerlilik.MaxLength = 20;
             txtGecerlilik.Name = "txtGecerlilik";
             txtGecerlilik.Size = new Size(120, 23);
-            txtGecerlilik.TabIndex = 121;
+            txtGecerlilik.TabIndex = 17;
             // 
             // label12
             // 
+            label12.Anchor = AnchorStyles.Top;
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label12.Location = new Point(548, 9);
@@ -569,14 +612,16 @@
             // 
             // txtOdemeSartlari
             // 
+            txtOdemeSartlari.Anchor = AnchorStyles.Top;
             txtOdemeSartlari.Location = new Point(645, 6);
             txtOdemeSartlari.MaxLength = 20;
             txtOdemeSartlari.Name = "txtOdemeSartlari";
             txtOdemeSartlari.Size = new Size(120, 23);
-            txtOdemeSartlari.TabIndex = 120;
+            txtOdemeSartlari.TabIndex = 16;
             // 
             // label23
             // 
+            label23.Anchor = AnchorStyles.Top;
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label23.Location = new Point(247, 93);
@@ -588,14 +633,16 @@
             // 
             // txtNakliyeSarti
             // 
+            txtNakliyeSarti.Anchor = AnchorStyles.Top;
             txtNakliyeSarti.Location = new Point(330, 90);
             txtNakliyeSarti.MaxLength = 60;
             txtNakliyeSarti.Name = "txtNakliyeSarti";
             txtNakliyeSarti.Size = new Size(197, 23);
-            txtNakliyeSarti.TabIndex = 118;
+            txtNakliyeSarti.TabIndex = 11;
             // 
             // label22
             // 
+            label22.Anchor = AnchorStyles.Top;
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label22.Location = new Point(247, 64);
@@ -607,14 +654,16 @@
             // 
             // txtIstenenOzellikler
             // 
+            txtIstenenOzellikler.Anchor = AnchorStyles.Top;
             txtIstenenOzellikler.Location = new Point(358, 61);
             txtIstenenOzellikler.MaxLength = 60;
             txtIstenenOzellikler.Name = "txtIstenenOzellikler";
             txtIstenenOzellikler.Size = new Size(169, 23);
-            txtIstenenOzellikler.TabIndex = 116;
+            txtIstenenOzellikler.TabIndex = 10;
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Top;
             button2.Location = new Point(501, 31);
             button2.Name = "button2";
             button2.Size = new Size(26, 23);
@@ -623,14 +672,16 @@
             // 
             // txtSatisMuhendisi
             // 
+            txtSatisMuhendisi.Anchor = AnchorStyles.Top;
             txtSatisMuhendisi.Location = new Point(346, 32);
             txtSatisMuhendisi.MaxLength = 15;
             txtSatisMuhendisi.Name = "txtSatisMuhendisi";
             txtSatisMuhendisi.Size = new Size(149, 23);
-            txtSatisMuhendisi.TabIndex = 114;
+            txtSatisMuhendisi.TabIndex = 9;
             // 
             // label21
             // 
+            label21.Anchor = AnchorStyles.Top;
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label21.Location = new Point(247, 35);
@@ -641,6 +692,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top;
             button1.Location = new Point(501, 2);
             button1.Name = "button1";
             button1.Size = new Size(26, 23);
@@ -649,14 +701,16 @@
             // 
             // txtFirmaTemsilcisi
             // 
+            txtFirmaTemsilcisi.Anchor = AnchorStyles.Top;
             txtFirmaTemsilcisi.Location = new Point(346, 3);
             txtFirmaTemsilcisi.MaxLength = 15;
             txtFirmaTemsilcisi.Name = "txtFirmaTemsilcisi";
             txtFirmaTemsilcisi.Size = new Size(149, 23);
-            txtFirmaTemsilcisi.TabIndex = 111;
+            txtFirmaTemsilcisi.TabIndex = 8;
             // 
             // label20
             // 
+            label20.Anchor = AnchorStyles.Top;
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label20.Location = new Point(247, 6);
@@ -667,6 +721,7 @@
             // 
             // label19
             // 
+            label19.Anchor = AnchorStyles.Top;
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label19.Location = new Point(12, 180);
@@ -677,15 +732,17 @@
             // 
             // txtTeklifDurumu
             // 
+            txtTeklifDurumu.Anchor = AnchorStyles.Top;
             txtTeklifDurumu.Location = new Point(105, 177);
             txtTeklifDurumu.MaxLength = 100;
             txtTeklifDurumu.Multiline = true;
             txtTeklifDurumu.Name = "txtTeklifDurumu";
             txtTeklifDurumu.Size = new Size(118, 23);
-            txtTeklifDurumu.TabIndex = 109;
+            txtTeklifDurumu.TabIndex = 6;
             // 
             // label18
             // 
+            label18.Anchor = AnchorStyles.Top;
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label18.Location = new Point(795, 72);
@@ -696,6 +753,7 @@
             // 
             // rbYurtDisi
             // 
+            rbYurtDisi.Anchor = AnchorStyles.Top;
             rbYurtDisi.AutoSize = true;
             rbYurtDisi.CheckAlign = ContentAlignment.MiddleRight;
             rbYurtDisi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
@@ -709,6 +767,7 @@
             // 
             // rbYurtIci
             // 
+            rbYurtIci.Anchor = AnchorStyles.Top;
             rbYurtIci.AutoSize = true;
             rbYurtIci.CheckAlign = ContentAlignment.MiddleRight;
             rbYurtIci.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
@@ -722,6 +781,7 @@
             // 
             // label13
             // 
+            label13.Anchor = AnchorStyles.Top;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label13.Location = new Point(12, 122);
@@ -732,15 +792,17 @@
             // 
             // txtDovizBazTarihi
             // 
+            txtDovizBazTarihi.Anchor = AnchorStyles.Top;
             txtDovizBazTarihi.Location = new Point(113, 119);
             txtDovizBazTarihi.MaxLength = 255;
             txtDovizBazTarihi.Multiline = true;
             txtDovizBazTarihi.Name = "txtDovizBazTarihi";
             txtDovizBazTarihi.Size = new Size(110, 23);
-            txtDovizBazTarihi.TabIndex = 96;
+            txtDovizBazTarihi.TabIndex = 5;
             // 
             // btnCariKod
             // 
+            btnCariKod.Anchor = AnchorStyles.Top;
             btnCariKod.Location = new Point(197, 32);
             btnCariKod.Name = "btnCariKod";
             btnCariKod.Size = new Size(26, 23);
@@ -749,6 +811,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label4.Location = new Point(12, 210);
@@ -759,16 +822,18 @@
             // 
             // cmbIthalatIhracat
             // 
+            cmbIthalatIhracat.Anchor = AnchorStyles.Top;
             cmbIthalatIhracat.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbIthalatIhracat.Font = new Font("Segoe UI", 9F);
             cmbIthalatIhracat.FormattingEnabled = true;
             cmbIthalatIhracat.Location = new Point(134, 206);
             cmbIthalatIhracat.Name = "cmbIthalatIhracat";
             cmbIthalatIhracat.Size = new Size(89, 23);
-            cmbIthalatIhracat.TabIndex = 4;
+            cmbIthalatIhracat.TabIndex = 7;
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.Top;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label11.Location = new Point(12, 93);
@@ -779,22 +844,23 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 253);
+            dataGridView1.Location = new Point(0, 247);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1343, 372);
+            dataGridView1.Size = new Size(1086, 276);
             dataGridView1.TabIndex = 96;
             // 
-            // SatinAlmaTalep
+            // SatisTeklif
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1343, 625);
+            ClientSize = new Size(1086, 523);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
-            Name = "SatinAlmaTalep";
+            Name = "SatisTeklif";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Satın Alma Talep";
             FormClosed += SatinAlmaTalep_FormClosed;

@@ -12,7 +12,7 @@ using System.Data.Common;
 namespace SinerjiCRM
 {
     public partial class SatisTeklif : Form
-    {        
+    {
         public SatisTeklif()
         {
             InitializeComponent();
@@ -197,11 +197,11 @@ namespace SinerjiCRM
             {
                 if (rbYurtIci.Checked)
                 {
-                    return "YURTICI";
+                    return "YURT ICI";
                 }
                 else if (rbYurtDisi.Checked)
                 {
-                    return "YURTDİSİ";
+                    return "YURT DİSİ";
                 }
                 else
                 {
@@ -243,82 +243,84 @@ namespace SinerjiCRM
 
 
 
-
-        //private void AddParametersToCommandTra(SqlCommand command, Data teklifTraData)
-        //{
-        //    command.Parameters.AddWithValue("@TEKLIF_NO", teklifTraData.No ?? string.Empty);
-        //    command.Parameters.AddWithValue("@STOK_KODU", teklifTraData.Kod ?? string.Empty);
-        //    command.Parameters.AddWithValue("@STOK_ADI", teklifTraData.Isim ?? string.Empty);
-        //    command.Parameters.AddWithValue("@TESLIM_TARIHI", teklifTraData.Tarih ?? (object)DBNull.Value);
-        //    command.Parameters.AddWithValue("@MIKTAR", teklifTraData.Miktar ?? string.Empty);
-        //    command.Parameters.AddWithValue("@MIKTAR_OLCU_BIRIMI", teklifTraData.MiktarOlcuBirimi ?? string.Empty);
-        //    command.Parameters.AddWithValue("@DOVIZ_KURU", teklifTraData.DovizKuru ?? (object)DBNull.Value);
-        //    command.Parameters.AddWithValue("@TL_FIYATI", teklifTraData.Fiyat ?? (object)DBNull.Value);
-        //    command.Parameters.AddWithValue("@KDV_ORANI", teklifTraData.KdvOrani ?? (object)DBNull.Value);
-        //    command.Parameters.AddWithValue("@TUTAR", teklifTraData.Tutar ?? (object)DBNull.Value);
-        //    command.Parameters.AddWithValue("@SIRA_NO", teklifTraData.No2 ?? string.Empty);
-        //    command.Parameters.AddWithValue("@PROJE_KODU", teklifTraData.Kod2 ?? string.Empty);
-        //    command.Parameters.AddWithValue("@EK_ALAN_1", teklifTraData.Ek1 ?? string.Empty);
-        //    command.Parameters.AddWithValue("@EK_ALAN_2", teklifTraData.Ek2 ?? string.Empty);
-        //}
-
-        
-        
-        //private void dataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Yeni eklenen satırı al
-        //        DataGridViewRow newRow = dataGridView1.Rows[e.Row.Index - 1];
-
-        //        // TEKLIF_NO kontrolü yap
-        //        if (newRow.Cells["TEKLIF_NO"].Value == null || string.IsNullOrWhiteSpace(newRow.Cells["TEKLIF_NO"].Value.ToString()))
-        //        {
-        //            MessageBox.Show("Teklif No boş olamaz.");
-        //            dataGridView1.Rows.RemoveAt(e.Row.Index - 1); // Boş satırı kaldır
-        //            return;
-        //        }
-
-        //        // Diğer sütun değerlerini bir teklifTraData nesnesine ata
-        //        var teklifTraData = new Data
-        //        {
-        //            No = newRow.Cells["TEKLIF_NO"].Value?.ToString(),
-        //            Kod = newRow.Cells["STOK_KODU"].Value?.ToString(),
-        //            Isim = newRow.Cells["STOK_ADI"].Value?.ToString(),
-        //            Tarih = newRow.Cells["TESLIM_TARIHI"].Value?.ToString(),
-        //            Miktar = newRow.Cells["MIKTAR"].Value?.ToString(),
-        //            MiktarOlcuBirimi = newRow.Cells["MIKTAR_OLCU_BIRIMI"].Value?.ToString(),
-        //            DovizKuru = newRow.Cells["DOVIZ_KURU"].Value?.ToString(),
-        //            Fiyat = newRow.Cells["TL_FIYATI"].Value?.ToString(),
-        //            KdvOrani = newRow.Cells["KDV_ORANI"].Value?.ToString(),
-        //            Tutar = newRow.Cells["TUTAR"].Value?.ToString(),
-        //            No2 = newRow.Cells["SIRA_NO"].Value?.ToString(),
-        //            Kod2 = newRow.Cells["PROJE_KODU"].Value?.ToString(),
-        //            Ek1 = newRow.Cells["EK_ALAN_1"].Value?.ToString(),
-        //            Ek2 = newRow.Cells["EK_ALAN_2"].Value?.ToString()
-        //        };
-
-        //        // SQL bağlantısı ve komutu
-        //        using (SqlConnection connection = new SQLBaglantisi().baglanti())
-        //        {
-        //            string query = "INSERT INTO dbo.TEKLIFTRA (TEKLIF_NO, STOK_KODU, STOK_ADI, TESLIM_TARIHI, MIKTAR, MIKTAR_OLCU_BIRIMI, DOVIZ_KURU, TL_FIYATI, KDV_ORANI, TUTAR, SIRA_NO, PROJE_KODU, EK_ALAN_1, EK_ALAN_2) " +
-        //                           "VALUES (@TEKLIF_NO, @STOK_KODU, @STOK_ADI, @TESLIM_TARIHI, @MIKTAR, @MIKTAR_OLCU_BIRIMI, @DOVIZ_KURU, @TL_FIYATI, @KDV_ORANI, @TUTAR, @SIRA_NO, @PROJE_KODU, @EK_ALAN_1, @EK_ALAN_2)";
-        //            using (SqlCommand command = new SqlCommand(query, connection))
-        //            {
-        //                AddParametersToCommandTra(command, teklifTraData);
-        //                command.ExecuteNonQuery();
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Veritabanına ekleme hatası: " + ex.Message);
-        //    }
-        //}
-
-
-        
         /* ====================================================================== [ NetOpenX REST API ] ====================================================================== */
-                      
+
+        private void btnAktar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // NetOpenX-REST için OAuth2 ile kimlik doğrulama
+                oAuth2 _oAuth2 = new oAuth2("http://srv1:7070");
+                _oAuth2.Login(new JLogin()
+                {
+                    BranchCode = 0,
+                    NetsisUser = "netsis",
+                    NetsisPassword = "5091",
+                    DbType = JNVTTipi.vtMSSQL,
+                    DbName = "SINERJISMART",
+                    DbPassword = "",
+                    DbUser = "TEMELSET"
+                });
+
+                // SINERJICRM veritabanındaki dbo.TEKLIFMAS tablosundaki verileri al
+                using (SqlConnection crmConnection = new SqlConnection("Server=SRV1; Database=SINERJICRM; User Id=sa; Password=SA123pass_"))
+                {
+                    crmConnection.Open();
+                    string selectQuery = "SELECT * FROM dbo.TEKLIFMAS";
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, crmConnection);
+                    SqlDataReader reader = selectCommand.ExecuteReader();
+
+                    // SINERJISMART veritabanına bağlan ve verileri aktar
+                    using (SqlConnection smartConnection = new SqlConnection("Server=SRV1; Database=SINERJISMART; User Id=sa; Password=SA123pass_"))
+                    {
+                        smartConnection.Open();
+                        while (reader.Read())
+                        {
+                            string insertQuery = @"INSERT INTO dbo.TBLTEKLIFMAS 
+                            (TEKLIF_NO, CARI_KOD, TARIH, DOVIZ_BAZ_TARIHI, YURT_ICI_DISI, TEKLIF_DURUMU, FIRMA_TEMSILCISI, SATIS_MUHENDISI, ITHALAT_IHRACAT_TIPI, NOT_1, NOT_2, NOT_3, NOT_4, ISTENEN_OZELLIKLER, NAKLIYE_SARTI, ACIKLAMA, ODEME_SARTLARI, GECERLILIK, PAKETLEME, HAZIRLAYAN, BRUT_TOPLAM, KDV_ORANI, KDV_TOPLAMI, GENEL_TOPLAM, VADE_TARIHI, VADE_GUNU) 
+                            VALUES (@TEKLIF_NO, @CARI_KOD, @TARIH, @DOVIZ_BAZ_TARIHI, @YURT_ICI_DISI, @TEKLIF_DURUMU, @FIRMA_TEMSILCISI, @SATIS_MUHENDISI, @ITHALAT_IHRACAT_TIPI, @NOT_1, @NOT_2, @NOT_3, @NOT_4, @ISTENEN_OZELLIKLER, @NAKLIYE_SARTI, @ACIKLAMA, @ODEME_SARTLARI, @GECERLILIK, @PAKETLEME, @HAZIRLAYAN, @BRUT_TOPLAM, @KDV_ORANI, @KDV_TOPLAMI, @GENEL_TOPLAM, @VADE_TARIHI, @VADE_GUNU)";
+
+                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, smartConnection))
+                            {
+                                insertCommand.Parameters.AddWithValue("@FATIRS_NO", reader["TEKLIF_NO"]);
+                                insertCommand.Parameters.AddWithValue("@CARI_KODU", reader["CARI_KOD"]);
+                                insertCommand.Parameters.AddWithValue("@TARIH", reader["TARIH"]);
+                                //insertCommand.Parameters.AddWithValue("@DOVIZ_BAZ_TARIHI", reader["DOVIZ_BAZ_TARIHI"]);
+                                //insertCommand.Parameters.AddWithValue("@YURT_ICI_DISI", reader["YURT_ICI_DISI"]);
+                                //insertCommand.Parameters.AddWithValue("@TEKLIF_DURUMU", reader["TEKLIF_DURUMU"]);
+                                //insertCommand.Parameters.AddWithValue("@FIRMA_TEMSILCISI", reader["FIRMA_TEMSILCISI"]);
+                                //insertCommand.Parameters.AddWithValue("@SATIS_MUHENDISI", reader["SATIS_MUHENDISI"]);
+                                //insertCommand.Parameters.AddWithValue("@ITHALAT_IHRACAT_TIPI", reader["ITHALAT_IHRACAT_TIPI"]);
+                                insertCommand.Parameters.AddWithValue("@NOT_1", reader["NOT_1"]);
+                                insertCommand.Parameters.AddWithValue("@NOT_2", reader["NOT_2"]);
+                                insertCommand.Parameters.AddWithValue("@NOT_3", reader["NOT_3"]);
+                                insertCommand.Parameters.AddWithValue("@NOT_4", reader["NOT_4"]);
+                                insertCommand.Parameters.AddWithValue("@ISTENEN_OZELLIKLER", reader["ISTENEN_OZELLIKLER"]);
+                                insertCommand.Parameters.AddWithValue("@NAKLIYE_SARTI", reader["NAKLIYE_SARTI"]);
+                                insertCommand.Parameters.AddWithValue("@ACIKLAMA", reader["ACIKLAMA"]);
+                                insertCommand.Parameters.AddWithValue("@ODEME_SARTLARI", reader["ODEME_SARTLARI"]);
+                                insertCommand.Parameters.AddWithValue("@GECERLILIK", reader["GECERLILIK"]);
+                                insertCommand.Parameters.AddWithValue("@PAKETLEME", reader["PAKETLEME"]);
+                                insertCommand.Parameters.AddWithValue("@HAZIRLAYAN", reader["HAZIRLAYAN"]);
+                                insertCommand.Parameters.AddWithValue("@BRUT_TOPLAM", reader["BRUT_TOPLAM"]);
+                                insertCommand.Parameters.AddWithValue("@KDV_ORANI", reader["KDV_ORANI"]);
+                                insertCommand.Parameters.AddWithValue("@KDV_TOPLAMI", reader["KDV_TOPLAMI"]);
+                                insertCommand.Parameters.AddWithValue("@GENEL_TOPLAM", reader["GENEL_TOPLAM"]);
+                                insertCommand.Parameters.AddWithValue("@VADE_TARIHI", reader["VADE_TARIHI"]);
+                                insertCommand.Parameters.AddWithValue("@VADE_GUNU", reader["VADE_GUNU"]);
+
+                                insertCommand.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    MessageBox.Show("Veriler başarıyla aktarıldı.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veri aktarımı sırasında hata oluştu: {ex.Message}");
+            }
+            
+        }
     }
 }

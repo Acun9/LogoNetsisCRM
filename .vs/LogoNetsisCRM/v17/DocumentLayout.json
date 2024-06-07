@@ -1,12 +1,70 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\satisteklif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\satisteklif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\satisteklif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\satisteklif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|c:\\users\\dijital1\\documents\\github\\sinerji\\sinerjicrm\\forms\\main\\menu\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23C0E5C0-7F05-4AB2-BC6B-A07A895C37A1}|SinerjiCRM\\SinerjiCRM.csproj|solutionrelative:sinerjicrm\\forms\\main\\menu\\carikayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SatisTeklif.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs [Tasar\u0131m]",
+              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T06:56:41.026Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SatisTeklif.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\SatisTeklif.cs",
+              "ViewState": "AQIAAA0BAAAAAAAAAAAswCoBAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T07:33:34.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CariKayit.cs",
+              "DocumentMoniker": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\CariKayit.cs",
+              "RelativeDocumentMoniker": "SinerjiCRM\\Forms\\Main\\Menu\\CariKayit.cs",
+              "ToolTip": "C:\\Users\\dijital1\\Documents\\GitHub\\Sinerji\\SinerjiCRM\\Forms\\Main\\Menu\\CariKayit.cs",
+              "RelativeToolTip": "SinerjiCRM\\Forms\\Main\\Menu\\CariKayit.cs",
+              "ViewState": "AQIAAOUBAAAAAAAAAAAowP0BAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T07:35:44.86Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

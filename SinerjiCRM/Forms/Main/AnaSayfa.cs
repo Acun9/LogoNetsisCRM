@@ -22,7 +22,7 @@ namespace SinerjiCRM
         private void SinerjiCRM_FormClosed(object sender, FormClosedEventArgs e)
         {
             // SinerjiCRM formu kapatıldığında Giris formunu yeniden göster            
-            Application.OpenForms?["Giris"]?.Show();
+            Application.OpenForms?["AnaSayfa"]?.Show();
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -37,8 +37,10 @@ namespace SinerjiCRM
             this.Hide();
         }
 
-        private void btnMusteri_Click(object sender, EventArgs e)
+        private void btnSatisTeklif_Click(object sender, EventArgs e)
         {
+            SatisTeklif satisTeklifForm = new SatisTeklif();
+            satisTeklifForm.Show();
             this.Hide();
         }
 
